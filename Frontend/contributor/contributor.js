@@ -167,7 +167,7 @@ from February 11th, 2025, to March 15th, 2025.`;
                 .download-btn {
                   margin-top: 30px;
                   padding: 15px 30px;
-                  background-color: #f1c40f;
+                  background-color:rgb(164, 132, 4);
                   color: white;
                   font-size: 18px;
                   border: none;

@@ -1,0 +1,73 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Feedback container */
+.feedback-container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+/* Title */
+.feedback-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Subtext */
+.feedback-subtext {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Input fields */
+.feedback-input,
+.feedback-textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  color: black;
+}
+
+.feedback-textarea {
+  resize: none;
+}
+
+/* Button */
+.feedback-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.feedback-button:hover {
+  background-color: #e68900;
+}
+
+/* Message */
+.feedback-message {
+  margin-top: 10px;
+  font-size: 14px;
+}

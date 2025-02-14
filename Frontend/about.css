@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #2b6cb0, #4a90e2);
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.about-container {
+    margin-top: 50px auto;
+    max-width: 800px;
+    margin-top: 60px;
+    margin-left: 360px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.highlight {
+    color: #ffcb00;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    padding: 12px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Back Button */
+.back-button {
+    background: #2867f0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: #0190f6;
+    transform: scale(1.05);
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .back-button {
+        padding: 8px 15px;
+    }
+}

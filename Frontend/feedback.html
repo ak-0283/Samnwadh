@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="feedback-container">
+        <h2 class="feedback-title">We Value Your Feedback!</h2>
+        <p class="feedback-subtext">Let us know how we can improve.</p>
+
+        <form id="feedback-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="feedback-input" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="feedback-input" placeholder="Enter your email" required>
+
+            <label for="rating">Rate Us:</label>
+            <select id="rating" class="feedback-input">
+                <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                <option value="4">⭐⭐⭐⭐ - Very Good</option>
+                <option value="3">⭐⭐⭐ - Good</option>
+                <option value="2">⭐⭐ - Fair</option>
+                <option value="1">⭐ - Poor</option>
+            </select>
+
+            <label for="message">Your Feedback:</label>
+            <textarea id="message" class="feedback-textarea" rows="4" placeholder="Write your feedback here..." required></textarea>
+
+            <button type="submit" class="feedback-button">Submit Feedback</button>
+        </form>
+
+        <p id="feedback-message" class="feedback-message"></p>
+    </div>
+
+    <script src="feedback.js"></script>
+
+</body>
+</html>
