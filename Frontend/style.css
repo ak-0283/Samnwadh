@@ -184,6 +184,7 @@ header .nav-links a:hover {
 
 /* Footer Styling */
 /* Footer Styling */
+/* Footer Styling */
 footer {
     background-color: #2b6cb0;
     color: white;
@@ -196,20 +197,22 @@ footer {
     position: relative;
 }
 
-/* Footer Links (Right Side) */
+/* Footer Main Layout */
 .footer-container {
     width: 90%;
     display: flex;
-    justify-content: flex-end; /* Moves links to the right */
+    justify-content: space-between; /* Keeps links on right */
     align-items: center;
-    margin-bottom: 30px;
+    flex-wrap: wrap; /* Prevents overlap */
 }
 
+/* Footer Links (Always on Right) */
 .footer-links {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-right: 10px;
+    align-items: flex-end; /* Aligns to the right */
+    text-align: right;
+    margin-left: auto; /* Pushes links to the right */
 }
 
 .footer-links a {
@@ -233,8 +236,8 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100%;
-    position: absolute;
-    bottom: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
 }
 
 .bottom-footer p {
@@ -246,6 +249,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .social-links a {
@@ -287,6 +291,7 @@ body.dark .feature-item h4 {
     color: #ffcb00;
 }
 
+
 body.dark .feature-item p {
     color: #ddd;
 }
@@ -306,6 +311,19 @@ body.dark .social-links a {
 body.dark .social-links a:hover {
     color: #ffcb00;
     background-color: #444;
+
+/* Responsive Fix for Small Screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        
+    }
+
+    .footer-links {
+        align-items: center; /* Center the links on small screens */
+        text-align: center;
+        margin-left: 0;
+    }
 }
 
 
