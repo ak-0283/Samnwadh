@@ -18,6 +18,7 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   width: 350px;
   text-align: center;
+  margin-top: 80px; 
 }
 
 /* Title */
@@ -78,7 +79,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.2);
+  /* background: rgba(255, 255, 255, 0.2); */
   padding: 15px;
   display: flex;
   justify-content: flex-start;
@@ -99,4 +100,23 @@ body {
 .back-button:hover {
   background: #0190f6;
   transform: scale(1.05);
+}
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .back-button {
+    padding: 8px 16px; /* Smaller button */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .feedback-container {
+    width: 90%; /* Adjust width for smaller screens */
+    margin-top: 100px; /* Increased margin for proper spacing */
+  }
+
+  .feedback-title {
+    font-size: 20px; /* Slightly reduce text size */
+  }
 }
