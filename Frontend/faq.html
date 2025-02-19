@@ -1,119 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQ - Samnwadh</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="toggle.css">
-    <link rel="stylesheet" href="faq.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="faq.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="toggle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
     <style>
-        /* Search bar styling */
-        .search-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+      header {
+        padding: 24px 2px;
+      }
+      ul {
+        line-height: 1.8;
+        margin-bottom: 15px; /* Added spacing below paragraphs and lists */
+      }
 
-        .search-box {
-            width: 100%;
-            max-width: 400px;
-            padding: 10px;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            outline: none;
-        }
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
 
-        .highlight {
-            background-color: yellow;
-        }
+      a:hover {
+        text-decoration: underline;
+      }
+      /* Search bar styling */
+      .search-container {
+        text-align: center;
+        margin: 10%;
+        margin-bottom: 20px;
+      }
+
+      .search-box {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+
+        font-size: 16px;
+        outline: none;
+      }
+
+      .highlight {
+        background-color: yellow;
+      }
     </style>
-</head>
-<body class="bg-gray-100 text-gray-900">
-    
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <header class="bg-blue-600 text-white p-6">
+      <div class="container">
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <a href="index.html"><img src="logo.png" alt="Samnwadh" /></a>
+        <nav class="navbar" id="navbar">
+          <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="techstack.html">Tech Stack</a></li>
+            <li><a href="contributor/contributor.html">Contribute</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <!-- scroll button -->
     <button id="scrollBtn" onclick="scrollToTop()">
-        <i class="fas fa-arrow-up"></i>
-      </button>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <button class="back-button" onclick="window.location.href = 'index.html'">
-            <i class="fa-solid fa-arrow-left fa-xl"></i>
-        </button>
-    </nav>
-
+      <i class="fas fa-arrow-up"></i>
+    </button>
     <!-- Search Bar -->
     <div class="search-container">
-        <input type="text" id="faq-search" class="search-box" placeholder="Search FAQs..." onkeyup="searchFAQ()">
+      <input
+        type="text"
+        id="faq-search"
+        class="search-box"
+        placeholder="Search FAQs..."
+        onkeyup="searchFAQ()"
+      />
     </div>
-    
+
     <section class="py-16 bg-white container mx-auto px-4">
-        <h2 data-aos="fade-up" class="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
-        <div data-aos="fade-up" class="faq-container">
-            
-            <div data-aos="fade-up" class="faq-item">
-                <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">What is Samnwadh? <i class="fas fa-chevron-down"></i></h1>
-                <div class="faq-answer">Samnwadh is an open-source platform designed to facilitate real-time collaboration, messaging, and community building.</div>
-            </div>
-        
-            <div data-aos="fade-up" class="faq-item">
-                <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">Is Samnwadh free to use? <i class="fas fa-chevron-down"></i></h1>
-                <div class="faq-answer">Yes! Samnwadh is completely free and open-source. You can contribute to its development on GitHub.</div>
-            </div>
-        
-            <div data-aos="fade-up" class="faq-item">
-                <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">How do I contribute to Samnwadh? <i class="fas fa-chevron-down"></i></h1>
-                <div class="faq-answer">You can contribute by visiting our <a href="./contributor/contributor.html">Contribute</a> section and following the guidelines on our GitHub repository.</div>
-            </div>
-        
-            <div data-aos="fade-up" class="faq-item">
-                <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">Is my data secure on Samnwadh? <i class="fas fa-chevron-down"></i></h1>
-                <div class="faq-answer">Absolutely! We use end-to-end encryption to ensure your conversations remain private and secure.</div>
-            </div>
-        
-            <!-- New Q&A Items -->
-        
-            <div data-aos="fade-up" class="faq-item">
-                <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">Can I use Samnwadh on mobile devices? <i class="fas fa-chevron-down"></i></h1>
-                <div class="faq-answer">Yes, Samnwadh is fully responsive and works smoothly on both mobile and desktop devices.</div>
-            </div>
-        
-            <div data-aos="fade-up" class="faq-item">
-                <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">Do I need an account to use Samnwadh? <i class="fas fa-chevron-down"></i></h1>
-                <div class="faq-answer">While some features may be accessible without an account, creating an account unlocks full functionality such as messaging and collaboration tools.</div>
-            </div>
-        
-            <div data-aos="fade-up" class="faq-item">
-                <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">Who can I contact for support? <i class="fas fa-chevron-down"></i></h1>
-                <div class="faq-answer">If you need help, you can reach out to us at <a href="mailto:support@samnwadh.com">support@samnwadh.com</a> or visit our community forum.</div>
-            </div>
-        
+      <h2 data-aos="fade-up" class="text-2xl font-bold text-center mb-8">
+        Frequently Asked Questions
+      </h2>
+      <div data-aos="fade-up" class="faq-container">
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            What is Samnwadh? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            Samnwadh is an open-source platform designed to facilitate real-time
+            collaboration, messaging, and community building.
+          </div>
         </div>
-        
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Is Samnwadh free to use? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            Yes! Samnwadh is completely free and open-source. You can contribute
+            to its development on GitHub.
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            How do I contribute to Samnwadh? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            You can contribute by visiting our
+            <a href="./contributor/contributor.html">Contribute</a> section and
+            following the guidelines on our GitHub repository.
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Is my data secure on Samnwadh? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            Absolutely! We use end-to-end encryption to ensure your
+            conversations remain private and secure.
+          </div>
+        </div>
+
+        <!-- New Q&A Items -->
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Can I use Samnwadh on mobile devices?
+            <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            Yes, Samnwadh is fully responsive and works smoothly on both mobile
+            and desktop devices.
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Do I need an account to use Samnwadh?
+            <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            While some features may be accessible without an account, creating
+            an account unlocks full functionality such as messaging and
+            collaboration tools.
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Who can I contact for support? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            If you need help, you can reach out to us at
+            <a href="mailto:support@samnwadh.com">support@samnwadh.com</a> or
+            visit our community forum.
+          </div>
+        </div>
+      </div>
     </section>
+    <!-- footer section -->
+    <footer class="bg-blue-600 text-white py-8">
+      <div class="footer-container">
+        <!-- Footer Links (Right Side) -->
+        <div class="footer-links">
+          <a href="about.html" class="text-white hover:underline">About Us</a>
+          <a href="contact.html" class="text-white hover:underline"
+            >Contact Us</a
+          >
+          <a href="faq.html" class="text-white hover:underline">FAQ</a>
+          <a href="feedback.html" class="text-white hover:underline">
+            Feedback
+          </a>
+          <a href="privacy.html" class="text-white hover:underline">
+            Privacy Policy
+          </a>
+        </div>
+      </div>
+
+      <!-- Social Links & Copyright (Centered at Bottom) -->
+      <div class="bottom-footer">
+        <p>&copy; 2025 Samnwadh. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://github.com/ak-0283"><i class="fab fa-github"></i></a>
+          <a href="https://discord.com/users/762235277263241236"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+          <a href="https://x.com/AK_2805"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
     <script>
-        function toggleAnswer(element) {
-            let answer = element.nextElementSibling;
-            answer.style.display = answer.style.display === "block" ? "none" : "block";
-        }
-    
-        function searchFAQ() {
-            let input = document.querySelector('.search-box').value.toLowerCase();
-            let questions = document.querySelectorAll('.faq-item');
-    
-            questions.forEach(item => {
-                let text = item.textContent.toLowerCase();
-                item.style.display = text.includes(input) ? "block" : "none";
-            });
-        }
+      function toggleAnswer(element) {
+        let answer = element.nextElementSibling;
+        answer.style.display =
+          answer.style.display === "block" ? "none" : "block";
+      }
+
+      function searchFAQ() {
+        let input = document.querySelector(".search-box").value.toLowerCase();
+        let questions = document.querySelectorAll(".faq-item");
+
+        questions.forEach((item) => {
+          let text = item.textContent.toLowerCase();
+          item.style.display = text.includes(input) ? "block" : "none";
+        });
+      }
     </script>
-  <script src="script.js"></script>
-  <script src="toggle.js"></script>
+    <script src="script.js"></script>
+    <script src="toggle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init({duration: 600, once: false });
+      AOS.init({ duration: 600, once: false });
     </script>
-</body>
+  </body>
 </html>
