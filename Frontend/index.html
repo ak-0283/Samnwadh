@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samnwadh - Connect & Collaborate</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="card.css" />
     <link rel="stylesheet" href="toggle.css" />
     <link
       rel="stylesheet"
@@ -13,17 +14,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   </head>
   <body class="bg-gray-100 text-gray-900">
+
+      <!--greeting card code-->
+
+    <div  class="overlay" id="overlay">
+      <div class="card">
+          <button class="close-btn" onclick="closeCard()">X</button>
+          <h1 id="greeting"></h1>
+      </div>
+    </div>
+
     <header class="bg-blue-600 text-white p-6">
       <div class="container">
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-        <a href="index.html"><img src="logo.png" alt="Samnwadh" /></a>
+        <a href="index.html"><img src="logo.webp" alt="Samnwadh" /></a>
         <nav class="navbar" id="navbar">
           <ul class="nav-links">
             <li><a href="#features">Features</a></li>
             <li><a href="techstack.html">Tech Stack</a></li>
             <li><a href="contributor/contributor.html">Contribute</a></li>
             <li><a href="#community">Community</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="login.html" id="auth-link">Login</a></li>
           </ul>
         </nav>
       </div>
@@ -70,6 +81,18 @@
     <!-- footer section -->
     <footer class="bg-blue-600 text-white py-8">
       <div class="footer-container">
+        <div class="newsletter">
+          <h3>Subscribe to our Newsletter</h3>
+          <form id="subscribeForm">
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Enter your email"
+              required
+            />
+            <button class="submit" type="submit">Subscribe</button>
+          </form>
+        </div>
         <!-- Footer Links (Right Side) -->
         <div class="footer-links">
           <a href="about.html" class="text-white hover:underline">About Us</a>
@@ -78,8 +101,9 @@
           >
           <a href="faq.html" class="text-white hover:underline">FAQ</a>
           <a href="feedback.html" class="text-white hover:underline"
-            >Feedback</a
-          >
+            > Feedback </a>
+          <a href="privacy.html" class="text-white hover:underline"
+            > Privacy Policy </a>
         </div>
       </div>
 
@@ -102,7 +126,32 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="event.js"></script>
+    <script src="card.js"></script>
     <script src="toggle.js"></script>
+    <script>
+      function updateAuthLink() {
+          let loggedInUser = localStorage.getItem("loggedInUser");
+          let authLink = document.getElementById("auth-link");
+  
+          if (loggedInUser) {
+              authLink.innerText = "Logout";
+              authLink.href = "#";
+              authLink.onclick = function () {
+                  logout();
+              };
+          }
+      }
+  
+      function logout() {
+          localStorage.removeItem("loggedInUser");
+          window.location.reload();
+      }
+  
+      // Update login/logout button on page load
+      updateAuthLink();
+  </script>
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init({duration: 600, once: false });
