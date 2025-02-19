@@ -7,10 +7,10 @@ body {
 }
 
 .head {
-  background-color: #2b6cb0;
-  color: white;
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  color: #585555;
   padding: 20px 0;
-  font-size: 24px;
+  font-size: 2rem;
   border-radius: 0%;
 }
 
@@ -36,8 +36,10 @@ body {
 }
 
 .tech-card img {
-  width: 80px;
-  height: 80px;
+ width: 90px;
+ height: 70px;
+ object-fit: contain;
+ 
 }
 
 .tech-card h2 {
