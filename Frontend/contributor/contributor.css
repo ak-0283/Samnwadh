@@ -14,8 +14,7 @@ body {
 }
 
 .head {
-  background-color: #2b6cb0;
-  color: white;
+  margin-top: 40px;
   padding: 20px 0;
   font-size: 24px;
   border-radius: 0%;
@@ -31,13 +30,13 @@ body {
 }
 
     .title {
-        font-family: 'Arial', sans-serif; /* You can use any font of your choice */
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* You can use any font of your choice */
         font-size: 2.5rem;
         font-weight: bold;
         color: #333333;
         text-transform: uppercase; /* Makes the text uppercase */
         margin-bottom: 20px;
-        letter-spacing: 1.5px; /* Adds spacing between letters */
+        letter-spacing: 1px; /* Adds spacing between letters */
         text-align: center; /* Centers the text */
     }
     
@@ -54,7 +53,7 @@ body {
   
   /* Contributor Card */
   .contributor-card {
-      background: #f6c903;
+    background: linear-gradient(135deg,#FEE140,#FA709A);
       padding: 20px;
       height: 250px;
       width: 300px; /* Ensure each card has a fixed width */
@@ -71,7 +70,7 @@ body {
 
   .contributor-card:hover {
     transform: scale(1.01);
-    box-shadow: 0 12px 25px rgba(238, 195, 1, 0.995);
+    box-shadow: 0 5px 15px rgba(255,105,180,0.6);
   }
 
   /* Fix container responsiveness */
@@ -152,7 +151,7 @@ body {
 
   
 .certificate-btn {
-    background: linear-gradient(135deg, #00539b, #00c6ff); /* Light Blue Gradient */
+  background: #6A1B9A;  /* Light Blue Gradient */
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -172,7 +171,7 @@ body {
   
   /* Button Hover Effect */
   .certificate-btn:hover {
-    background: linear-gradient(135deg, #00c6ff, #4facfe); /* Reverse Gradient */
+    background: #532a5f;/* Reverse Gradient */
     transform: scale(1.01);
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
   }

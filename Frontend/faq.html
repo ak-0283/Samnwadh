@@ -9,6 +9,27 @@
     <link rel="stylesheet" href="faq.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        /* Search bar styling */
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
     
@@ -18,40 +39,52 @@
             <i class="fa-solid fa-arrow-left fa-xl"></i>
         </button>
     </nav>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="faq-search" class="search-box" placeholder="Search FAQs..." onkeyup="searchFAQ()">
+    </div>
     
     <section class="py-16 bg-white container mx-auto px-4">
         <h2 data-aos="fade-up" class="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
         <div data-aos="fade-up" class="faq-container">
+            
             <div data-aos="fade-up" class="faq-item">
-                <h1 class="faq-question">What is Samnwadh? <i class="fas fa-chevron-down"></i></h1>
+                <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">What is Samnwadh? <i class="fas fa-chevron-down"></i></h1>
                 <div class="faq-answer">Samnwadh is an open-source platform designed to facilitate real-time collaboration, messaging, and community building.</div>
             </div>
             
             <div data-aos="fade-up" class="faq-item">
-                <h1 class="faq-question">Is Samnwadh free to use? <i class="fas fa-chevron-down"></i></h1>
+                <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">Is Samnwadh free to use? <i class="fas fa-chevron-down"></i></h1>
                 <div class="faq-answer">Yes! Samnwadh is completely free and open-source. You can contribute to its development on GitHub.</div>
             </div>
             
             <div data-aos="fade-up" class="faq-item">
-                <h1 class="faq-question">How do I contribute to Samnwadh? <i class="fas fa-chevron-down"></i></h1>
+                <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">How do I contribute to Samnwadh? <i class="fas fa-chevron-down"></i></h1>
                 <div class="faq-answer">You can contribute by visiting our <a href="./contributor/contributor.html">Contribute</a> section and following the guidelines on our GitHub repository.</div>
             </div>
             
             <div data-aos="fade-up" class="faq-item">
-                <h1 class="faq-question">Is my data secure on Samnwadh? <i class="fas fa-chevron-down"></i></h1>
+                <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">Is my data secure on Samnwadh? <i class="fas fa-chevron-down"></i></h1>
                 <div class="faq-answer">Absolutely! We use end-to-end encryption to ensure your conversations remain private and secure.</div>
             </div>
         </div>
     </section>
-    
-   
     <script>
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        function toggleAnswer(element) {
+            let answer = element.nextElementSibling;
+            answer.style.display = answer.style.display === "block" ? "none" : "block";
+        }
+    
+        function searchFAQ() {
+            let input = document.querySelector('.search-box').value.toLowerCase();
+            let questions = document.querySelectorAll('.faq-item');
+    
+            questions.forEach(item => {
+                let text = item.textContent.toLowerCase();
+                item.style.display = text.includes(input) ? "block" : "none";
             });
-        });
+        }
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
