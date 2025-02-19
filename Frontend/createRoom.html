@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room Creation Form</title>
+    <link rel="stylesheet" href="createRoom.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Create a Room</h2>
+      <form id="room-form">
+        <input
+          type="text"
+          id="name"
+          class="input-field"
+          placeholder="Enter your name"
+          required
+        />
+        <input
+          type="text"
+          id="roomId"
+          class="input-field"
+          placeholder="Enter Room ID"
+          required
+        />
+
+        <button type="submit" class="submit-btn">Create Room</button>
+      </form>
+    </div>
+
+    <script src="createRoom.js"></script>
+  </body>
+</html>

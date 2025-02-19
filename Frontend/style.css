@@ -1,19 +1,19 @@
 /* Global Styles */
 ::-webkit-scrollbar {
-    width: 10px;
-    border-radius: 10px;
-    background-color: #3e82cbdf;
+  width: 10px;
+  border-radius: 10px;
+  background-color: #3e82cbdf;
 }
 ::-webkit-scrollbar:hover {
-    background-color: #57bff3;
+  background-color: #57bff3;
 }
 ::-webkit-scrollbar-thumb {
-    box-shadow: 2px 2px 5px #00B3EE;
-    background: linear-gradient(45deg, #003B6C, #0569DD);
-    border-radius: 10px;
+  box-shadow: 2px 2px 5px #00b3ee;
+  background: linear-gradient(45deg, #003b6c, #0569dd);
+  border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #0569DD, #003B6C);
+  background: linear-gradient(45deg, #0569dd, #003b6c);
 }
 
 * {
@@ -28,7 +28,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 
 /* Container */
 .container {
@@ -96,6 +95,7 @@ header .nav-links a:hover {
 }
 
 #hero a {
+  margin: 25px;
   background-color: #ffcb00;
   color: black;
   padding: 14px 32px;
@@ -267,16 +267,16 @@ footer {
   margin-right: 5px;
   border-radius: 10px;
 }
-.newsletter button{
-  background: linear-gradient(135deg,#6d6a6a,#ffffff);
+.newsletter button {
+  background: linear-gradient(135deg, #6d6a6a, #ffffff);
 }
-#subscribeForm{
+#subscribeForm {
   margin-top: 10px;
 }
-.submit{
+.submit {
   padding: 10px;
   margin-right: 5px;
-  border-radius:10px ;
+  border-radius: 10px;
 }
 .social-links {
   display: flex;
