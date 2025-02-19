@@ -257,7 +257,26 @@ footer {
   margin-bottom: 10px;
   font-size: 1rem;
 }
+.newsletter {
+  margin: 20px;
+}
 
+.newsletter input {
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+.newsletter button{
+  background: linear-gradient(135deg,#6d6a6a,#ffffff);
+}
+#subscribeForm{
+  margin-top: 10px;
+}
+.submit{
+  padding: 10px;
+  margin-right: 5px;
+  border-radius:10px ;
+}
 .social-links {
   display: flex;
   justify-content: center;
