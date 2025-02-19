@@ -33,6 +33,10 @@
 </head>
 <body class="bg-gray-100 text-gray-900">
     
+    <!-- scroll button -->
+    <button id="scrollBtn" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+      </button>
     <!-- Navbar -->
     <nav class="navbar">
         <button class="back-button" onclick="window.location.href = 'index.html'">
@@ -53,22 +57,41 @@
                 <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">What is Samnwadh? <i class="fas fa-chevron-down"></i></h1>
                 <div class="faq-answer">Samnwadh is an open-source platform designed to facilitate real-time collaboration, messaging, and community building.</div>
             </div>
-            
+        
             <div data-aos="fade-up" class="faq-item">
                 <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">Is Samnwadh free to use? <i class="fas fa-chevron-down"></i></h1>
                 <div class="faq-answer">Yes! Samnwadh is completely free and open-source. You can contribute to its development on GitHub.</div>
             </div>
-            
+        
             <div data-aos="fade-up" class="faq-item">
                 <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">How do I contribute to Samnwadh? <i class="fas fa-chevron-down"></i></h1>
                 <div class="faq-answer">You can contribute by visiting our <a href="./contributor/contributor.html">Contribute</a> section and following the guidelines on our GitHub repository.</div>
             </div>
-            
+        
             <div data-aos="fade-up" class="faq-item">
                 <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">Is my data secure on Samnwadh? <i class="fas fa-chevron-down"></i></h1>
                 <div class="faq-answer">Absolutely! We use end-to-end encryption to ensure your conversations remain private and secure.</div>
             </div>
+        
+            <!-- New Q&A Items -->
+        
+            <div data-aos="fade-up" class="faq-item">
+                <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">Can I use Samnwadh on mobile devices? <i class="fas fa-chevron-down"></i></h1>
+                <div class="faq-answer">Yes, Samnwadh is fully responsive and works smoothly on both mobile and desktop devices.</div>
+            </div>
+        
+            <div data-aos="fade-up" class="faq-item">
+                <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">Do I need an account to use Samnwadh? <i class="fas fa-chevron-down"></i></h1>
+                <div class="faq-answer">While some features may be accessible without an account, creating an account unlocks full functionality such as messaging and collaboration tools.</div>
+            </div>
+        
+            <div data-aos="fade-up" class="faq-item">
+                <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">Who can I contact for support? <i class="fas fa-chevron-down"></i></h1>
+                <div class="faq-answer">If you need help, you can reach out to us at <a href="mailto:support@samnwadh.com">support@samnwadh.com</a> or visit our community forum.</div>
+            </div>
+        
         </div>
+        
     </section>
     <script>
         function toggleAnswer(element) {
@@ -86,7 +109,8 @@
             });
         }
     </script>
-
+  <script src="script.js"></script>
+  <script src="toggle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init({duration: 600, once: false });
