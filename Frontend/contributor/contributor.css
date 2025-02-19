@@ -38,6 +38,7 @@ body {
         margin-bottom: 20px;
         letter-spacing: 1px; /* Adds spacing between letters */
         text-align: center; /* Centers the text */
+        
     }
     
     /* Contributors Grid */
@@ -53,7 +54,7 @@ body {
   
   /* Contributor Card */
   .contributor-card {
-      background: #f6c903;
+      background: linear-gradient(135deg,#FEE140,#FA709A);
       padding: 20px;
       height: 250px;
       width: 300px; /* Ensure each card has a fixed width */
@@ -70,7 +71,7 @@ body {
 
   .contributor-card:hover {
     transform: scale(1.01);
-    box-shadow: 0 12px 25px rgba(238, 195, 1, 0.995);
+    box-shadow: 0 5px 15px rgba(255,105,180,0.6);
   }
 
   /* Fix container responsiveness */
@@ -151,7 +152,7 @@ body {
 
   
 .certificate-btn {
-    background: linear-gradient(135deg, #00539b, #00c6ff); /* Light Blue Gradient */
+    background: #6A1B9A; /* Light Blue Gradient */
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -171,7 +172,7 @@ body {
   
   /* Button Hover Effect */
   .certificate-btn:hover {
-    background: linear-gradient(135deg, #00c6ff, #4facfe); /* Reverse Gradient */
+    background: #532a5f; /* Reverse Gradient */
     transform: scale(1.01);
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
   }
@@ -189,7 +190,7 @@ body {
     left: -3px;
     right: -3px;
     bottom: -3px;
-    background: linear-gradient(45deg, #d7f3ff, #00aaff, #04abf3);
+    /* background: linear-gradient(45deg, #d7f3ff, #00aaff, #04abf3); */
     z-index: -1;
     border-radius: 10px;
     opacity: 0;
