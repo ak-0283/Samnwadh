@@ -37,7 +37,23 @@ window.onscroll = function() {scrollFunction()};
           }
       }
       
-        
+      function resetForm() {
+        document.getElementById("signup-name").value = "";
+        document.getElementById("signup-dateofbirth").value = "";
+        document.getElementById("signup-username").value = "";
+        document.getElementById("signup-phone").value = "";
+        document.getElementById("signup-password").value = "";
+        document.getElementById("signup-confirmpassword").value = "";
+        document.getElementById("profilepic").value = "";
+    
+        // Reset radio buttons
+        let genderInputs = document.getElementsByName("gender");
+        genderInputs.forEach(input => input.checked = false);
+    
+        // Clear signup message
+        document.getElementById("signup-message").innerText = "";
+    }
+    
         function login() {
             let username = document.getElementById("login-username").value;
             let password = document.getElementById("login-password").value;
