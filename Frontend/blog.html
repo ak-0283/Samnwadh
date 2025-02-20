@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samnwadh - Blog</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="blog.css">
-    <link rel="stylesheet" href="toggle.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="blog.css" />
+    <link rel="stylesheet" href="toggle.css" />
     <!-- <style>
         body {
             font-family: Arial, sans-serif;
@@ -112,115 +115,156 @@
             }
         }
     </style> -->
-</head>
-<body>
-
+  </head>
+  <body>
     <header class="bg-blue-600 text-white p-6">
-        <div class="container">
-          <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-          <a href="index.html"><img src="logo.webp" alt="Samnwadh" /></a>
-          <nav class="navbar" id="navbar">
-            <ul class="nav-links">
-              <li><a href="index.html">Features</a></li>
-              <li><a href="techstack.html">Tech Stack</a></li>
-              <li><a href="contributor/contributor.html">Contribute</a></li>
-              <li><a href="#community">Community</a></li>
-              <li><a href="login.html">Login</a></li>
-            </ul>
-          </nav>
-        </div>
+      <div class="container">
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <a href="index.html"><img src="logo.webp" alt="Samnwadh" /></a>
+        <nav class="navbar" id="navbar">
+          <ul class="nav-links">
+            <li><a href="index.html">Features</a></li>
+            <li><a href="techstack.html">Tech Stack</a></li>
+            <li><a href="contributor/contributor.html">Contribute</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Blog Section -->
     <section class="blog-section">
-        <div class="container">
-            <h1 class="blog-title">Open Source Blogs</h1>
+      <div class="container">
+        <h1 class="blog-title">Open Source Blogs</h1>
 
-            <!-- Search Bar -->
-            <input type="text" id="searchInput" class="search-bar" placeholder="Search blogs..." onkeyup="searchBlogs()">
+        <!-- Search Bar -->
+        <input
+          type="text"
+          id="searchInput"
+          class="search-bar"
+          placeholder="Search blogs..."
+          onkeyup="searchBlogs()"
+        />
 
-            <!-- Blog Posts -->
-            <div class="blog-card" data-title="The Power of Open Source">
-                <img src="https://tse2.mm.bing.net/th?id=OIP.j4pk788zW7EJoqZro0oeSgHaGa&pid=Api&P=0&h=180" alt="Open Source Contribution">
-                <div class="blog-content">
-                    <h2>The Power of Open Source</h2>
-                    <p>Open source software allows developers worldwide to collaborate and innovate. Learn why open source is shaping the future of technology.</p>
-                    <a href="https://opensource.googleblog.com/2024/04/the-power-of-open-source.html" class="read-more">Read More</a>
-                </div>
-            </div>
-
-            <div class="blog-card" data-title="How to Get Started with Open Source">
-                <img src="https://tse4.mm.bing.net/th?id=OIP.FpQwSeQNA5GCLOW3nl3EpgHaEh&pid=Api&P=0&h=180" alt="GitHub">
-                <div class="blog-content">
-                    <h2>How to Get Started with Open Source</h2>
-                    <p>New to open source? This guide will help you contribute to projects, find beginner-friendly repositories, and collaborate on GitHub.</p>
-                    <a href="https://www.geeksforgeeks.org/step-wise-guide-to-start-with-open-source/" class="read-more">Read More</a>
-                </div>
-            </div>
-
-            <div class="blog-card" data-title="Why Linux is the Heart of Open Source">
-                <img src="https://tse3.mm.bing.net/th?id=OIP.0Is0Bxodds-SBu1JHhMZgAHaDx&pid=Api&P=0&h=180" alt="Linux OS">
-                <div class="blog-content">
-                    <h2>Why Linux is the Heart of Open Source</h2>
-                    <p>Linux powers the world's servers, smartphones, and even supercomputers. Discover why it's one of the most influential open source projects.</p>
-                    <a href="https://techgenies.com/why-is-linux-so-popular/" class="read-more">Read More</a>
-                </div>
-            </div>
-
+        <!-- Blog Posts -->
+        <div class="blog-card" data-title="The Power of Open Source">
+          <img
+            src="https://tse2.mm.bing.net/th?id=OIP.j4pk788zW7EJoqZro0oeSgHaGa&pid=Api&P=0&h=180"
+            alt="Open Source Contribution"
+          />
+          <div class="blog-content">
+            <h2>The Power of Open Source</h2>
+            <p>
+              Open source software allows developers worldwide to collaborate
+              and innovate. Learn why open source is shaping the future of
+              technology.
+            </p>
+            <a
+              href="https://opensource.googleblog.com/2024/04/the-power-of-open-source.html"
+              class="read-more"
+              >Read More</a
+            >
+          </div>
         </div>
+
+        <div class="blog-card" data-title="How to Get Started with Open Source">
+          <img
+            src="https://tse4.mm.bing.net/th?id=OIP.FpQwSeQNA5GCLOW3nl3EpgHaEh&pid=Api&P=0&h=180"
+            alt="GitHub"
+          />
+          <div class="blog-content">
+            <h2>How to Get Started with Open Source</h2>
+            <p>
+              New to open source? This guide will help you contribute to
+              projects, find beginner-friendly repositories, and collaborate on
+              GitHub.
+            </p>
+            <a
+              href="https://www.geeksforgeeks.org/step-wise-guide-to-start-with-open-source/"
+              class="read-more"
+              >Read More</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="blog-card"
+          data-title="Why Linux is the Heart of Open Source"
+        >
+          <img
+            src="https://tse3.mm.bing.net/th?id=OIP.0Is0Bxodds-SBu1JHhMZgAHaDx&pid=Api&P=0&h=180"
+            alt="Linux OS"
+          />
+          <div class="blog-content">
+            <h2>Why Linux is the Heart of Open Source</h2>
+            <p>
+              Linux powers the world's servers, smartphones, and even
+              supercomputers. Discover why it's one of the most influential open
+              source projects.
+            </p>
+            <a
+              href="https://techgenies.com/why-is-linux-so-popular/"
+              class="read-more"
+              >Read More</a
+            >
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- footer section -->
-  <footer class="bg-blue-600 text-white py-8">
-    <div class="footer-container">
-      <!-- Footer Links (Right Side) -->
-      <div class="footer-links">
-        <a href="about.html" class="text-white hover:underline">About Us</a>
-        <a href="contact.html" class="text-white hover:underline"
-          >Contact Us</a
-        >
-        <a href="faq.html" class="text-white hover:underline">FAQ</a>
-        <a href="feedback.html" class="text-white hover:underline"
-          > Feedback </a>
-        <a href="privacy.html" class="text-white hover:underline"
-          > Privacy Policy </a>
+    <footer class="bg-blue-600 text-white py-8">
+      <div class="footer-container">
+        <!-- Footer Links (Right Side) -->
+        <div class="footer-links">
+          <a href="about.html" class="text-white hover:underline">About Us</a>
+          <a href="contact.html" class="text-white hover:underline"
+            >Contact Us</a
+          >
+          <a href="faq.html" class="text-white hover:underline">FAQ</a>
+          <a href="feedback.html" class="text-white hover:underline">
+            Feedback
+          </a>
+          <a href="privacy.html" class="text-white hover:underline">
+            Privacy Policy
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Social Links & Copyright (Centered at Bottom) -->
-    <div class="bottom-footer">
-      <p>&copy; 2025 Samnwadh. All rights reserved.</p>
-      <div class="social-links">
-        <a href="https://github.com/ak-0283"><i class="fab fa-github"></i></a>
-        <a href="https://discord.com/users/762235277263241236"
-          ><i class="fa-brands fa-discord"></i
-        ></a>
-        <a href="https://x.com/AK_2805"
-          ><i class="fa-brands fa-x-twitter"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
+      <!-- Social Links & Copyright (Centered at Bottom) -->
+      <div class="bottom-footer">
+        <p>&copy; 2025 Samnwadh. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://github.com/ak-0283"><i class="fab fa-github"></i></a>
+          <a href="https://discord.com/users/762235277263241236"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+          <a href="https://x.com/AK_2805"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
     <script>
-        function searchBlogs() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
-            let blogCards = document.querySelectorAll('.blog-card');
+      function searchBlogs() {
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        let blogCards = document.querySelectorAll(".blog-card");
 
-            blogCards.forEach(card => {
-                let title = card.getAttribute('data-title').toLowerCase();
-                if (title.includes(input)) {
-                    card.style.display = "flex";
-                } else {
-                    card.style.display = "none";
-                }
-            });
-        }
+        blogCards.forEach((card) => {
+          let title = card.getAttribute("data-title").toLowerCase();
+          if (title.includes(input)) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
     </script>
     <script src="toggle.js"></script>
-
-</body>
+  </body>
 </html>
