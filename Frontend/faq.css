@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: linear-gradient(150deg, #93d6e8, #5a8ff3);
   margin: 100px;
   padding: 0;
@@ -81,29 +81,12 @@ h2 {
   transform: rotate(180deg);
 }
 
-/* Back Button */
-.back-button {
-  background: #2867f0;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.back-button:hover {
-  background: #0190f6;
-  transform: scale(1.05);
-}
 .navbar {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 15px;
+  /* margin: 7px; */
+  /* width: 100%; */
+  /* position: absolute; */
+  /* background: rgba(255, 255, 255, 0); */
+  /* padding: 4px; */
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
