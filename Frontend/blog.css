@@ -57,6 +57,130 @@
   header .nav-links a:hover {
     color: #ffcb00;
   }
+
+  .blog-title{
+    color: #313E42;
+    text-shadow: 2px 2px 0 #0056b3;
+    /* text-decoration: underline; */
+    /* text-decoration-color: #0056b3; */
+  }
+
+  /* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+} */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.blog-section {
+    /* background-color: #007bff58; */
+    padding: 50px 0;
+}
+
+.blog-title {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block;
+}
+
+.blog-card {
+    display: flex;
+    background: transparent;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #0056b3;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #2B6CB0;
+}
+
+.blog-card:hover {
+    transform: scale(1.02);
+}
+
+.blog-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 4px 4px 12px #0056b3;
+    
+}
+.blog-card img:hover{
+    transform: translate3d(0, -5px, 0);
+}
+
+.blog-content {
+    padding: 20px;
+    flex: 1;
+    
+}
+
+.blog-content h2 {
+    margin: 0;
+    color: #2B6CB0;
+    font-size: 1.8rem;
+}
+
+.blog-content p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    background: #0056b3;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.read-more:hover {
+    border: 2px solid #0056b3;
+    background: transparent;
+    color: #0056b3;
+}
+.read-more:active {
+    transform: scale(0.9);
+}
+
+@media (max-width: 768px) {
+    .blog-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .blog-card img {
+        width: 30%;
+        height: auto;
+        
+    }
+}
   
   /* Footer Styling */
 footer {
