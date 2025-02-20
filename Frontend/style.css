@@ -221,6 +221,20 @@ footer {
 }
 
 /* Footer Links (Always on Right) */
+.footerLinksForAdminInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns to the right */
+  text-align: left;
+  margin-right: auto; /* Pushes links to the right */
+}
+.footerLinksForAdminInfo a {
+  color: white;
+}
+.footerLinksForAdminInfo a:hover {
+  color: black;
+}
+
 .footer-links {
   display: flex;
   flex-direction: column;
