@@ -2,21 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Samnwadh - Connect & Collaborate</title>
-    <link rel="icon" type="image/x-icon" href="favicon-32x32.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="card.css" />
-    <link rel="stylesheet" href="toggle.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
-    <link rel="stylesheet" href="homefeedback.css" />
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="card.css"/>
+    <link rel="stylesheet" href="toggle.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <link rel="stylesheet" href="homefeedback.css"/>
   </head>
   <body class="bg-gray-100 text-gray-900">
     <!--greeting card code-->
@@ -58,22 +52,15 @@
       <h2 data-aos="fade-up" class="text-3xl font-bold mb-4">
         Welcome to Samnwadh!
       </h2>
+
       <p data-aos="fade-up" class="text-lg mb-6">
         An open-source platform to connect, share, and collaborate in real-time.
       </p>
-      <a
-        href="#contribute"
-        onclick="window.location.href = 'signup.html'"
-        class="home-bttn">
-        Get Started
-      </a>
-      <a
-        href="#contribute"
-        onclick="window.location.href = 'createRoom.html'"
-        class="bg-yellow-500 text-black py-2 px-6 rounded-lg hover:bg-yellow-400 hover:text-white transition-colors duration-300"
-      >
-        Create Room
-      </a>
+
+      <a href="#contribute" onclick="window.location.href = 'signup.html'" class="home-bttn">Get Started</a>
+
+      <a href="#contribute" onclick="window.location.href = 'createRoom.html'" class="bg-yellow-500 text-black py-2 px-6 rounded-lg hover:bg-yellow-400 hover:text-white transition-colors duration-300">Create Room</a>
+
     </section>
 
     <section data-aos="fade-up" id="features" class="py-16 bg-white">
@@ -86,18 +73,21 @@
               Chat instantly with friends and colleagues in real-time.
             </p>
           </div>
+
           <div class="feature-item">
             <h4 data-aos="fade-up">Group Chats</h4>
             <p data-aos="fade-up">
               Create communities and have group discussions.
             </p>
           </div>
+
           <div class="feature-item">
             <h4 data-aos="fade-up">End-to-End Encryption</h4>
             <p data-aos="fade-up">
               Ensure privacy with end-to-end encryption for all chats.
             </p>
           </div>
+
         </div>
       </div>
     </section>
@@ -145,8 +135,7 @@
             class="feedback-textarea"
             rows="4"
             placeholder="Write your feedback here..."
-            required
-          ></textarea>
+            required></textarea>
 
           <button type="submit" data-aos="fade-up" class="feedback-button">
             Submit Feedback
@@ -172,25 +161,16 @@
             <button class="submit" type="submit">Subscribe</button>
           </form>
         </div>
+
         <!-- Footer Links (Right Side) -->
         <div class="footer-links">
           <a href="about.html" class="text-white hover:underline">About Us</a>
-          <a href="contact.html" class="text-white hover:underline"
-            >Contact Us</a
-          >
+          <a href="contact.html" class="text-white hover:underline">Contact Us</a>
           <a href="faq.html" class="text-white hover:underline">FAQ</a>
-          <a href="feedback.html" class="text-white hover:underline"
-            >Feedback</a
-          >
-          <a href="terms.html" class="text-white hover:underline"
-            >Terms & Conditions</a
-          >
-            > Feedback </a>
-
+          <a href="feedback.html" class="text-white hover:underline">Feedback</a>
+          <a href="terms.html" class="text-white hover:underline">Terms & Conditions</a>> Feedback </a>
           <a href="blog.html" class="text-white hover:underline"> Blog </a>
-          <a href="privacy.html" class="text-white hover:underline">
-            Privacy Policy
-          </a>
+          <a href="privacy.html" class="text-white hover:underline">Privacy Policy</a>
         </div>
       </div>
 
@@ -199,26 +179,19 @@
         <p>&copy; 2025 Samnwadh. All rights reserved.</p>
         <div class="social-links">
           <a href="https://github.com/ak-0283"><i class="fab fa-github"></i></a>
-          <a href="https://discord.com/users/762235277263241236"
-            ><i class="fa-brands fa-discord"></i
-          ></a>
-          <a href="https://x.com/AK_2805"
-            ><i class="fa-brands fa-x-twitter"></i
-          ></a>
-          <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
+          <a href="https://discord.com/users/762235277263241236"><i class="fa-brands fa-discord"></i></a>
+          <a href="https://x.com/AK_2805"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/"><i class="fa-brands fa-linkedin"></i></a>
         </div>
       </div>
     </footer>
-    <script src="feedback.js"></script>
 
+    <script src="feedback.js"></script>
     <script src="script.js"></script>
     <script src="event.js"></script>
-
     <script src="card.js"></script>
-
     <script src="toggle.js"></script>
+
     <script>
       function updateAuthLink() {
         let loggedInUser = localStorage.getItem("loggedInUser");
@@ -246,5 +219,6 @@
     <script>
       AOS.init({ duration: 600, once: false });
     </script>
+
   </body>
 </html>
