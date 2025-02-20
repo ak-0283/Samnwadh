@@ -37,6 +37,7 @@ window.onscroll = function() {scrollFunction()};
           }
       }
       
+
       function resetfield() {
         document.getElementById("signup-name").value = "";
         document.getElementById("signup-dateofbirth").value = "";
@@ -54,6 +55,8 @@ window.onscroll = function() {scrollFunction()};
         let message = document.getElementById("signup-message");
         message.style.color = "blue";
         message.innerText = "All fields are reset";
+
+
         
         // Remove message after 2 seconds
         setTimeout(() => message.innerText = "", 2000);
