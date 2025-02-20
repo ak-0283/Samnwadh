@@ -9,7 +9,7 @@ body {
 
 /* Container */
 .faq-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 50px auto;
   padding: 30px;
   background: #ffffff;
@@ -45,7 +45,13 @@ h2 {
   color: #000;
   transition: color 0.3s ease;
 }
-
+@media(max-width:413px){
+  .faq-item{
+    min-width: 50px;
+    overflow-wrap: break-word;
+  }
+ 
+}
 .faq-item:hover .question {
   color: #007bff;
 }
