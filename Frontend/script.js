@@ -15,20 +15,28 @@ window.onscroll = function() {scrollFunction()};
 
 
         function signup() {
-            let username = document.getElementById("signup-username").value;
-            let password = document.getElementById("signup-password").value;
-            let message = document.getElementById("signup-message");
-        
-            if (localStorage.getItem(username)) {
-                message.style.color = "red";
-                message.innerText = "User already exists!";
-            } else {
-                localStorage.setItem(username, password);
-                message.style.color = "green";
-                message.innerText = "Signup successful! Redirecting to Home...";
-                setTimeout(() => window.location.href = "index.html", 2000);
-            }
-        }
+          let username = document.getElementById("signup-username").value;
+          let password = document.getElementById("signup-password").value;
+          let confirmPassword = document.getElementById("signup-confirmpassword").value;
+          let message = document.getElementById("signup-message");
+      
+          if (password !== confirmPassword) {
+              message.style.color = "red";
+              message.innerText = "Both passwords do not match!";
+              return; // Stop execution if passwords don't match
+          }
+      
+          if (localStorage.getItem(username)) {
+              message.style.color = "red";
+              message.innerText = "User already exists!";
+          } else {
+              localStorage.setItem(username, password);
+              message.style.color = "green";
+              message.innerText = "Signup successful! Redirecting to Home...";
+              setTimeout(() => window.location.href = "index.html", 2000);
+          }
+      }
+      
         
         function login() {
             let username = document.getElementById("login-username").value;
