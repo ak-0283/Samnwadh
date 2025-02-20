@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samnwadh - Connect & Collaborate</title>
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="card.css" />
     <link rel="stylesheet" href="toggle.css" />
@@ -11,16 +12,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="homefeedback.css" />
   </head>
   <body class="bg-gray-100 text-gray-900">
+    <!--greeting card code-->
 
-      <!--greeting card code-->
-
-    <div  class="overlay" id="overlay">
+    <div class="overlay" id="overlay">
       <div class="card">
-          <button class="close-btn" onclick="closeCard()">X</button>
-          <h1 id="greeting"></h1>
+        <button class="close-btn" onclick="closeCard()">X</button>
+        <h1 id="greeting"></h1>
       </div>
     </div>
 
@@ -28,10 +32,9 @@
       <div class="container">
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
 
-        <a href="index.html"><img src="logo.webp" alt="Samnwadh" class="logo" /></a>
-
-        <a href="index.html"><img src="logo.webp" alt="Samnwadh" /></a>
-
+        <a href="index.html"
+          ><img src="logo.webp" alt="Samnwadh" class="logo"
+        /></a>
         <nav class="navbar" id="navbar">
           <ul class="nav-links">
             <li><a href="#features">Features</a></li>
@@ -39,9 +42,8 @@
             <li><a href="contributor/contributor.html">Contribute</a></li>
             <li><a href="#community">Community</a></li>
             <li><a href="review.html">Review</a></li>
-            <li><a href="login.html">Login</a></li>
+            
             <li><a href="login.html" id="auth-link">Login</a></li>
-
           </ul>
         </nav>
       </div>
@@ -52,15 +54,25 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
-    <section  id="hero" class="bg-blue-600 text-white text-center py-24">
-      <h2 data-aos="fade-up" class="text-3xl font-bold mb-4">Welcome to Samnwadh!</h2>
+    <section id="hero" class="bg-blue-600 text-white text-center py-24">
+      <h2 data-aos="fade-up" class="text-3xl font-bold mb-4">
+        Welcome to Samnwadh!
+      </h2>
       <p data-aos="fade-up" class="text-lg mb-6">
         An open-source platform to connect, share, and collaborate in real-time.
       </p>
-      <a href="#contribute"
+      <a
+        href="#contribute"
         onclick="window.location.href = 'signup.html'"
         class="home-bttn">
         Get Started
+      </a>
+      <a
+        href="#contribute"
+        onclick="window.location.href = 'createRoom.html'"
+        class="bg-yellow-500 text-black py-2 px-6 rounded-lg hover:bg-yellow-400 hover:text-white transition-colors duration-300"
+      >
+        Create Room
       </a>
     </section>
 
@@ -70,17 +82,78 @@
         <div data-aos="fade-up" class="grid">
           <div class="feature-item">
             <h4 data-aos="fade-up">Real-time Messaging</h4>
-            <p data-aos="fade-up">Chat instantly with friends and colleagues in real-time.</p>
+            <p data-aos="fade-up">
+              Chat instantly with friends and colleagues in real-time.
+            </p>
           </div>
           <div class="feature-item">
             <h4 data-aos="fade-up">Group Chats</h4>
-            <p data-aos="fade-up">Create communities and have group discussions.</p>
+            <p data-aos="fade-up">
+              Create communities and have group discussions.
+            </p>
           </div>
           <div class="feature-item">
             <h4 data-aos="fade-up">End-to-End Encryption</h4>
-            <p data-aos="fade-up">Ensure privacy with end-to-end encryption for all chats.</p>
+            <p data-aos="fade-up">
+              Ensure privacy with end-to-end encryption for all chats.
+            </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- feedback section -->
+    <section data-aos="fade-up" class="feedback-section">
+      <div data-aos="fade-up" class="feedback-container">
+        <h2 data-aos="fade-up" class="feedback-title">
+          We Value Your Feedback!
+        </h2>
+        <p data-aos="fade-up" class="feedback-subtext">
+          Let us know how we can improve.
+        </p>
+
+        <form data-aos="fade-up" id="feedback-form">
+          <input
+            data-aos="fade-up"
+            type="text"
+            id="name"
+            class="feedback-input"
+            placeholder="Enter your name"
+            required
+          />
+
+          <input
+            data-aos="fade-up"
+            type="email"
+            id="email"
+            class="feedback-input"
+            placeholder="Enter your email"
+            required
+          />
+
+          <select id="rating" data-aos="fade-up" class="feedback-input">
+            <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+            <option value="4">⭐⭐⭐⭐ - Very Good</option>
+            <option value="3">⭐⭐⭐ - Good</option>
+            <option value="2">⭐⭐ - Fair</option>
+            <option value="1">⭐ - Poor</option>
+          </select>
+
+          <textarea
+            data-aos="fade-up"
+            id="message"
+            class="feedback-textarea"
+            rows="4"
+            placeholder="Write your feedback here..."
+            required
+          ></textarea>
+
+          <button type="submit" data-aos="fade-up" class="feedback-button">
+            Submit Feedback
+          </button>
+        </form>
+
+        <p id="feedback-message" class="feedback-message"></p>
       </div>
     </section>
 
@@ -114,10 +187,10 @@
           >
             > Feedback </a>
 
-          <a href="blog.html" class="text-white hover:underline"
-            > Blog </a>
-          <a href="privacy.html" class="text-white hover:underline"
-            > Privacy Policy </a>
+          <a href="blog.html" class="text-white hover:underline"> Blog </a>
+          <a href="privacy.html" class="text-white hover:underline">
+            Privacy Policy
+          </a>
         </div>
       </div>
 
@@ -138,6 +211,7 @@
         </div>
       </div>
     </footer>
+    <script src="feedback.js"></script>
 
     <script src="script.js"></script>
     <script src="event.js"></script>
@@ -147,30 +221,30 @@
     <script src="toggle.js"></script>
     <script>
       function updateAuthLink() {
-          let loggedInUser = localStorage.getItem("loggedInUser");
-          let authLink = document.getElementById("auth-link");
-  
-          if (loggedInUser) {
-              authLink.innerText = "Logout";
-              authLink.href = "#";
-              authLink.onclick = function () {
-                  logout();
-              };
-          }
+        let loggedInUser = localStorage.getItem("loggedInUser");
+        let authLink = document.getElementById("auth-link");
+
+        if (loggedInUser) {
+          authLink.innerText = "Logout";
+          authLink.href = "#";
+          authLink.onclick = function () {
+            logout();
+          };
+        }
       }
-  
+
       function logout() {
-          localStorage.removeItem("loggedInUser");
-          window.location.reload();
+        localStorage.removeItem("loggedInUser");
+        window.location.reload();
       }
-  
+
       // Update login/logout button on page load
       updateAuthLink();
-  </script>
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init({duration: 600, once: false });
+      AOS.init({ duration: 600, once: false });
     </script>
   </body>
 </html>
