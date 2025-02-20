@@ -37,7 +37,32 @@ window.onscroll = function() {scrollFunction()};
           }
       }
       
+
+      function resetfield() {
+        document.getElementById("signup-name").value = "";
+        document.getElementById("signup-dateofbirth").value = "";
+        document.getElementById("signup-username").value = "";
+        document.getElementById("signup-phone").value = "";
+        document.getElementById("signup-password").value = "";
+        document.getElementById("signup-confirmpassword").value = "";
+        document.getElementById("profilepic").value = "";
+    
+        // Reset radio buttons
+        let genderInputs = document.getElementsByName("gender");
+        genderInputs.forEach(input => input.checked = false);
+    
+        // Show reset message
+        let message = document.getElementById("signup-message");
+        message.style.color = "blue";
+        message.innerText = "All fields are reset";
+
+
         
+        // Remove message after 2 seconds
+        setTimeout(() => message.innerText = "", 2000);
+    }
+    
+    
         function login() {
             let username = document.getElementById("login-username").value;
             let password = document.getElementById("login-password").value;
