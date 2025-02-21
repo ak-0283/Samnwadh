@@ -69,7 +69,7 @@
 }
 
 .feedback-container .feedback-button:hover {
-  background: #0056b3;
+  background: #17579c;
   transform: scale(1.05); /* Slight zoom on hover */
 }
 
