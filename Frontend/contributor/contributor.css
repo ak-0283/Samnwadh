@@ -40,6 +40,9 @@ body {
         text-align: center; /* Centers the text */
     }
     
+    body.dark-mode .title {
+      color: #ffffff;
+    }
     /* Contributors Grid */
     .contributors-grid {
       display: grid;
