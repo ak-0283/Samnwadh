@@ -9,8 +9,17 @@ body {
 }
 
 /* Container */
+.faq-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.faq-box h2{
+  text-align: center;
+}
 .faq-container {
-  max-width: 900px;
+  max-width: 500px;
   margin: 50px auto;
   padding: 30px;
   background: #ffffff;
