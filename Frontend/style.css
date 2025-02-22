@@ -56,7 +56,6 @@ body {
   font-size: 16px;
 }
 
-
 .icon {
   display: none;
 }
@@ -81,7 +80,6 @@ body {
 .dark-mode .moon {
   display: inline;
 }
-
 
 /*dark mode button*/
 .toggle {
@@ -136,16 +134,13 @@ body {
   display: inline;
 }
 
-
-
 /* Container */
 .container {
-  display: flex;
+  /* display: flex; */
   justify-content: space space-evenly;
   width: auto;
   margin: 0 auto;
 }
-
 
 /* Header */
 header {
@@ -615,4 +610,3 @@ body.dark-mode ::-webkit-scrollbar {
 body.dark-mode ::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, #666, #888);
 }
-
