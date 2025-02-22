@@ -337,6 +337,28 @@ header .nav-links a:hover {
   transform: scale(1.05);
 }
 
+/* feedback */
+.feedback-section {
+  background-color: white;
+}
+
+.dark-mode .feedback-section {
+  background: #2d3748; /* Darker background for contrast */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.dark-mode .feedback-container {
+  background-color: #2d3748; /* Darker background for contrast */
+}
+.dark-mode .feedback-title {
+  color: #63b3ed !important;
+}
+.dark-mode .feedback-title {
+  color: #63b3ed !important; /* Light blue heading */
+}
+.dark-mode .feedback-button {
+  background-color: #007bff;
+}
+
 /* Footer Styling */
 /* Footer Styling */
 /* Footer Styling */
