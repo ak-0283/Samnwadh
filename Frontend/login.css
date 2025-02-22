@@ -14,6 +14,13 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh; /* Full height of viewport */
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode Full Page */
+.dark-mode {
+    background: linear-gradient(to right, #1e1e1e, #121212); /* Dark background */
+    color: white;
 }
 
 /* Navbar */
@@ -26,6 +33,60 @@ body {
     padding: 15px;
     display: flex;
     justify-content: flex-start;
+}
+
+/* Dark Mode for Navbar */
+.dark-mode .navbar {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Dark Mode Button */
+.toggle {
+    margin-left: auto; /* Push the dark mode button to the far right */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ffd700, #ffa500);
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.toggle:hover {
+    background: linear-gradient(135deg, #ffa500, #ff4500);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.dark-mode .toggle {
+    background: linear-gradient(135deg, #4b4b4b, #000);
+}
+
+.dark-mode .toggle:hover {
+    background: linear-gradient(135deg, #6b6b6b, #222);
+}
+
+/* Icon Visibility */
+.sun {
+    display: inline;
+}
+
+.moon {
+    display: none;
+}
+
+.dark-mode .sun {
+    display: none;
+}
+
+.dark-mode .moon {
+    display: inline;
 }
 
 /* Back Button */
@@ -54,12 +115,24 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     text-align: center;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.login-wrapper:hover{
+.login-wrapper:hover {
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
 }
+
+/* Dark Mode Login Form */
+.dark-mode .login-wrapper {
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .login-title {
+    color: white;
+}
+
 /* Login Title */
 .login-title {
     font-size: 24px;
@@ -85,6 +158,19 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+/* Dark Mode Input */
+.dark-mode .login-input {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
+
+.dark-mode .login-input:hover, 
+.dark-mode .login-input:focus {
+    border-color: #017afc;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
 /* Login Button */
 .login-button {
     width: 100%;
@@ -100,6 +186,15 @@ body {
 .login-button:hover {
     background-color: #0056b3;
     transform: scale(1.01);
+}
+
+/* Dark Mode Button */
+.dark-mode .login-button {
+    background-color: #017afc;
+}
+
+.dark-mode .login-button:hover {
+    background-color: #0056b3;
 }
 
 /* Sign Up Link */
@@ -119,6 +214,15 @@ body {
 .login-link:hover {
     color: #0056b3;
     text-decoration: underline;
+}
+
+/* Dark Mode Sign Up Link */
+.dark-mode .login-link {
+    color: #54a2f7;
+}
+
+.dark-mode .login-link:hover {
+    color: #0190f6;
 }
 
 /* Login Message */
