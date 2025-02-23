@@ -239,3 +239,26 @@ body {
         padding: 20px;
     }
 }
+
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.password-container i {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #555;
+}
+
+.password-container i:hover {
+    color: #000;
+}
