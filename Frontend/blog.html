@@ -117,6 +117,9 @@
     </style> -->
   </head>
   <body>
+    <!-- scroll btn -->
+    <button id="scrollToTopBtn">⬆</button>
+
     <header class="bg-blue-600 text-white p-6">
       <div class="container">
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
@@ -268,5 +271,18 @@
     </script>
     <script src="toggle.js"></script>
     <script src="blog.js"></script>
+    <script>
+      window.onscroll = function () {
+        if (document.documentElement.scrollTop > 100) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      };
+
+      scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
   </body>
 </html>
