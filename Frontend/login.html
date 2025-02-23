@@ -19,12 +19,32 @@
     <div class="login-wrapper">
         <h2 class="login-title">Login</h2>
         <input type="email" class="login-input" id="login-username" placeholder="Enter Email">
-        <input type="password" class="login-input" id="login-password" placeholder="Enter Password">
+
+        <!-- Password Field with Eye Icon -->
+        <div class="password-container">
+            <input type="password" class="login-input" id="login-password" placeholder="Enter Password">
+            <i class="fa-solid fa-eye" onclick="togglePassword('login-password', this)"></i>
+        </div>
+
         <button class="login-button" onclick="login()">Login</button>
         <p class="login-text">Don't have an account? <a href="signup.html" class="login-link">Sign Up</a></p>
         <p id="login-message" class="login-message"></p>
     </div>
-    <script src="script.js"></script>
 
+    <script>
+        function togglePassword(fieldId, eyeIcon) {
+            const passwordField = document.getElementById(fieldId);
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                eyeIcon.classList.remove("fa-eye-slash");
+                eyeIcon.classList.add("fa-eye");
+            }
+        }
+    </script>
+<script src="script.js"></script>
 </body>
 </html>
