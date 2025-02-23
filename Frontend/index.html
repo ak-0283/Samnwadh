@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samnwadh - Connect & Collaborate</title>
     <link rel="icon" type="image/x-icon" href="favicon-32x32.png" />
-    <link rel="stylesheet" href="faq.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="faq.css" />
     <link rel="stylesheet" href="card.css" />
     <link rel="stylesheet" href="toggle.css" />
     <link
@@ -18,22 +18,24 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
     <link rel="stylesheet" href="homefeedback.css" />
+    <<<<<<< HEAD =======
     <style>
       .faq-section {
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-       background-color: white;
-       padding-top:20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding-top: 20px;
       }
-      .faq-container{
+      .faq-container {
         margin-top: 0px;
       }
       .faq-item h1 {
         color:black;
       }
     </style>
+    >>>>>>> upstream/main
   </head>
   <body class="bg-gray-100 text-gray-900">
     <!--greeting card code-->
@@ -49,10 +51,11 @@
       <div class="container">
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
 
-        <a href="index.html"><img src="logo.webp" alt="Samnwadh" class="logo" /></a>
+        <a href="index.html"
+          ><img src="logo.webp" alt="Samnwadh" class="logo"
+        /></a>
 
-        <nav class="navbar" >
-
+        <nav class="navbar">
           <ul class="nav-links">
             <li><a href="#features">Features</a></li>
             <li><a href="techstack.html">Tech Stack</a></li>
@@ -99,9 +102,9 @@
       >
     </section>
 
-    <section data-aos="fade-up" id="features" >
-      <div data-aos="fade-up" class="container">
-        <h3 data-aos="fade-up" class="text-2xl font-bold mb-8">Features</h3>
+    <section data-aos="fade-up" id="features" class="py-16 bg-white">
+      <h3 data-aos="fade-up" class="text-2xl font-bold mb-8">Features</h3>
+      <div data-aos="fade-up" class="container text-center">
         <div data-aos="fade-up" class="grid">
           <div class="feature-item">
             <h4 data-aos="fade-up">Real-time Messaging</h4>
@@ -128,11 +131,7 @@
     </section>
 
     <!-- feedback section -->
-    <section
-      data-aos="fade-up"
-      class="feedback-section"
-      style="background-color: white"
-    >
+    <section data-aos="fade-up" class="feedback-section">
       <div data-aos="fade-up" class="feedback-container">
         <h2 data-aos="fade-up" class="feedback-title">
           We Value Your Feedback!
@@ -190,11 +189,7 @@
       <h2 data-aos="fade-up" class="text-2xl font-bold text-center mb-8">
         Frequently Asked Questions
       </h2>
-      <div
-        data-aos="fade-up"
-        class="faq-container"
-        style="background-color: cornsilk"
-      >
+      <div data-aos="fade-up" class="faq-container">
         <div data-aos="fade-up" class="faq-item">
           <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
             What is Samnwadh? <i class="fas fa-chevron-down"></i>
