@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: hsla(51, 67%, 73%, 0.9);
+ background-color: white;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -56,7 +56,6 @@ body {
   font-size: 16px;
 }
 
-
 .icon {
   display: none;
 }
@@ -81,7 +80,6 @@ body {
 .dark-mode .moon {
   display: inline;
 }
-
 
 /*dark mode button*/
 .toggle {
@@ -136,16 +134,13 @@ body {
   display: inline;
 }
 
-
-
 /* Container */
 .container {
-  display: flex;
+  /* display: flex; */
   justify-content: space space-evenly;
   width: auto;
   margin: 0 auto;
 }
-
 
 /* Header */
 header {
@@ -340,6 +335,28 @@ header .nav-links a:hover {
 #contribute a:hover {
   background-color: #0056b3;
   transform: scale(1.05);
+}
+
+/* feedback */
+.feedback-section {
+  background-color: white;
+}
+
+.dark-mode .feedback-section {
+  background: #2d3748; /* Darker background for contrast */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.dark-mode .feedback-container {
+  background-color: #2d3748; /* Darker background for contrast */
+}
+.dark-mode .feedback-title {
+  color: #63b3ed !important;
+}
+.dark-mode .feedback-title {
+  color: #63b3ed !important; /* Light blue heading */
+}
+.dark-mode .feedback-button {
+  background-color: #007bff;
 }
 
 /* Footer Styling */
@@ -615,4 +632,3 @@ body.dark-mode ::-webkit-scrollbar {
 body.dark-mode ::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, #666, #888);
 }
-
