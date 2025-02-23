@@ -4,10 +4,41 @@ body {
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: 0;
+}
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgb(19, 99, 202);
+  padding: 15px;
+  display: flex;
+  height: 40px;
+  justify-content: flex-start;
+  box-shadow: 0 4px 4px rgb(44, 44, 44);
+}
+.dark-mode .navbar{
+  background: #444;
+}
+/* Back Button */
+.back-button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #218838;
+  transform: scale(1.05);
 }
 
 /* Feedback container */
@@ -18,7 +49,8 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   width: 350px;
   text-align: center;
-  margin-top: 80px; 
+  margin-top: 100px;
+  margin-bottom: 60px; 
 }
 
 /* Title */
@@ -118,5 +150,136 @@ body {
 
   .feedback-title {
     font-size: 20px; /* Slightly reduce text size */
+  }
+}
+footer {
+  background-color: #2461a3;
+  color: white;
+  padding: 40px 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+}
+
+/* Footer Main Layout */
+.footer-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between; /* Keeps links on right */
+  align-items: center;
+  flex-wrap: wrap; /* Prevents overlap */
+}
+
+/* Footer Links (Always on Right) */
+.footerLinksForAdminInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns to the right */
+  text-align: left;
+  margin-right: auto; /* Pushes links to the right */
+}
+.footerLinksForAdminInfo a {
+  color: white;
+}
+.footerLinksForAdminInfo a:hover {
+  color: black;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns to the right */
+  text-align: right;
+  margin-left: auto; /* Pushes links to the right */
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  margin: 5px 0;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  color: #ffcb00;
+  text-decoration: underline;
+}
+
+/* Social Links & Copyright (Centered at Bottom) */
+.bottom-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.bottom-footer p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.newsletter {
+  margin: 20px;
+}
+
+.newsletter input {
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+.newsletter button {
+  background: linear-gradient(135deg, #6d6a6a, #ffffff);
+}
+#subscribeForm {
+  margin-top: 10px;
+}
+.submit {
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.social-links a:hover {
+  color: #ffcb00;
+  background-color: purple;
+}
+
+/* Responsive Fix for Small Screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    /* align-items: flex-end; */
+  }
+
+  .footer-links {
+    align-items: center; /* Center the links on small screens */
+    text-align: center;
+    margin-left: 0;
   }
 }
