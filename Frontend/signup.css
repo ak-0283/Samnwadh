@@ -8,9 +8,10 @@
 
 /* Full-Screen Centering */
 body {
-    background: linear-gradient(to right, #2b7ec6, #00f2fe);
+    background: linear-gradient(to right, #2A69AE, #20418F);
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh; /* Full height of viewport */
@@ -22,7 +23,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to right, #217bca, #14b1b9);
     padding: 15px;
     display: flex;
     justify-content: flex-start;
@@ -30,7 +31,7 @@ body {
 
 /* Back Button */
 .back-button {
-    background: #28a745;
+    background: #204290;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -41,7 +42,7 @@ body {
 }
 
 .back-button:hover {
-    background: #218838;
+    background: #0190f6;
     transform: scale(1.05);
 }
 
@@ -55,7 +56,8 @@ body {
     border-radius: 12px;
     text-align: center;
     transition: all 0.3s ease-in-out;
-    margin-top: 200px;
+    margin-top: 700px;
+    margin-bottom: 50px;
 }
 
 /* Form Hover Effect */
@@ -66,7 +68,11 @@ body {
 .signup-wrapper input::placeholder{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
-    color: #444;
+    color: #525455;
+}
+.signup-wrapper h2{
+    color: #fff;
+    text-shadow: 2px 2px 2px #007bff;
 }
 
 /* Signup Title */
@@ -113,7 +119,7 @@ body {
 
 .signup-input:hover,
 .signup-input:focus {
-    border-color: #011cb5;
+    border-color: #017afc;
     outline: none;
     box-shadow: 0 0 10px rgba(1, 28, 181, 0.4);
     background-color: rgba(255, 255, 255, 0.8);
@@ -128,8 +134,7 @@ body {
     width: 100%;
     margin-right: 20px;
     padding: 12px;
-    background-color: #28a745;
-    color: white;
+    background:linear-gradient(to right, #2965AB, #204290);    color: white;
     border: none;
     border-radius: 6px;
     font-size: 16px;
@@ -139,16 +144,16 @@ body {
 }
 
 .reset-button:hover {
-    background-color: #218838;
+    background:linear-gradient(to left, #2965AB, #204290);
     transform: scale(1.05);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .signup-button {
     width: 100%;
     padding: 12px;
-    background-color: #28a745;
+    background-color: transparent;
     color: white;
-    border: none;
+    border:2px solid #04468c;
     border-radius: 6px;
     font-size: 16px;
     font-weight: bold;
@@ -157,8 +162,9 @@ body {
 }
 
 .signup-button:hover {
-    background-color: #218838;
+    background:linear-gradient(to right, #2965AB, #204290);
     transform: scale(1.05);
+    border: none;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -170,14 +176,14 @@ body {
 }
 
 .signup-link {
-    color: #28a745;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
 .signup-link:hover {
-    color: #218838;
+    color: #04468c;
     text-decoration: underline;
 }
 
@@ -212,3 +218,155 @@ body {
     margin-bottom: 5px;
     }
 }
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.password-container i {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #555;
+}
+
+.password-container i:hover {
+    color: #000;
+}
+footer {
+    background: linear-gradient(to right, #2165a1, #099ca3);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100vw;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  
+  }
+  
+  /* Footer Main Layout */
+  .footer-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between; /* Keeps links on right */
+    align-items: center;
+    flex-wrap: wrap; /* Prevents overlap */
+  }
+  
+  /* Footer Links (Always on Right) */
+  .footerLinksForAdminInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns to the right */
+    text-align: left;
+    margin-right: auto; /* Pushes links to the right */
+  }
+  .footerLinksForAdminInfo a {
+    color: white;
+  }
+  .footerLinksForAdminInfo a:hover {
+    color: black;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aligns to the right */
+    text-align: right;
+    margin-left: auto; /* Pushes links to the right */
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .footer-links a:hover {
+    color: #ffcb00;
+    text-decoration: underline;
+  }
+  
+  /* Social Links & Copyright (Centered at Bottom) */
+  .bottom-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .bottom-footer p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  .newsletter {
+    margin: 20px;
+  }
+  
+  .newsletter input {
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+  }
+  .newsletter button {
+    background: linear-gradient(135deg, #6d6a6a, #ffffff);
+  }
+  #subscribeForm {
+    margin-top: 10px;
+  }
+  .submit {
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  
+  .social-links a:hover {
+    color: #ffcb00;
+    background-color: purple;
+  }
+  
+  /* Responsive Fix for Small Screens */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      /* align-items: flex-end; */
+    }
+  
+    .footer-links {
+      align-items: center; /* Center the links on small screens */
+      text-align: center;
+      margin-left: 0;
+    }
+  }
