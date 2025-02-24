@@ -8,115 +8,62 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
     <link rel="stylesheet" href="blog.css" />
     <link rel="stylesheet" href="toggle.css" />
-    <!-- <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-        }
+    <!-- styling for the add blog page  -->
+    <style>
+      .add-blog-section {
+        background: #f8f9fa;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 600px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-            text-align: center;
-        }
+      .add-blog-section h2 {
+        text-align: center;
+        color: #333;
+      }
 
-        .blog-section {
-            padding: 50px 0;
-        }
+      .add-blog-form {
+        display: flex;
+        flex-direction: column;
+      }
 
-        .blog-title {
-            color: #333;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
+      .add-blog-form input,
+      .add-blog-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
 
-        .search-bar {
-            width: 100%;
-            max-width: 400px;
-            padding: 10px;
-            margin: 20px auto;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-            display: block;
-        }
+      .add-blog-form button {
+        background: #007bff;
+        color: white;
+        padding: 10px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
 
-        .blog-card {
-            display: flex;
-            background: white;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .blog-card:hover {
-            transform: scale(1.02);
-        }
-
-        .blog-card img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .blog-content {
-            padding: 20px;
-            flex: 1;
-        }
-
-        .blog-content h2 {
-            margin: 0;
-            color: #007bff;
-            font-size: 1.8rem;
-        }
-
-        .blog-content p {
-            color: #555;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-        .read-more {
-            display: inline-block;
-            margin-top: 10px;
-            color: white;
-            background: #007bff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s ease-in-out;
-        }
-
-        .read-more:hover {
-            background: #0056b3;
-        }
-
-        @media (max-width: 768px) {
-            .blog-card {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .blog-card img {
-                width: 30%;
-                height: auto;
-                
-            }
-        }
-    </style> -->
+      .add-blog-form button:hover {
+        background: #0056b3;
+      }
+    </style>
   </head>
   <body>
+    <!-- scroll top button -->
+    <button id="scrollToTopBtn">⬆</button>
     <header class="bg-blue-600 text-white p-6">
       <div class="container">
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
@@ -128,14 +75,40 @@
             <li><a href="contributor/contributor.html">Contribute</a></li>
             <li><a href="#community">Community</a></li>
             <li><a href="login.html">Login</a></li>
+            <!-- <li><a href="createBlog.html">Create A Blog</a></li> -->
           </ul>
+          <button type="button" id="darkModeToggle" class="toggle">
+            <span class="icon sun">☀️</span>
+            <span class="icon moon">🌙</span>
+          </button>
         </nav>
       </div>
     </header>
 
+    <section class="add-blog-section">
+      <h2>Add a New Blog</h2>
+      <form class="add-blog-form" id="blogForm">
+        <input
+          type="text"
+          id="blogTitle"
+          placeholder="Enter Blog Title"
+          required
+        />
+        <textarea
+          id="blogDescription"
+          placeholder="Enter Blog Description"
+          rows="3"
+          required
+        ></textarea>
+        <input type="text" id="blogImage" placeholder="Enter Image URL" />
+        <button type="submit">Add Blog</button>
+      </form>
+    </section>
     <!-- Blog Section -->
     <section class="blog-section">
       <div class="container">
+        <!-- ADD POST SECTION -->
+
         <h1 class="blog-title">Open Source Blogs</h1>
 
         <!-- Search Bar -->
@@ -148,66 +121,51 @@
         />
 
         <!-- Blog Posts -->
-        <div class="blog-card" data-title="The Power of Open Source">
-          <img
-            src="https://tse2.mm.bing.net/th?id=OIP.j4pk788zW7EJoqZro0oeSgHaGa&pid=Api&P=0&h=180"
-            alt="Open Source Contribution"
-          />
-          <div class="blog-content">
-            <h2>The Power of Open Source</h2>
-            <p>
-              Open source software allows developers worldwide to collaborate
-              and innovate. Learn why open source is shaping the future of
-              technology.
-            </p>
-            <a
-              href="https://opensource.googleblog.com/2024/04/the-power-of-open-source.html"
-              class="read-more"
-              >Read More</a
-            >
+        <div id="blogContainer">
+          <div
+            class="blog-card"
+            data-title="How to Get Started with Open Source"
+          >
+            <img
+              src="https://tse4.mm.bing.net/th?id=OIP.FpQwSeQNA5GCLOW3nl3EpgHaEh&pid=Api&P=0&h=180"
+              alt="GitHub"
+            />
+            <div class="blog-content">
+              <h2>How to Get Started with Open Source</h2>
+              <p>
+                New to open source? This guide will help you contribute to
+                projects, find beginner-friendly repositories, and collaborate
+                on GitHub.
+              </p>
+              <a
+                href="https://www.geeksforgeeks.org/step-wise-guide-to-start-with-open-source/"
+                class="read-more"
+                >Read More</a
+              >
+            </div>
           </div>
-        </div>
 
-        <div class="blog-card" data-title="How to Get Started with Open Source">
-          <img
-            src="https://tse4.mm.bing.net/th?id=OIP.FpQwSeQNA5GCLOW3nl3EpgHaEh&pid=Api&P=0&h=180"
-            alt="GitHub"
-          />
-          <div class="blog-content">
-            <h2>How to Get Started with Open Source</h2>
-            <p>
-              New to open source? This guide will help you contribute to
-              projects, find beginner-friendly repositories, and collaborate on
-              GitHub.
-            </p>
-            <a
-              href="https://www.geeksforgeeks.org/step-wise-guide-to-start-with-open-source/"
-              class="read-more"
-              >Read More</a
-            >
-          </div>
-        </div>
-
-        <div
-          class="blog-card"
-          data-title="Why Linux is the Heart of Open Source"
-        >
-          <img
-            src="https://tse3.mm.bing.net/th?id=OIP.0Is0Bxodds-SBu1JHhMZgAHaDx&pid=Api&P=0&h=180"
-            alt="Linux OS"
-          />
-          <div class="blog-content">
-            <h2>Why Linux is the Heart of Open Source</h2>
-            <p>
-              Linux powers the world's servers, smartphones, and even
-              supercomputers. Discover why it's one of the most influential open
-              source projects.
-            </p>
-            <a
-              href="https://techgenies.com/why-is-linux-so-popular/"
-              class="read-more"
-              >Read More</a
-            >
+          <div
+            class="blog-card"
+            data-title="Why Linux is the Heart of Open Source"
+          >
+            <img
+              src="https://tse3.mm.bing.net/th?id=OIP.0Is0Bxodds-SBu1JHhMZgAHaDx&pid=Api&P=0&h=180"
+              alt="Linux OS"
+            />
+            <div class="blog-content">
+              <h2>Why Linux is the Heart of Open Source</h2>
+              <p>
+                Linux powers the world's servers, smartphones, and even
+                supercomputers. Discover why it's one of the most influential
+                open source projects.
+              </p>
+              <a
+                href="https://techgenies.com/why-is-linux-so-popular/"
+                class="read-more"
+                >Read More</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -226,9 +184,12 @@
           <a href="feedback.html" class="text-white hover:underline">
             Feedback
           </a>
-          <a href="privacy.html" class="text-white hover:underline">
-            Privacy Policy
-          </a>
+          <a href="privacy.html" class="text-white hover:underline"
+            >Privacy Policy</a
+          >
+          <a href="terms.html" class="text-white hover:underline"
+            >Terms & Conditions</a
+          >
         </div>
       </div>
 
@@ -264,7 +225,82 @@
           }
         });
       }
+
+      // Add Blog Feature
+      document
+        .getElementById("blogForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          let title = document.getElementById("blogTitle").value;
+          let description = document.getElementById("blogDescription").value;
+          let imageUrl =
+            document.getElementById("blogImage").value ||
+            "https://via.placeholder.com/150";
+
+          let newBlog = `
+          <div class="blog-card" data-title="${title}">
+            <img src="${imageUrl}" alt="${title}" />
+            <div class="blog-content">
+              <h2>${title}</h2>
+              <p>${description}</p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+        `;
+
+          document
+            .getElementById("blogContainer")
+            .insertAdjacentHTML("afterbegin", newBlog);
+
+          // Save to local storage
+          let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
+          blogs.push({ title, description, imageUrl });
+          localStorage.setItem("blogs", JSON.stringify(blogs));
+
+          document.getElementById("blogForm").reset();
+        });
+
+      // Load blogs from local storage
+      window.onload = function () {
+        let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
+        blogs.forEach((blog) => {
+          let newBlog = `
+            <div class="blog-card" data-title="${blog.title}">
+              <img src="${blog.imageUrl}" alt="${blog.title}" />
+              <div class="blog-content">
+                <h2>${blog.title}</h2>
+                <p>${blog.description}</p>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+            </div>
+          `;
+          document
+            .getElementById("blogContainer")
+            .insertAdjacentHTML("afterbegin", newBlog);
+        });
+      };
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="toggle.js"></script>
+    <script src="blog.js"></script>
+    <script>
+      AOS.init({ duration: 600, once: false });
+      // Scroll to Top button functionality
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      window.onscroll = function () {
+        if (document.documentElement.scrollTop > 100) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      };
+
+      scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
   </body>
 </html>
