@@ -11,25 +11,6 @@ body {
   background-color: #2b6cb0;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #28a745;
-}
 
 /* Toggle Button */
 .menu-toggle {

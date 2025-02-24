@@ -6,6 +6,7 @@
     <title>Samnwadh - Connect & Collaborate</title>
     <link rel="icon" type="image/x-icon" href="favicon-32x32.png" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="faq.css" />
     <link rel="stylesheet" href="card.css" />
     <link rel="stylesheet" href="toggle.css" />
     <link
@@ -17,6 +18,23 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
     <link rel="stylesheet" href="homefeedback.css" />
+
+    <style>
+      .faq-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding-top: 20px;
+      }
+      .faq-container {
+        margin-top: 0px;
+      }
+      .faq-item h1 {
+        color: black;
+      }
+    </style>
   </head>
   <body class="bg-gray-100 text-gray-900">
     <!--greeting card code-->
@@ -35,16 +53,21 @@
         <a href="index.html"
           ><img src="logo.webp" alt="Samnwadh" class="logo"
         /></a>
-        <nav class="navbar" id="navbar">
+
+        <nav class="navbar">
           <ul class="nav-links">
             <li><a href="#features">Features</a></li>
             <li><a href="techstack.html">Tech Stack</a></li>
             <li><a href="contributor/contributor.html">Contribute</a></li>
-            <li><a href="#community">Community</a></li>
+            <li><a href="community.html">Community</a></li>
             <li><a href="review.html">Review</a></li>
 
             <li><a href="login.html" id="auth-link">Login</a></li>
           </ul>
+          <button type="button" id="darkModeToggle" class="toggle">
+            <span class="icon sun">☀️</span>
+            <span class="icon moon">🌙</span>
+          </button>
         </nav>
       </div>
     </header>
@@ -79,8 +102,8 @@
     </section>
 
     <section data-aos="fade-up" id="features" class="py-16 bg-white">
+      <h3 data-aos="fade-up" class="text-2xl font-bold mb-8">Features</h3>
       <div data-aos="fade-up" class="container text-center">
-        <h3 data-aos="fade-up" class="text-2xl font-bold mb-8">Features</h3>
         <div data-aos="fade-up" class="grid">
           <div class="feature-item">
             <h4 data-aos="fade-up">Real-time Messaging</h4>
@@ -158,6 +181,90 @@
         </form>
 
         <p id="feedback-message" class="feedback-message"></p>
+      </div>
+    </section>
+    <!-- faq section -->
+    <section class="faq-section">
+      <h2 data-aos="fade-up" class="text-2xl font-bold text-center mb-8">
+        Frequently Asked Questions
+      </h2>
+      <div data-aos="fade-up" class="faq-container">
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            What is Samnwadh? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            Samnwadh is an open-source platform designed to facilitate real-time
+            collaboration, messaging, and community building.
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Is Samnwadh free to use? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            Yes! Samnwadh is completely free and open-source. You can contribute
+            to its development on GitHub.
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            How do I contribute to Samnwadh? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            You can contribute by visiting our
+            <a href="./contributor/contributor.html">Contribute</a> section and
+            following the guidelines on our GitHub repository.
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Is my data secure on Samnwadh? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            Absolutely! We use end-to-end encryption to ensure your
+            conversations remain private and secure.
+          </div>
+        </div>
+
+        <!-- New Q&A Items -->
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Can I use Samnwadh on mobile devices?
+            <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            Yes, Samnwadh is fully responsive and works smoothly on both mobile
+            and desktop devices.
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Do I need an account to use Samnwadh?
+            <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            While some features may be accessible without an account, creating
+            an account unlocks full functionality such as messaging and
+            collaboration tools.
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Who can I contact for support? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            If you need help, you can reach out to us at
+            <a href="mailto:support@samnwadh.com">support@samnwadh.com</a> or
+            visit our community forum.
+          </div>
+        </div>
       </div>
     </section>
 
@@ -256,6 +363,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init({ duration: 600, once: false });
+    </script>
+    <script>
+      function toggleAnswer(element) {
+        let answer = element.nextElementSibling;
+        answer.style.display =
+          answer.style.display === "block" ? "none" : "block";
+      }
+
+      function searchFAQ() {
+        let input = document.querySelector(".search-box").value.toLowerCase();
+        let questions = document.querySelectorAll(".faq-item");
+
+        questions.forEach((item) => {
+          let text = item.textContent.toLowerCase();
+          item.style.display = text.includes(input) ? "block" : "none";
+        });
+      }
     </script>
   </body>
 </html>
