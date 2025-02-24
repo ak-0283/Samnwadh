@@ -8,7 +8,7 @@
 
 /* Full-Screen Centering */
 body {
-    background: linear-gradient(to right, #2b7ec6, #00f2fe);
+    background: linear-gradient(to right, #2A69AE, #20418F);
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@ body {
 
 /* Back Button */
 .back-button {
-    background: #28a745;
+    background: #204290;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -42,7 +42,7 @@ body {
 }
 
 .back-button:hover {
-    background: #218838;
+    background: #0190f6;
     transform: scale(1.05);
 }
 
@@ -68,7 +68,11 @@ body {
 .signup-wrapper input::placeholder{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
-    color: #444;
+    color: #525455;
+}
+.signup-wrapper h2{
+    color: #fff;
+    text-shadow: 2px 2px 2px #007bff;
 }
 
 /* Signup Title */
@@ -115,7 +119,7 @@ body {
 
 .signup-input:hover,
 .signup-input:focus {
-    border-color: #011cb5;
+    border-color: #017afc;
     outline: none;
     box-shadow: 0 0 10px rgba(1, 28, 181, 0.4);
     background-color: rgba(255, 255, 255, 0.8);
@@ -130,8 +134,7 @@ body {
     width: 100%;
     margin-right: 20px;
     padding: 12px;
-    background-color: #28a745;
-    color: white;
+    background:linear-gradient(to right, #2965AB, #204290);    color: white;
     border: none;
     border-radius: 6px;
     font-size: 16px;
@@ -141,16 +144,16 @@ body {
 }
 
 .reset-button:hover {
-    background-color: #218838;
+    background:linear-gradient(to left, #2965AB, #204290);
     transform: scale(1.05);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .signup-button {
     width: 100%;
     padding: 12px;
-    background-color: #28a745;
+    background-color: transparent;
     color: white;
-    border: none;
+    border:2px solid #04468c;
     border-radius: 6px;
     font-size: 16px;
     font-weight: bold;
@@ -159,8 +162,9 @@ body {
 }
 
 .signup-button:hover {
-    background-color: #218838;
+    background:linear-gradient(to right, #2965AB, #204290);
     transform: scale(1.05);
+    border: none;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -172,14 +176,14 @@ body {
 }
 
 .signup-link {
-    color: #28a745;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
 .signup-link:hover {
-    color: #218838;
+    color: #04468c;
     text-decoration: underline;
 }
 

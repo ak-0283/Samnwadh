@@ -8,7 +8,7 @@
 
 /* Full-Screen Centering */
 body {
-    background: linear-gradient(to right, #4facfe, #00f2fe);
+    background: linear-gradient(to right, #2A69AE, #20418F);
     font-family: Arial, sans-serif;
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@ body {
 
 /* Back Button */
 .back-button {
-    background: #2867f0;
+    background: #204290;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -59,6 +59,10 @@ body {
 .login-wrapper:hover{
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
+}
+.login-wrapper h2{
+    color: #fff;
+    text-shadow: 2px 2px 2px #007bff;
 }
 /* Login Title */
 .login-title {
@@ -89,7 +93,7 @@ body {
 .login-button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background:linear-gradient(to right, #2965AB, #204290);
     color: white;
     border: none;
     border-radius: 5px;
@@ -98,7 +102,7 @@ body {
 }
 
 .login-button:hover {
-    background-color: #0056b3;
+    background:linear-gradient(to left, #2965AB, #204290);
     transform: scale(1.01);
 }
 
@@ -110,14 +114,14 @@ body {
 }
 
 .login-link {
-    color: #54a2f7;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
 .login-link:hover {
-    color: #0056b3;
+    color: #04468c;
     text-decoration: underline;
 }
 
