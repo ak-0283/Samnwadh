@@ -95,6 +95,7 @@
       <h2 data-aos="fade-up" class="text-2xl font-bold text-center mb-8">
         Frequently Asked Questions
       </h2>
+      <p id="noResultsMessage" style="display: none; color: red; text-align: center; margin-top: 10px;">No results found</p>
       <div data-aos="fade-up" class="faq-container">
         <div data-aos="fade-up" class="faq-item">
           <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
@@ -218,14 +219,31 @@
       }
 
       function searchFAQ() {
-        let input = document.querySelector(".search-box").value.toLowerCase();
-        let questions = document.querySelectorAll(".faq-item");
+    let input = document.querySelector(".search-box").value.toLowerCase();
+    let questions = document.querySelectorAll(".faq-item");
+    let resultsFound = false;
 
-        questions.forEach((item) => {
-          let text = item.textContent.toLowerCase();
-          item.style.display = text.includes(input) ? "block" : "none";
-        });
-      }
+    questions.forEach((item) => {
+        let text = item.textContent.toLowerCase();
+        let match = text.includes(input);
+        item.style.display = match ? "block" : "none";
+        if (match) resultsFound = true;
+    });
+
+    let noResultsMessage = document.querySelector(".no-results");
+    if (!noResultsMessage) {
+        noResultsMessage = document.createElement("div");
+        noResultsMessage.classList.add("no-results");
+        noResultsMessage.style.display = "none";
+        noResultsMessage.style.marginTop = "10px";
+        noResultsMessage.style.color = "red";
+        noResultsMessage.textContent = "No results found.";
+        document.querySelector(".faq-container").appendChild(noResultsMessage);
+    }
+
+    noResultsMessage.style.display = resultsFound ? "none" : "block";
+}
+
     </script>
     <script src="script.js"></script>
     <script src="toggle.js"></script>
