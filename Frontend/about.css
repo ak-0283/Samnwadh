@@ -124,3 +124,17 @@ p {
         height: 100px;
     }
 }
+.dark-mode .navbar {
+    background: none;
+    background-color: #333;
+}
+body.dark-mode{
+    background: none;
+    background-color: #333;
+}
+.dark-mode .back-button{
+    background-color: #767575;
+}
+.dark-mode .highlight{
+    color: #dbc467;
+}
