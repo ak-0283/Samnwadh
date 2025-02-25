@@ -34,7 +34,7 @@ body {
   justify-content: space-evenly !important;
   align-items: center !important;
   padding: 10px 20px;
-  background-color: #f8f9fa; /* Light background for navbar */
+
   font-family: Arial, sans-serif;
 }
 
@@ -49,7 +49,9 @@ body {
 .nav-links li {
   display: inline;
 }
-
+.dark-mode .navbar{
+  background-color: #333;
+}
 .nav-links a {
   text-decoration: none;
   color: #000; /* Text color for links */
@@ -282,11 +284,11 @@ header .nav-links a:hover {
 }
 
 .dark-mode .feedback-section {
-  background: #2d3748; /* Darker background for contrast */
+  background: #1e1e1e; /* Darker background for contrast */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 .dark-mode .feedback-container {
-  background-color: #2d3748; /* Darker background for contrast */
+  background-color: #333; /* Darker background for contrast */
 }
 .dark-mode .feedback-title {
   color: #63b3ed !important;
@@ -341,7 +343,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-end; /* Aligns to the right */
-  text-align: right;
+  text-align: center;
   margin-left: auto; /* Pushes links to the right */
 }
 

@@ -1,20 +1,21 @@
 /* General styling */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(to right, #2A69AE, #20418F);
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
+  overflow-x: hidden;
 }
 .navbar {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background: rgb(19, 99, 202);
+  background: rgba(255, 255, 255, 0.2);
   padding: 15px;
   display: flex;
   height: 40px;
@@ -26,7 +27,7 @@ body {
 }
 /* Back Button */
 .back-button {
-  background: #28a745;
+  background: #204290;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -37,7 +38,7 @@ body {
 }
 
 .back-button:hover {
-  background: #218838;
+  background: #0190f6;
   transform: scale(1.05);
 }
 
@@ -57,6 +58,8 @@ body {
 .feedback-title {
   font-size: 24px;
   font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 2px #007bff;
 }
 
 /* Subtext */
@@ -86,17 +89,19 @@ body {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background-color: #ff9800;
+  background:linear-gradient(to right, #2965AB, #204290);    color: white;
   color: white;
   border: none;
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .feedback-button:hover {
-  background-color: #e68900;
+  background:linear-gradient(to left, #2965AB, #204290);
+  transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Message */
@@ -119,7 +124,7 @@ body {
 
 /* Back Button */
 .back-button {
-  background: #2867f0;
+  background: #204290;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -153,7 +158,7 @@ body {
   }
 }
 footer {
-  background-color: #2461a3;
+  background-color: rgba(255, 255, 255, 0.2);
   color: white;
   padding: 40px 0;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
