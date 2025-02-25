@@ -8,17 +8,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-  />
     <link rel="stylesheet" href="blog.css" />
     <link rel="stylesheet" href="toggle.css" />
     
   </head>
   <body>
-    <!-- scroll top button -->
-<button id="scrollToTopBtn">⬆</button>
     <header class="bg-blue-600 text-white p-6">
       <div class="container">
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
@@ -53,6 +47,7 @@
           placeholder="Search blogs..."
           onkeyup="searchBlogs()"
         />
+        <p id="noResultsMessage" style="display: none; color: red; text-align: center; margin-top: 10px;">No results found</p>
 
         <!-- Blog Posts -->
         <div class="blog-card" data-title="The Power of Open Source">
@@ -159,39 +154,36 @@
 
     <script>
       function searchBlogs() {
-        let input = document.getElementById("searchInput").value.toLowerCase();
-        let blogCards = document.querySelectorAll(".blog-card");
-
-        blogCards.forEach((card) => {
-          let title = card.getAttribute("data-title").toLowerCase();
-          if (title.includes(input)) {
-            card.style.display = "flex";
-          } else {
-            card.style.display = "none";
+          let input = document.getElementById("searchInput").value.toLowerCase();
+          let blogCards = document.querySelectorAll(".blog-card");
+          let resultsFound = false;
+          let noResultsMessage = document.getElementById("noResultsMessage");
+  
+          if (!noResultsMessage) {
+              noResultsMessage = document.createElement("p");
+              noResultsMessage.id = "noResultsMessage";
+              noResultsMessage.textContent = "No results found";
+              noResultsMessage.style.display = "none";
+              noResultsMessage.style.textAlign = "center";
+              document.getElementById("blogContainer").appendChild(noResultsMessage);
           }
-        });
+  
+          blogCards.forEach((card) => {
+              let title = card.getAttribute("data-title").toLowerCase();
+              if (title.includes(input)) {
+                  card.style.display = "flex";
+                  resultsFound = true;
+              } else {
+                  card.style.display = "none";
+              }
+          });
+  
+          noResultsMessage.style.display = resultsFound ? "none" : "block";
       }
-    </script>
-
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  </script>
+  
     <script src="toggle.js"></script>
     <script src="blog.js"></script>
-    <script>
-      AOS.init({ duration: 600, once: false });
-      // Scroll to Top button functionality
-      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-window.onscroll = function () {
-    if (document.documentElement.scrollTop > 100) {
-        scrollToTopBtn.style.display = "block";
-    } else {
-        scrollToTopBtn.style.display = "none";
-    }
-};
-
-scrollToTopBtn.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
