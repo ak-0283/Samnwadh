@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #2b6cb0, #4a90e2);
+    background: linear-gradient(to right, #2A69AE, #20418F);
     color: white;
     text-align: center;
     padding: 0;
@@ -10,7 +10,7 @@ body {
     margin: 50px auto;
     max-width: 700px;
     margin-left: 360px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -32,7 +32,7 @@ p {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
+    background: rgba(255, 255, 255, 0.2);
     padding: 12px 20px;
     position: sticky;
     top: 0;
@@ -41,7 +41,7 @@ p {
 
 /* Back Button */
 .back-button {
-    background: #2867f0;
+    background: #204290;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -122,4 +122,7 @@ p {
         width: 80%;
         height: 100px;
     }
+}
+footer{
+    background-color: rgba(255, 255, 255, 0.2) !important;
 }
