@@ -119,6 +119,17 @@
           placeholder="Search blogs..."
           onkeyup="searchBlogs()"
         />
+        <p
+          id="noResultsMessage"
+          style="
+            display: none;
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+          "
+        >
+          No results found
+        </p>
 
         <!-- Blog Posts -->
         <div id="blogContainer">
@@ -180,16 +191,14 @@
           <a href="contact.html" class="text-white hover:underline"
             >Contact Us</a
           >
+          <a href="review.html" class="text-white hover:underline">Review</a>
           <a href="faq.html" class="text-white hover:underline">FAQ</a>
           <a href="feedback.html" class="text-white hover:underline">
             Feedback
           </a>
-          <a href="privacy.html" class="text-white hover:underline"
-            >Privacy Policy</a
-          >
-          <a href="terms.html" class="text-white hover:underline"
-            >Terms & Conditions</a
-          >
+          <a href="privacy.html" class="text-white hover:underline">
+            Privacy Policy
+          </a>
         </div>
       </div>
 
@@ -215,71 +224,32 @@
       function searchBlogs() {
         let input = document.getElementById("searchInput").value.toLowerCase();
         let blogCards = document.querySelectorAll(".blog-card");
+        let resultsFound = false;
+        let noResultsMessage = document.getElementById("noResultsMessage");
+
+        if (!noResultsMessage) {
+          noResultsMessage = document.createElement("p");
+          noResultsMessage.id = "noResultsMessage";
+          noResultsMessage.textContent = "No results found";
+          noResultsMessage.style.display = "none";
+          noResultsMessage.style.textAlign = "center";
+          document
+            .getElementById("blogContainer")
+            .appendChild(noResultsMessage);
+        }
 
         blogCards.forEach((card) => {
           let title = card.getAttribute("data-title").toLowerCase();
           if (title.includes(input)) {
             card.style.display = "flex";
+            resultsFound = true;
           } else {
             card.style.display = "none";
           }
         });
+
+        noResultsMessage.style.display = resultsFound ? "none" : "block";
       }
-
-      // Add Blog Feature
-      document
-        .getElementById("blogForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          let title = document.getElementById("blogTitle").value;
-          let description = document.getElementById("blogDescription").value;
-          let imageUrl =
-            document.getElementById("blogImage").value ||
-            "https://via.placeholder.com/150";
-
-          let newBlog = `
-          <div class="blog-card" data-title="${title}">
-            <img src="${imageUrl}" alt="${title}" />
-            <div class="blog-content">
-              <h2>${title}</h2>
-              <p>${description}</p>
-              <a href="#" class="read-more">Read More</a>
-            </div>
-          </div>
-        `;
-
-          document
-            .getElementById("blogContainer")
-            .insertAdjacentHTML("afterbegin", newBlog);
-
-          // Save to local storage
-          let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
-          blogs.push({ title, description, imageUrl });
-          localStorage.setItem("blogs", JSON.stringify(blogs));
-
-          document.getElementById("blogForm").reset();
-        });
-
-      // Load blogs from local storage
-      window.onload = function () {
-        let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
-        blogs.forEach((blog) => {
-          let newBlog = `
-            <div class="blog-card" data-title="${blog.title}">
-              <img src="${blog.imageUrl}" alt="${blog.title}" />
-              <div class="blog-content">
-                <h2>${blog.title}</h2>
-                <p>${blog.description}</p>
-                <a href="#" class="read-more">Read More</a>
-              </div>
-            </div>
-          `;
-          document
-            .getElementById("blogContainer")
-            .insertAdjacentHTML("afterbegin", newBlog);
-        });
-      };
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
