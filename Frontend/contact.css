@@ -67,7 +67,7 @@ h1 {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: left !important;
     align-items: center;
     background: linear-gradient(to right, #4facfe, #00f2fe);
     padding: 10px 20px;
