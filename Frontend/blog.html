@@ -52,6 +52,17 @@
           placeholder="Search blogs..."
           onkeyup="searchBlogs()"
         />
+        <p
+          id="noResultsMessage"
+          style="
+            display: none;
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+          "
+        >
+          No results found
+        </p>
 
         <!-- Blog Posts -->
         <div class="blog-card" data-title="The Power of Open Source">
@@ -128,16 +139,14 @@
           <a href="contact.html" class="text-white hover:underline"
             >Contact Us</a
           >
+          <a href="review.html" class="text-white hover:underline">Review</a>
           <a href="faq.html" class="text-white hover:underline">FAQ</a>
           <a href="feedback.html" class="text-white hover:underline">
             Feedback
           </a>
-          <a href="privacy.html" class="text-white hover:underline"
-            >Privacy Policy</a
-          >
-          <a href="terms.html" class="text-white hover:underline"
-            >Terms & Conditions</a
-          >
+          <a href="privacy.html" class="text-white hover:underline">
+            Privacy Policy
+          </a>
         </div>
       </div>
 
@@ -163,15 +172,31 @@
       function searchBlogs() {
         let input = document.getElementById("searchInput").value.toLowerCase();
         let blogCards = document.querySelectorAll(".blog-card");
+        let resultsFound = false;
+        let noResultsMessage = document.getElementById("noResultsMessage");
+
+        if (!noResultsMessage) {
+          noResultsMessage = document.createElement("p");
+          noResultsMessage.id = "noResultsMessage";
+          noResultsMessage.textContent = "No results found";
+          noResultsMessage.style.display = "none";
+          noResultsMessage.style.textAlign = "center";
+          document
+            .getElementById("blogContainer")
+            .appendChild(noResultsMessage);
+        }
 
         blogCards.forEach((card) => {
           let title = card.getAttribute("data-title").toLowerCase();
           if (title.includes(input)) {
             card.style.display = "flex";
+            resultsFound = true;
           } else {
             card.style.display = "none";
           }
         });
+
+        noResultsMessage.style.display = resultsFound ? "none" : "block";
       }
     </script>
 

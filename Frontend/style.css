@@ -343,7 +343,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-end; /* Aligns to the right */
-  text-align: right;
+  text-align: center;
   margin-left: auto; /* Pushes links to the right */
 }
 
@@ -367,7 +367,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 94%;
   margin-top: 20px;
   padding-bottom: 20px;
 }
