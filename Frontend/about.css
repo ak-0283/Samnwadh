@@ -9,7 +9,6 @@ body {
 .about-container {
     margin: 50px auto;
     max-width: 700px;
-    margin-left: 360px;
     background: rgba(255, 255, 255, 0.2);
     padding: 30px;
     border-radius: 12px;
@@ -30,7 +29,7 @@ p {
 
 .navbar {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start !important;
     align-items: center;
     background: rgba(255, 255, 255, 0.2);
     padding: 12px 20px;
@@ -123,6 +122,4 @@ p {
         height: 100px;
     }
 }
-footer{
-    background-color: rgba(255, 255, 255, 0.2) !important;
-}
+
