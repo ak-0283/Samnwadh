@@ -18,7 +18,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
     <link rel="stylesheet" href="homefeedback.css" />
-    <<<<<<< HEAD =======
+
     <style>
       .faq-section {
         display: flex;
@@ -34,8 +34,23 @@
       .faq-item h1 {
         color: black;
       }
+      .search-container {
+        text-align: center;
+        margin: 10%;
+        margin-bottom: 20px;
+      }
+
+      .search-box {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+
+        font-size: 16px;
+        outline: none;
+      }
     </style>
-    >>>>>>> upstream/main
   </head>
   <body class="bg-gray-100 text-gray-900">
     <!--greeting card code-->
@@ -185,7 +200,17 @@
       </div>
     </section>
     <!-- faq section -->
-    <section class="faq-section">
+    <div class="search-container">
+      <input
+        type="text"
+        id="faq-search"
+        class="search-box"
+        placeholder="Search FAQs..."
+        onkeyup="searchFAQ()"
+      />
+    </div>
+
+    <section class="faq-box">
       <h2 data-aos="fade-up" class="text-2xl font-bold text-center mb-8">
         Frequently Asked Questions
       </h2>
@@ -303,30 +328,13 @@
           <a href="feedback.html" class="text-white hover:underline"
             >Feedback</a
           >
-          <a href="terms.html" class="text-white hover:underline"
-            >Terms & Conditions</a
-          >
           <a href="blog.html" class="text-white hover:underline"> Blog </a>
           <a href="privacy.html" class="text-white hover:underline"
             >Privacy Policy</a
           >
-        </div>
-      </div>
-
-      <!-- Social Links & Copyright (Centered at Bottom) -->
-      <div class="bottom-footer">
-        <p>&copy; 2025 Samnwadh. All rights reserved.</p>
-        <div class="social-links">
-          <a href="https://github.com/ak-0283"><i class="fab fa-github"></i></a>
-          <a href="https://discord.com/users/762235277263241236"
-            ><i class="fa-brands fa-discord"></i
-          ></a>
-          <a href="https://x.com/AK_2805"
-            ><i class="fa-brands fa-x-twitter"></i
-          ></a>
-          <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
+          <a href="terms.html" class="text-white hover:underline"
+            >Terms & Conditions</a
+          >
         </div>
       </div>
     </footer>

@@ -1,80 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup</title>
-    <link rel="stylesheet" href="signup.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <button class="back-button" onclick="window.location.href = 'index.html'">
-            <i class="fa-solid fa-arrow-left fa-xl"></i>
-        </button>
+      <button class="back-button" onclick="window.location.href = 'index.html'">
+        <i class="fa-solid fa-arrow-left fa-xl"></i>
+      </button>
     </nav>
 
     <div class="signup-wrapper">
-        <h2 class="signup-title">Sign Up</h2>
-        <input type="file" name="profilepic" class="signup-profilepic" id="profilepic" accept="image/*" required>
-        <label for="profilepic" class="lab-signup-profile"><img src="download.png" alt=""></label>
-        <input type="text" class="signup-input" id="signup-name" placeholder="Enter Name">
-        <input type="date" class="signup-input" id="signup-dateofbirth">
-        
-        <div class="user-gender">
-            <div class="female">
-                <input type="radio" name="gender" class="signupinput-gender" id="signup-gender-female" value="Female">
-                <label for="signup-gender-female">Female</label>
-            </div>
-            <div class="male">
-                <input type="radio" name="gender" class="signupinput-gender" id="signup-gender-male" value="Male">
-                <label for="signup-gender-male">Male</label>
-            </div>
-            <div class="others">
-                <input type="radio" name="gender" class="signupinput-gender" id="signup-gender-other" value="Other">
-                <label for="signup-gender-other">Others</label>
-            </div>
-        </div>
+      <h2 class="signup-title">Sign Up</h2>
+      <input
+        type="file"
+        name="profilepic"
+        class="signup-profilepic"
+        id="profilepic"
+        accept="image/*"
+        required
+      />
+      <label for="profilepic" class="lab-signup-profile"
+        ><img src="download.png" alt=""
+      /></label>
+      <input
+        type="text"
+        class="signup-input"
+        id="signup-name"
+        placeholder="Enter Name"
+      />
+      <input type="date" class="signup-input" id="signup-dateofbirth" />
 
-        <input type="email" class="signup-input" id="signup-username" placeholder="Enter Email" required>
-        <input type="tel" class="signup-input" id="signup-phone" placeholder="Enter Phone" required>
-        
-        <!-- Password Field with Eye Icon -->
-        <div class="password-container">
-            <input type="password" class="signup-input" id="signup-password" placeholder="Enter Password" required>
-            <i class="fa-solid fa-eye" onclick="togglePassword('signup-password', this)"></i>
+      <div class="user-gender">
+        <div class="female">
+          <input
+            type="radio"
+            name="gender"
+            class="signupinput-gender"
+            id="signup-gender-female"
+            value="Female"
+          />
+          <label for="signup-gender-female">Female</label>
         </div>
+        <div class="male">
+          <input
+            type="radio"
+            name="gender"
+            class="signupinput-gender"
+            id="signup-gender-male"
+            value="Male"
+          />
+          <label for="signup-gender-male">Male</label>
+        </div>
+        <div class="others">
+          <input
+            type="radio"
+            name="gender"
+            class="signupinput-gender"
+            id="signup-gender-other"
+            value="Other"
+          />
+          <label for="signup-gender-other">Others</label>
+        </div>
+      </div>
 
-        <!-- Confirm Password Field with Eye Icon -->
-        <div class="password-container">
-            <input type="password" class="signup-input" id="signup-confirmpassword" placeholder="Confirm Password" required>
-            <i class="fa-solid fa-eye" onclick="togglePassword('signup-confirmpassword', this)"></i>
-        </div>
-       
-        <div class="bttn">
-            <button type="reset" class="reset-button" onclick="resetfield()">Reset</button>
-            <button class="signup-button" onclick="signup()">Sign Up</button>
-        </div>
+      <input
+        type="email"
+        class="signup-input"
+        id="signup-username"
+        placeholder="Enter Email"
+        required
+      />
+      <input
+        type="tel"
+        class="signup-input"
+        id="signup-phone"
+        placeholder="Enter Phone"
+        required
+      />
 
-        <p class="signup-text">Already have an account? <a href="login.html" class="signup-link">Login</a></p>
-        <p id="signup-message" class="signup-message"></p>
+      <!-- Password Field with Eye Icon -->
+      <div class="password-container">
+        <input
+          type="password"
+          class="signup-input"
+          id="signup-password"
+          placeholder="Enter Password"
+          required
+        />
+        <i
+          class="fa-solid fa-eye"
+          onclick="togglePassword('signup-password', this)"
+        ></i>
+      </div>
+
+      <!-- Confirm Password Field with Eye Icon -->
+      <div class="password-container">
+        <input
+          type="password"
+          class="signup-input"
+          id="signup-confirmpassword"
+          placeholder="Confirm Password"
+          required
+        />
+        <i
+          class="fa-solid fa-eye"
+          onclick="togglePassword('signup-confirmpassword', this)"
+        ></i>
+      </div>
+
+      <div class="bttn">
+        <button type="reset" class="reset-button" onclick="resetfield()">
+          Reset
+        </button>
+        <button class="signup-button" onclick="signup()">Sign Up</button>
+      </div>
+
+      <p class="signup-text">
+        Already have an account?
+        <a href="login.html" class="signup-link">Login</a>
+      </p>
+      <p id="signup-message" class="signup-message"></p>
     </div>
+    <footer class="bg-blue-600 text-white py-8">
+      <div class="footer-container">
+        <div class="newsletter">
+          <h3>Subscribe to our Newsletter</h3>
+          <form id="subscribeForm">
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Enter your email"
+              required
+            />
+            <button class="submit" type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="footerLinksForAdminInfo">
+          <p>📍 Location: xyz, India</p>
+          <p>📞 Phone: <a href="tel:+919876543210">+91 99999 99990</a></p>
+          <p>
+            📧 Email:
+            <a href="mailto:your-email@example.com">your-email@example.com</a>
+          </p>
+        </div>
+        <!-- Footer Links (Right Side) -->
+        <div class="footer-links">
+          <a href="about.html" class="text-white hover:underline">About Us</a>
+          <a href="contact.html" class="text-white hover:underline"
+            >Contact Us</a
+          >
+          <a href="review.html" class="text-white hover:underline">Review</a>
+          <a href="faq.html" class="text-white hover:underline">FAQ</a>
+          <a href="feedback.html" class="text-white hover:underline"
+            >Feedback</a
+          >
+          <a href="terms.html" class="text-white hover:underline"
+            >Terms & Conditions</a
+          >
+          <a href="blog.html" class="text-white hover:underline"> Blog </a>
+          <a href="privacy.html" class="text-white hover:underline"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+
+      <!-- Social Links & Copyright (Centered at Bottom) -->
+      <div class="bottom-footer">
+        <p>&copy; 2025 Samnwadh. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://github.com/ak-0283"><i class="fab fa-github"></i></a>
+          <a href="https://discord.com/users/762235277263241236"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+          <a href="https://x.com/AK_2805"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
 
     <script>
-        function togglePassword(fieldId, eyeIcon) {
-            const passwordField = document.getElementById(fieldId);
-            if (passwordField.type === "password") {
-                passwordField.type = "text";
-                eyeIcon.classList.remove("fa-eye");
-                eyeIcon.classList.add("fa-eye-slash");
-            } else {
-                passwordField.type = "password";
-                eyeIcon.classList.remove("fa-eye-slash");
-                eyeIcon.classList.add("fa-eye");
-            }
+      function togglePassword(fieldId, eyeIcon) {
+        const passwordField = document.getElementById(fieldId);
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+          eyeIcon.classList.remove("fa-eye");
+          eyeIcon.classList.add("fa-eye-slash");
+        } else {
+          passwordField.type = "password";
+          eyeIcon.classList.remove("fa-eye-slash");
+          eyeIcon.classList.add("fa-eye");
         }
+      }
     </script>
-     <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
