@@ -14,7 +14,54 @@
     />
     <link rel="stylesheet" href="blog.css" />
     <link rel="stylesheet" href="toggle.css" />
+    <!-- styling for the add blog page  -->
+    <style>
+      .add-blog-section {
+        background: #f8f9fa;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 600px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .add-blog-section h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      .add-blog-form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .add-blog-form input,
+      .add-blog-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .add-blog-form button {
+        background: #007bff;
+        color: white;
+        padding: 10px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .add-blog-form button:hover {
+        background: #0056b3;
+      }
+    </style>
   </head>
+
   <body>
     <!-- scroll top button -->
     <button id="scrollToTopBtn">⬆</button>
@@ -38,7 +85,25 @@
         </nav>
       </div>
     </header>
-
+    <section class="add-blog-section">
+      <h2>Add a New Blog</h2>
+      <form class="add-blog-form" id="blogForm">
+        <input
+          type="text"
+          id="blogTitle"
+          placeholder="Enter Blog Title"
+          required
+        />
+        <textarea
+          id="blogDescription"
+          placeholder="Enter Blog Description"
+          rows="3"
+          required
+        ></textarea>
+        <input type="text" id="blogImage" placeholder="Enter Image URL" />
+        <button type="submit">Add Blog</button>
+      </form>
+    </section>
     <!-- Blog Section -->
     <section class="blog-section">
       <div class="container">
