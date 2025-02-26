@@ -111,6 +111,7 @@ p {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
 }
+
 @media(max-width: 768px){
     .offer-container ul,
     .choose-container ul{
@@ -122,4 +123,3 @@ p {
         height: 100px;
     }
 }
-
