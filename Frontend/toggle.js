@@ -1,4 +1,5 @@
 document.getElementById("menu-toggle").addEventListener("click", function() {
+  console.log('')
   const navbar = document.getElementById("navbar");
   navbar.classList.toggle("active"); // Toggle the menu visibility
   
