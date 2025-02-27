@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="blog.css" />
     <link rel="stylesheet" href="toggle.css" />
+    <link rel="stylesheet" href="style.css">
     <!-- styling for the add blog page  -->
     <style>
       .add-blog-section {
@@ -59,12 +60,30 @@
       .add-blog-form button:hover {
         background: #0056b3;
       }
+      .dark-mode h1,.dark-mode h2{
+        color: goldenrod
+      }
+      .dark-mode p{
+        color: white;
+      }
+      .dark-mode a{
+        background-color: #333;
+      }
+      .dark-mode .add-blog-section{
+        background-color: #333;
+        color: white;
+
+      }
+      .dark-mode .add-blog-form input,
+      .dark-mode .add-blog-form textarea {
+        background-color: #333;
+        color: white;
+      }
     </style>
   </head>
 
   <body>
-    <!-- scroll top button -->
-    <button id="scrollToTopBtn">⬆</button>
+
     <header class="bg-blue-600 text-white p-6">
       <div class="container">
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
@@ -328,21 +347,7 @@
     <script src="toggle.js"></script>
     <script src="blog.js"></script>
     <script>
-      AOS.init({ duration: 600, once: false });
-      // Scroll to Top button functionality
-      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-      window.onscroll = function () {
-        if (document.documentElement.scrollTop > 100) {
-          scrollToTopBtn.style.display = "block";
-        } else {
-          scrollToTopBtn.style.display = "none";
-        }
-      };
-
-      scrollToTopBtn.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
     </script>
   </script>
   
