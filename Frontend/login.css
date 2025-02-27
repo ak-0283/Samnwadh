@@ -1,35 +1,136 @@
 /* General Reset */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+  background-color: #3e82cbdf;
+}
+
+::-webkit-scrollbar:hover {
+  background-color: #57bff3;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: 2px 2px 5px #00b3ee;
+  background: linear-gradient(45deg, #003b6c, #0569dd);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #0569dd, #003b6c);
+}
+
 * {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Full-Screen Centering */
 body {
+  background: linear-gradient(to right, #3c87d7, #6ccfeb);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow-x: hidden;
+
     background: linear-gradient(to right, #4facfe, #00f2fe);
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh; /* Full height of viewport */
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode Full Page */
+.dark-mode {
+    background: linear-gradient(to right, #1e1e1e, #121212); /* Dark background */
+    color: white;
+
 }
 
 /* Navbar */
 .navbar {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Dark Mode for Navbar */
+.dark-mode .navbar {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Dark Mode Button */
+.toggle {
+    margin-left: auto; /* Push the dark mode button to the far right */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ffd700, #ffa500);
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.toggle:hover {
+    background: linear-gradient(135deg, #ffa500, #ff4500);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.dark-mode .toggle {
+    background: linear-gradient(135deg, #4b4b4b, #000);
+}
+
+.dark-mode .toggle:hover {
+    background: linear-gradient(135deg, #6b6b6b, #222);
+}
+
+/* Icon Visibility */
+.sun {
+    display: inline;
+}
+
+.moon {
+    display: none;
+}
+
+.dark-mode .sun {
+    display: none;
+}
+
+.dark-mode .moon {
+    display: inline;
 }
 
 /* Back Button */
 .back-button {
+  background: #204290;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
     background: #2867f0;
     color: white;
     border: none;
@@ -38,15 +139,36 @@ body {
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
+
 }
 
 .back-button:hover {
-    background: #0190f6;
-    transform: scale(1.05);
+  background: #0190f6;
+  transform: scale(1.05);
 }
 
 /* Centering the Login Form */
 .login-wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background: rgba(240, 128, 128, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 300px;
+  margin-bottom: 50px;
+}
+
+.login-wrapper:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.login-wrapper h2 {
+  color: #fff;
+  text-shadow: 2px 2px 2px #007bff;
+
     width: 100%;
     max-width: 400px;
     padding: 30px;
@@ -54,39 +176,79 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     text-align: center;
-}
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-top: 300px;   
+    margin-bottom: 50px;
 
-.login-wrapper:hover{
+.login-wrapper:hover {
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
 }
+
+/* Dark Mode Login Form */
+.dark-mode .login-wrapper {
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .login-title {
+    color: white;
+
+}
+
 /* Login Title */
 .login-title {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 /* Input Fields */
 .login-input {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
-.login-input:hover, 
+.login-input:hover,
 .login-input:focus {
+  border-color: #017afc;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Dark Mode Input */
+.dark-mode .login-input {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
+
+.dark-mode .login-input:hover, 
+.dark-mode .login-input:focus {
     border-color: #017afc;
-    outline: none;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
-    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
 }
 
 /* Login Button */
 .login-button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg,#ffcb00,#6ccfeb);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.login-button:hover {
+  background: linear-gradient(to left,#ffcb00,#6ccfeb);
+  transform: scale(1.01);
     width: 100%;
     padding: 10px;
     background-color: #007bff;
@@ -102,14 +264,32 @@ body {
     transform: scale(1.01);
 }
 
+/* Dark Mode Button */
+.dark-mode .login-button {
+    background-color: #017afc;
+}
+
+.dark-mode .login-button:hover {
+    background-color: #0056b3;
+}
+
 /* Sign Up Link */
 .login-text {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #555;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
 }
 
 .login-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.login-link:hover {
+  color: #04468c;
+  text-decoration: underline;
     color: #54a2f7;
     text-decoration: none;
     font-weight: bold;
@@ -121,17 +301,196 @@ body {
     text-decoration: underline;
 }
 
+/* Dark Mode Sign Up Link */
+.dark-mode .login-link {
+    color: #54a2f7;
+}
+
+.dark-mode .login-link:hover {
+    color: #0190f6;
+}
+
 /* Login Message */
 .login-message {
-    margin-top: 10px;
-    font-size: 14px;
-    color: red;
+  margin-top: 10px;
+  font-size: 14px;
+  color: red;
 }
 
 /* Responsive Design */
 @media (max-width: 480px) {
-    .login-wrapper {
-        width: 90%;
-        padding: 20px;
-    }
+  .login-wrapper {
+    width: 90%;
+    padding: 20px;
+  }
 }
+
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.password-container i {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #555;
+}
+
+.password-container i:hover {
+  color: #000;
+}
+
+footer {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+}
+
+/* Footer Main Layout */
+.footer-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  /* Keeps links on right */
+  align-items: center;
+  flex-wrap: wrap;
+  /* Prevents overlap */
+}
+
+/* Footer Links (Always on Right) */
+.footerLinksForAdminInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Aligns to the right */
+  text-align: left;
+  margin-right: auto;
+  /* Pushes links to the right */
+}
+
+.footerLinksForAdminInfo a {
+  color: white;
+}
+
+.footerLinksForAdminInfo a:hover {
+  color: black;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* Aligns to the right */
+  text-align: right;
+  margin-left: auto;
+  /* Pushes links to the right */
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  margin: 5px 0;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  color: #ffcb00;
+  text-decoration: underline;
+}
+
+/* Social Links & Copyright (Centered at Bottom) */
+.bottom-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.bottom-footer p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.newsletter {
+  margin: 20px;
+}
+
+.newsletter input {
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.newsletter button {
+  background: linear-gradient(135deg, #6d6a6a, #ffffff);
+}
+
+#subscribeForm {
+  margin-top: 10px;
+}
+
+.submit {
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.social-links a:hover {
+  color: #ffcb00;
+  background-color: purple;
+}
+
+/* Responsive Fix for Small Screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    /* align-items: flex-end; */
+  }
+
+  .footer-links {
+    align-items: center;
+    /* Center the links on small screens */
+    text-align: center;
+    margin-left: 0;
+  }
+}
+

@@ -34,7 +34,7 @@ body {
   justify-content: space-evenly !important;
   align-items: center !important;
   padding: 10px 20px;
-  background-color: #f8f9fa; /* Light background for navbar */
+
   font-family: Arial, sans-serif;
 }
 
@@ -49,13 +49,14 @@ body {
 .nav-links li {
   display: inline;
 }
-
+.dark-mode .navbar{
+  background-color: #333;
+}
 .nav-links a {
   text-decoration: none;
   color: #000; /* Text color for links */
   font-size: 16px;
 }
-
 
 .icon {
   display: none;
@@ -66,6 +67,29 @@ body {
 }
 
 
+/*dark mode button*/
+.toggle {
+  margin-left: auto; /* Push the dark mode button to the far right */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ffd700, #ffa500);
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.toggle:hover {
+  background: linear-gradient(135deg, #ffa500, #ff4500);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px); /* Slight lift on hover */
+}
 
 .icon {
   font-size: 20px;
@@ -80,16 +104,13 @@ body {
 }
 
 
-
-
 /* Container */
 .container {
-  display: flex;
+  /* display: flex; */
   justify-content: space space-evenly;
   width: auto;
   margin: 0 auto;
 }
-
 
 /* Header */
 header {
@@ -257,6 +278,28 @@ header .nav-links a:hover {
   transform: scale(1.05);
 }
 
+/* feedback */
+.feedback-section {
+  background-color: white;
+}
+
+.dark-mode .feedback-section {
+  background: #1e1e1e; /* Darker background for contrast */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.dark-mode .feedback-container {
+  background-color: #333; /* Darker background for contrast */
+}
+.dark-mode .feedback-title {
+  color: #63b3ed !important;
+}
+.dark-mode .feedback-title {
+  color: #63b3ed !important; /* Light blue heading */
+}
+.dark-mode .feedback-button {
+  background-color: #007bff;
+}
+
 /* Footer Styling */
 /* Footer Styling */
 /* Footer Styling */
@@ -324,7 +367,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 94%;
   margin-top: 20px;
   padding-bottom: 20px;
 }
@@ -475,3 +518,58 @@ footer {
   font-size: 1rem;
 }
 
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode header {
+  background-color: #333;
+}
+
+body.dark-mode .feature-item {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+body.dark-mode #hero {
+  background: linear-gradient(135deg, #333, #1a1a1a);
+}
+
+body.dark-mode #contribute {
+  background: linear-gradient(135deg, #444, #666);
+}
+
+body.dark-mode footer {
+  background-color: #333;
+}
+
+body.dark-mode a {
+  color: #1e90ff;
+}
+
+body.dark-mode a:hover {
+  color: #87ceeb;
+}
+
+body.dark-mode .footer-links a:hover {
+  color: #fbbf24;
+}
+
+body.dark-mode .social-links a {
+  border: 1px solid #999;
+}
+
+body.dark-mode .social-links a:hover {
+  background-color: #555;
+}
+
+/* Dark mode for scrollbar */
+body.dark-mode ::-webkit-scrollbar {
+  background-color: #444;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #666, #888);
+}
