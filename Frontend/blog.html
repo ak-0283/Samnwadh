@@ -63,8 +63,7 @@
   </head>
 
   <body>
-    <!-- scroll top button -->
-    <button id="scrollToTopBtn">⬆</button>
+
     <header class="bg-blue-600 text-white p-6">
       <div class="container">
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
@@ -328,21 +327,7 @@
     <script src="toggle.js"></script>
     <script src="blog.js"></script>
     <script>
-      AOS.init({ duration: 600, once: false });
-      // Scroll to Top button functionality
-      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-      window.onscroll = function () {
-        if (document.documentElement.scrollTop > 100) {
-          scrollToTopBtn.style.display = "block";
-        } else {
-          scrollToTopBtn.style.display = "none";
-        }
-      };
-
-      scrollToTopBtn.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
     </script>
   </script>
   
