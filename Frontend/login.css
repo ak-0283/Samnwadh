@@ -36,14 +36,6 @@ body {
   justify-content: center;
   height: 100vh;
   overflow-x: hidden;
-
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Full height of viewport */
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -70,7 +62,12 @@ body {
 .dark-mode .navbar {
     background: rgba(0, 0, 0, 0.8);
 }
-
+.dark-mode footer {
+  background: rgba(0, 0, 0, 0.8);
+}
+.dark-mode .login-button {
+  background: rgba(79, 78, 78, 0.8);
+}
 /* Dark Mode Button */
 .toggle {
     margin-left: auto; /* Push the dark mode button to the far right */
@@ -131,15 +128,6 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 
-    background: #2867f0;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
 }
 
 .back-button:hover {
@@ -168,17 +156,9 @@ body {
 .login-wrapper h2 {
   color: #fff;
   text-shadow: 2px 2px 2px #007bff;
-
-    width: 100%;
-    max-width: 400px;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
     text-align: center;
     transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    margin-top: 300px;   
-    margin-bottom: 50px;
+}
 
 .login-wrapper:hover {
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
@@ -243,6 +223,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 0.5rem;
   transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
