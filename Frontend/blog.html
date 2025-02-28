@@ -8,18 +8,87 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
+<<<<<<<<< Temporary merge branch 1
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
     <link rel="stylesheet" href="blog.css" />
     <link rel="stylesheet" href="toggle.css" />
+    <link rel="stylesheet" href="style.css">
+    <!-- styling for the add blog page  -->
+    <style>
+      .add-blog-section {
+        background: #f8f9fa;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 600px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .add-blog-section h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      .add-blog-form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .add-blog-form input,
+      .add-blog-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .add-blog-form button {
+        background: #007bff;
+        color: white;
+        padding: 10px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .add-blog-form button:hover {
+        background: #0056b3;
+      }
+      .dark-mode h1,.dark-mode h2{
+        color: goldenrod
+      }
+      .dark-mode p{
+        color: white;
+      }
+      .dark-mode a{
+        background-color: #333;
+      }
+      .dark-mode .add-blog-section{
+        background-color: #333;
+        color: white;
+
+      }
+      .dark-mode .add-blog-form input,
+      .dark-mode .add-blog-form textarea {
+        background-color: #333;
+        color: white;
+      }
+    </style>
   </head>
+
   <body>
+<<<<<<<<< Temporary merge branch 1
     <!-- scroll top button -->
     <button id="scrollToTopBtn">⬆</button>
-
+=========
+>>>>>>>>> Temporary merge branch 2
     <header class="bg-blue-600 text-white p-6">
       <div class="container">
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
@@ -40,7 +109,25 @@
         </nav>
       </div>
     </header>
-
+    <section class="add-blog-section">
+      <h2>Add a New Blog</h2>
+      <form class="add-blog-form" id="blogForm">
+        <input
+          type="text"
+          id="blogTitle"
+          placeholder="Enter Blog Title"
+          required
+        />
+        <textarea
+          id="blogDescription"
+          placeholder="Enter Blog Description"
+          rows="3"
+          required
+        ></textarea>
+        <input type="text" id="blogImage" placeholder="Enter Image URL" />
+        <button type="submit">Add Blog</button>
+      </form>
+    </section>
     <!-- Blog Section -->
     <section class="blog-section">
       <div class="container">
@@ -204,27 +291,21 @@
 
         noResultsMessage.style.display = resultsFound ? "none" : "block";
       }
+
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="toggle.js"></script>
     <script src="blog.js"></script>
     <script>
-      AOS.init({ duration: 600, once: false });
-      // Scroll to Top button functionality
-      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-      window.onscroll = function () {
-        if (document.documentElement.scrollTop > 100) {
-          scrollToTopBtn.style.display = "block";
-        } else {
-          scrollToTopBtn.style.display = "none";
-        }
-      };
-
-      scrollToTopBtn.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
     </script>
+
+  </script>
+  
+    <script src="toggle.js"></script>
+    <script src="blog.js"></script>
+    <script src="script.js"></script>
+>>>>>>>>> Temporary merge branch 2
   </body>
 </html>
