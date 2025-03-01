@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+<<<<<<<<< Temporary merge branch 1
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
@@ -83,7 +84,11 @@
   </head>
 
   <body>
-
+<<<<<<<<< Temporary merge branch 1
+    <!-- scroll top button -->
+    <button id="scrollToTopBtn">⬆</button>
+=========
+>>>>>>>>> Temporary merge branch 2
     <header class="bg-blue-600 text-white p-6">
       <div class="container">
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
@@ -287,60 +292,6 @@
         noResultsMessage.style.display = resultsFound ? "none" : "block";
       }
 
-      // Add Blog Feature
-      document
-        .getElementById("blogForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          let title = document.getElementById("blogTitle").value;
-          let description = document.getElementById("blogDescription").value;
-          let imageUrl =
-            document.getElementById("blogImage").value ||
-            "https://via.placeholder.com/150";
-
-          let newBlog = `
-          <div class="blog-card" data-title="${title}">
-            <img src="${imageUrl}" alt="${title}" />
-            <div class="blog-content">
-              <h2>${title}</h2>
-              <p>${description}</p>
-              <a href="#" class="read-more">Read More</a>
-            </div>
-          </div>
-        `;
-
-          document
-            .getElementById("blogContainer")
-            .insertAdjacentHTML("afterbegin", newBlog);
-
-          // Save to local storage
-          let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
-          blogs.push({ title, description, imageUrl });
-          localStorage.setItem("blogs", JSON.stringify(blogs));
-
-          document.getElementById("blogForm").reset();
-        });
-
-      // Load blogs from local storage
-      window.onload = function () {
-        let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
-        blogs.forEach((blog) => {
-          let newBlog = `
-            <div class="blog-card" data-title="${blog.title}">
-              <img src="${blog.imageUrl}" alt="${blog.title}" />
-              <div class="blog-content">
-                <h2>${blog.title}</h2>
-                <p>${blog.description}</p>
-                <a href="#" class="read-more">Read More</a>
-              </div>
-            </div>
-          `;
-          document
-            .getElementById("blogContainer")
-            .insertAdjacentHTML("afterbegin", newBlog);
-        });
-      };
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -349,10 +300,12 @@
     <script>
 
     </script>
+
   </script>
   
     <script src="toggle.js"></script>
     <script src="blog.js"></script>
     <script src="script.js"></script>
+>>>>>>>>> Temporary merge branch 2
   </body>
 </html>
