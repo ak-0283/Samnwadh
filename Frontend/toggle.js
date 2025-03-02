@@ -10,3 +10,5 @@ document.getElementById("menu-toggle").addEventListener("click", function() {
     body.classList.remove("menu-open"); // Remove class to allow scrolling and show hamburger icon
   }
 });
+
+

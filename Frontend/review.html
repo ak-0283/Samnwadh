@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Samnwadh</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="toggle.css" />
@@ -17,10 +16,15 @@
       box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
+    
+    .navbar.active {
+      display: block;
+    }
 
     body {
       background-color: #f5f5f5;
       color: #333;
+      overflow-y: scroll;
     }
 
     .testimonial-section {
@@ -51,6 +55,12 @@
       padding: 20px;
       text-align: center;
       animation: slide 15s infinite;
+    }
+
+    #darkModeToggle {
+      align-items: center;
+      justify-content: center;
+      margin: 1rem auto;
     }
 
     @keyframes slide {
@@ -109,9 +119,7 @@
     }
 
     footer {
-      position: absolute;
-      width: 100%;
-      bottom: 0;
+      width: 100%
     }
 
     .footer-container {
@@ -135,6 +143,14 @@
       .footerLinksForAdminInfo {
         margin: 0.5rem auto;
         align-items: center;
+      }
+
+      .navbar {
+        display: none !important;
+      }
+
+      .navbar.active {
+        display: block !important;
       }
     }
   </style>
