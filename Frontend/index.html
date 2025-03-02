@@ -311,7 +311,9 @@
               placeholder="Enter your email"
               required
             />
-            <button class="submit" type="submit">Subscribe</button>
+            <button class="submit" type="submit" onclick="{subscribeAlert()}">
+              Subscribe
+            </button>
           </form>
         </div>
         <div class="footerLinksForAdminInfo">
@@ -397,6 +399,9 @@
       AOS.init({ duration: 600, once: false });
     </script>
     <script>
+      function subscribeAlert() {
+        alert("Thank you for subscribing to our newsletter!");
+      }
       function toggleAnswer(element) {
         let answer = element.nextElementSibling;
         answer.style.display =
