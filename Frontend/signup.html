@@ -24,116 +24,127 @@
 
     <div class="signup-wrapper">
       <h2 class="signup-title">Sign Up</h2>
+      
       <input
-        type="file"
-        name="profilepic"
-        class="signup-profilepic"
-        id="profilepic"
-        accept="image/*"
-        required
+          type="file"
+          name="profilepic"
+          class="signup-profilepic"
+          id="profilepic"
+          accept="image/*"
+          required
       />
-      <label for="profilepic" class="lab-signup-profile"
-        ><img src="download.png" alt=""
-      /></label>
-      <input
-        type="text"
-        class="signup-input"
-        id="signup-name"
-        placeholder="Enter Name"
-      />
+      <label for="profilepic" class="lab-signup-profile">
+          <img src="download.png" alt="Profile Picture" />
+      </label>
+  
+      <input type="text" class="signup-input" id="signup-name" placeholder="Enter Name" />
       <input type="date" class="signup-input" id="signup-dateofbirth" />
-
+  
       <div class="user-gender">
-        <div class="female">
-          <input
-            type="radio"
-            name="gender"
-            class="signupinput-gender"
-            id="signup-gender-female"
-            value="Female"
-          />
-          <label for="signup-gender-female">Female</label>
-        </div>
-        <div class="male">
-          <input
-            type="radio"
-            name="gender"
-            class="signupinput-gender"
-            id="signup-gender-male"
-            value="Male"
-          />
-          <label for="signup-gender-male">Male</label>
-        </div>
-        <div class="others">
-          <input
-            type="radio"
-            name="gender"
-            class="signupinput-gender"
-            id="signup-gender-other"
-            value="Other"
-          />
-          <label for="signup-gender-other">Others</label>
-        </div>
+          <div class="female">
+              <input type="radio" name="gender" class="signupinput-gender" id="signup-gender-female" value="Female" />
+              <label for="signup-gender-female">Female</label>
+          </div>
+          <div class="male">
+              <input type="radio" name="gender" class="signupinput-gender" id="signup-gender-male" value="Male" />
+              <label for="signup-gender-male">Male</label>
+          </div>
+          <div class="others">
+              <input type="radio" name="gender" class="signupinput-gender" id="signup-gender-other" value="Other" />
+              <label for="signup-gender-other">Others</label>
+          </div>
       </div>
-
-      <input
-        type="email"
-        class="signup-input"
-        id="signup-username"
-        placeholder="Enter Email"
-        required
-      />
-      <input
-        type="tel"
-        class="signup-input"
-        id="signup-phone"
-        placeholder="Enter Phone"
-        required
-      />
-
+  
+      <input type="email" class="signup-input" id="signup-username" placeholder="Enter Email" required />
+      <input type="tel" class="signup-input" id="signup-phone" placeholder="Enter Phone (10 digits)" pattern="\d{10}" required />
+  
       <!-- Password Field with Eye Icon -->
       <div class="password-container">
-        <input
-          type="password"
-          class="signup-input"
-          id="signup-password"
-          placeholder="Enter Password"
-          required
-        />
-        <i
-          class="fa-solid fa-eye"
-          onclick="togglePassword('signup-password', this)"
-        ></i>
+          <input type="password" class="signup-input" id="signup-password" placeholder="Enter Password" required />
+          <i class="fa-solid fa-eye" onclick="togglePassword('signup-password', this)"></i>
       </div>
-
+  
       <!-- Confirm Password Field with Eye Icon -->
       <div class="password-container">
-        <input
-          type="password"
-          class="signup-input"
-          id="signup-confirmpassword"
-          placeholder="Confirm Password"
-          required
-        />
-        <i
-          class="fa-solid fa-eye"
-          onclick="togglePassword('signup-confirmpassword', this)"
-        ></i>
+          <input type="password" class="signup-input" id="signup-confirmpassword" placeholder="Confirm Password" required />
+          <i class="fa-solid fa-eye" onclick="togglePassword('signup-confirmpassword', this)"></i>
       </div>
-
+  
       <div class="bttn">
-        <button type="reset" class="reset-button" onclick="resetfield()">
-          Reset
-        </button>
-        <button class="signup-button" onclick="signup()">Sign Up</button>
+          <button type="reset" class="reset-button" onclick="resetField()">Reset</button>
+          <button type="button" class="signup-button" onclick="signup()">Sign Up</button>
       </div>
-
+  
       <p class="signup-text">
-        Already have an account?
-        <a href="login.html" class="signup-link">Login</a>
+          Already have an account?
+          <a href="login.html" class="signup-link">Login</a>
       </p>
       <p id="signup-message" class="signup-message"></p>
-    </div>
+  </div>
+  
+  <script>
+      function togglePassword(fieldId, eyeIcon) {
+          let field = document.getElementById(fieldId);
+          if (field.type === "password") {
+              field.type = "text";
+              eyeIcon.classList.replace("fa-eye", "fa-eye-slash");
+          } else {
+              field.type = "password";
+              eyeIcon.classList.replace("fa-eye-slash", "fa-eye");
+          }
+      }
+  
+      function resetField() {
+          document.getElementById("signup-name").value = "";
+          document.getElementById("signup-dateofbirth").value = "";
+          document.getElementById("signup-username").value = "";
+          document.getElementById("signup-phone").value = "";
+          document.getElementById("signup-password").value = "";
+          document.getElementById("signup-confirmpassword").value = "";
+          document.getElementById("signup-message").textContent = "";
+          let genderInputs = document.getElementsByName("gender");
+          genderInputs.forEach(input => input.checked = false);
+      }
+  
+      function signup() {
+          let email = document.getElementById("signup-username").value;
+          let phone = document.getElementById("signup-phone").value;
+          let password = document.getElementById("signup-password").value;
+          let confirmPassword = document.getElementById("signup-confirmpassword").value;
+          let message = document.getElementById("signup-message");
+  
+          let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          let phonePattern = /^\d{10}$/;
+  
+          if (!emailPattern.test(email)) {
+              message.textContent = "Please enter a valid email address.";
+              message.style.color = "red";
+              return;
+          }
+  
+          if (!phonePattern.test(phone)) {
+              message.textContent = "Phone number must be exactly 10 digits.";
+              message.style.color = "red";
+              return;
+          }
+  
+          if (password.length < 6) {
+              message.textContent = "Password must be at least 6 characters long.";
+              message.style.color = "red";
+              return;
+          }
+  
+          if (password !== confirmPassword) {
+              message.textContent = "Passwords do not match!";
+              message.style.color = "red";
+              return;
+          }
+  
+          message.textContent = "Sign-up successful!";
+          message.style.color = "green";
+      }
+  </script>
+  
     <footer class="bg-blue-600 text-white py-8">
       <div class="footer-container">
         <div class="newsletter">
