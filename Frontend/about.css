@@ -66,6 +66,7 @@ p {
 @media(max-width:830px){
     .about{
         margin: 50px;
+        margin-top: 6rem;
      }
     .about-container {
         padding: 20px;
@@ -76,6 +77,10 @@ p {
     .about-container {
         padding: 20px;
         margin: 30px auto;
+    }
+    .footerLinksForAdminInfo{
+        margin: 0.5rem auto;
+        align-items: center;
     }
 
     .back-button {
