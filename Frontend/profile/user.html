@@ -4,10 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <title>User Profile</title>
   <style>
     * {
@@ -78,6 +75,14 @@
       background: #c82333;
     }
 
+    .dark-mode .profile-container {
+      background: rgb(72, 72, 72);
+    }
+
+    .dark-mode .profile-container h2 {
+      color: goldenrod;
+    }
+
     .profile-container {
       background: white;
       padding: 20px;
@@ -87,9 +92,15 @@
       width: 380px;
       margin: 5rem auto;
     }
-    .profile-container:hover{
+
+    .profile-container:hover {
       transform: scale(1.02);
       box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .dark-mode .profile-container,
+    .dark-mode .profile-container:hover {
+      box-shadow: 3px 3px 10px goldenrod;
     }
 
     .profile-pic {
@@ -120,7 +131,8 @@
       border-radius: 5px;
       cursor: pointer;
     }
-    .actions button:hover{
+
+    .actions button:hover {
       transform: translateY(-5px);
       box-shadow: 4px 4px 5px #0f345c;
     }
@@ -151,9 +163,9 @@
 
     .navbar {
       display: flex;
-      justify-content: left !important;
+      justify-content: space-between;
       align-items: center;
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
       padding: 10px 10px;
       position: sticky;
       top: 0;
@@ -180,6 +192,63 @@
       background: #0190f6;
       transform: scale(1.05);
     }
+
+    /* Dark Mode Button */
+    .toggle {
+      margin-left: auto;
+      /* Push the dark mode button to the far right */
+      padding: 10px 15px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ffd700, #ffa500);
+      cursor: pointer;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      width: 3.5rem;
+    }
+
+    .toggle:hover {
+      background: linear-gradient(135deg, #ffa500, #ff4500);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+      /* Slight lift on hover */
+    }
+
+    body.dark-mode {
+      background: #333;
+      color: #fff;
+    }
+
+    .dark-mode .toggle {
+      background: linear-gradient(135deg, #4b4b4b, #000);
+    }
+
+    .dark-mode .toggle:hover {
+      background: linear-gradient(135deg, #6b6b6b, #222);
+    }
+
+    /* Icon Visibility */
+    .sun {
+      display: inline;
+    }
+
+    .moon {
+      display: none;
+    }
+
+    .dark-mode .sun {
+      display: none;
+    }
+
+    .dark-mode .moon {
+      display: inline;
+    }
   </style>
 </head>
 
@@ -187,6 +256,10 @@
   <nav class="navbar">
     <button class="back-button" onclick="window.location.href = '../index.html'">
       <i class="fa-solid fa-arrow-left fa-xl"></i>
+    </button>
+    <button type="button" id="darkModeToggle" class="toggle">
+      <span class="icon sun">☀️</span>
+      <span class="icon moon">🌙</span>
     </button>
   </nav>
   <div class="profile-container">
@@ -215,6 +288,39 @@
     });
     document.querySelector(".close").addEventListener("click", function () {
       document.getElementById("modal").style.display = "none";
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const darkModeToggle = document.getElementById("darkModeToggle");
+
+      // Check if user has a saved preference
+      const isDarkMode = localStorage.getItem("darkMode") === "enabled";
+      if (isDarkMode) {
+        document.body.classList.add("dark-mode");
+        darkModeToggle.querySelector(".sun").style.display = "none";
+        darkModeToggle.querySelector(".moon").style.display = "inline";
+      } else {
+        darkModeToggle.querySelector(".sun").style.display = "inline";
+        darkModeToggle.querySelector(".moon").style.display = "none";
+      }
+
+      // Toggle dark mode on click
+      darkModeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        const isDarkModeActive = document.body.classList.contains("dark-mode");
+
+        // Update icons
+        if (isDarkModeActive) {
+          darkModeToggle.querySelector(".sun").style.display = "none";
+          darkModeToggle.querySelector(".moon").style.display = "inline";
+          localStorage.setItem("darkMode", "enabled");
+        } else {
+          darkModeToggle.querySelector(".sun").style.display = "inline";
+          darkModeToggle.querySelector(".moon").style.display = "none";
+          localStorage.setItem("darkMode", "disabled");
+        }
+      });
     });
   </script>
 
