@@ -57,6 +57,15 @@
       a:hover {
         text-decoration: underline;
       }
+      .dark-mode h1,
+      .dark-mode h2,
+      .dark-mode a {
+        color: goldenrod;
+      }
+      .dark-mode .containerprivacy {
+        background-color: #333;
+        color: #fff;
+      }
     </style>
   </head>
   <body class="bg-gray-100 text-gray-900">
@@ -72,6 +81,10 @@
             <li><a href="#community">Community</a></li>
             <li><a href="login.html">Login</a></li>
           </ul>
+          <button type="button" id="darkModeToggle" class="toggle">
+            <span class="icon sun">☀️</span>
+            <span class="icon moon">🌙</span>
+          </button>
         </nav>
       </div>
     </header>

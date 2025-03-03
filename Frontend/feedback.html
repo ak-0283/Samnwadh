@@ -11,6 +11,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
+  <style>
+    .reset-button {
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: #ff5c5c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .reset-button:hover {
+        background-color: #e04b4b;
+    }
+</style>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
@@ -19,11 +35,11 @@
       </button>
   </nav>
 
-    <div class="feedback-container">
-      <h2 class="feedback-title">We Value Your Feedback!</h2>
-      <p class="feedback-subtext">Let us know how we can improve.</p>
+  <div class="feedback-container"> 
+    <h2 class="feedback-title">We Value Your Feedback!</h2>
+    <p class="feedback-subtext">Let us know how we can improve.</p>
 
-      <form id="feedback-form">
+    <form id="feedback-form">
         <label for="name">Name:</label>
         <input
           type="text"
@@ -61,10 +77,18 @@
         ></textarea>
 
         <button type="submit" class="feedback-button">Submit Feedback</button>
-      </form>
+        <button type="button" class="reset-button" onclick="resetForm()">Reset</button>
+    </form>
 
-      <p id="feedback-message" class="feedback-message"></p>
-    </div>
+    <p id="feedback-message" class="feedback-message"></p>
+</div>
+
+<script>
+    function resetForm() {
+        document.getElementById("feedback-form").reset();
+    }
+</script>
+
     <footer class="bg-blue-600 text-white py-8">
       <div class="footer-container">
         <div class="newsletter">
