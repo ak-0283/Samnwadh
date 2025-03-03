@@ -99,6 +99,31 @@ grid-template-columns: 1fr 1fr 1fr;
    margin-bottom: 20px;
    color: #2B6CB0;
   }
+  .member {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.dark-mode .member{
+  background: #6d6a6a;
+}
+
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member h4 {
+    margin: 10px 0 5px;
+}
+.dark-mode .member p{
+  color: rgb(246, 248, 250);
+}
 .member{
     margin-right: 20px;
     margin-bottom: 20px;
