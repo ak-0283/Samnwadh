@@ -71,17 +71,31 @@ grid-template-columns: 1fr 1fr 1fr;
    margin-bottom: 20px;
    color: rgb(47, 150, 168);
   }
-.member{
-    margin-right: 20px;
-    margin-bottom: 20px;
-    background-color: rgb(209, 209, 209);
-    box-shadow: 2px 4px 4px rgba(0,0,0,0.3);
-    padding: 20px;
-  }
-.member h4{
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-  }
+  .member {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.dark-mode .member{
+  background: #6d6a6a;
+}
+
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member h4 {
+    margin: 10px 0 5px;
+}
+.dark-mode .member p{
+  color: rgb(246, 248, 250);
+}
  .member .role{
     font-style: italic;
     font-size: 18px;
