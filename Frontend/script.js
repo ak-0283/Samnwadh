@@ -17,29 +17,98 @@ function scrollFunction() {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
 function signup() {
-  let username = document.getElementById("signup-username").value;
+  let username = document.getElementById("signup-username").value.trim();
   let password = document.getElementById("signup-password").value;
   let confirmPassword = document.getElementById("signup-confirmpassword").value;
+  let name = document.getElementById("signup-name").value.trim();
+  let dateOfBirth = document.getElementById("signup-dateofbirth").value;
+  let phone = document.getElementById("signup-phone").value.trim();
+  let gender = document.querySelector('input[name="gender"]:checked');
+  let profilePic = document.getElementById("profilepic").files.length;
   let message = document.getElementById("signup-message");
+
+  // Email validation regex
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Phone number validation (assumes 10-digit number)
+  let phonePattern = /^\d{10}$/;
+  // Password strength validation (at least 8 characters, one number, one uppercase letter)
+  let passwordPattern = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+  // Validation checks
+  if (!profilePic) {
+    message.style.color = "red";
+    message.innerText = "Please upload a profile picture!";
+    return;
+  }
+
+  if (name === "") {
+    message.style.color = "red";
+    message.innerText = "Please enter your name!";
+    return;
+  }
+
+  if (dateOfBirth === "") {
+    message.style.color = "red";
+    message.innerText = "Please select your date of birth!";
+    return;
+  }
+
+  if (!gender) {
+    message.style.color = "red";
+    message.innerText = "Please select your gender!";
+    return;
+  }
+
+  if (!emailPattern.test(username)) {
+    message.style.color = "red";
+    message.innerText = "Enter a valid email address!";
+    return;
+  }
+
+  if (!phonePattern.test(phone)) {
+    message.style.color = "red";
+    message.innerText = "Enter a valid 10-digit phone number!";
+    return;
+  }
+
+  if (!passwordPattern.test(password)) {
+    message.style.color = "red";
+    message.innerText =
+      "Password must be at least 8 characters long, contain one uppercase letter, and one number!";
+    return;
+  }
 
   if (password !== confirmPassword) {
     message.style.color = "red";
     message.innerText = "Both passwords do not match!";
-    return; // Stop execution if passwords don't match
+    return;
   }
 
+  // Check if user already exists
   if (localStorage.getItem(username)) {
     message.style.color = "red";
     message.innerText = "User already exists!";
-  } else {
-    localStorage.setItem(username, password);
-    message.style.color = "green";
-    message.innerText = "Signup successful! Redirecting to Home...";
-    setTimeout(() => (window.location.href = "index.html"), 2000);
+    return;
   }
+
+  // Store user data in localStorage (for demo purposes)
+  let userData = {
+    name: name,
+    dateOfBirth: dateOfBirth,
+    gender: gender.value,
+    phone: phone,
+    password: password, // Ideally, hash this before storing in real applications
+  };
+
+  localStorage.setItem(username, JSON.stringify(userData));
+
+  message.style.color = "green";
+  message.innerText = "Signup successful! Redirecting to Home...";
+
+  setTimeout(() => (window.location.href = "index.html"), 2000);
 }
+
 
 function resetfield() {
   document.getElementById("signup-name").value = "";
