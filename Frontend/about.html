@@ -1,137 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Samnwadh</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="toggle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
-<style>
-    .navbar{
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="toggle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <style>
+    .navbar {
       justify-content: flex-start !important;
     }
-    footer{
-        padding: 10px;
+    footer {
+      padding: 10px;
     }
-</style>
-<body>
-
+  </style>
+  <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <button class="back-button" onclick="window.location.href = 'index.html'">
-            <i class="fa-solid fa-arrow-left fa-xl"></i>
-        </button>
-        <button type="button" id="darkModeToggle" class="toggle">
-            <span class="icon sun">☀️</span>
-            <span class="icon moon">🌙</span>
-          </button>
+      <button class="back-button" onclick="window.location.href = 'index.html'">
+        <i class="fa-solid fa-arrow-left fa-xl"></i>
+      </button>
+      <button type="button" id="darkModeToggle" class="toggle">
+        <span class="icon sun">☀️</span>
+        <span class="icon moon">🌙</span>
+      </button>
     </nav>
-     <div class="about">
-    <div class="about-container">
+    <div class="about">
+      <div class="about-container">
         <h1>About <span class="highlight">Samnwadh</span></h1>
         <p>
-            <strong>Samnwadh</strong> is an <span class="highlight">open-source platform</span> designed to connect, share, and collaborate in real-time. 
-            Whether you're a <span class="highlight">developer</span>, <span class="highlight">creator</span>, or <span class="highlight">enthusiast</span>, 
-            our platform provides <span class="highlight">secure messaging</span>, <span class="highlight">group chats</span>, and 
-            <span class="highlight">end-to-end encryption</span> to enhance your online interactions.
+          <strong>Samnwadh</strong> is an
+          <span class="highlight">open-source platform</span> designed to
+          connect, share, and collaborate in real-time. Whether you're a
+          <span class="highlight">developer</span>,
+          <span class="highlight">creator</span>, or
+          <span class="highlight">enthusiast</span>, our platform provides
+          <span class="highlight">secure messaging</span>,
+          <span class="highlight">group chats</span>, and
+          <span class="highlight">end-to-end encryption</span> to enhance your
+          online interactions.
         </p>
         <p>
-            We believe in <span class="highlight">privacy, transparency, and community-driven growth</span>. 
-            Our goal is to empower individuals by providing a seamless and feature-rich communication experience.
+          We believe in
+          <span class="highlight"
+            >privacy, transparency, and community-driven growth</span
+          >. Our goal is to empower individuals by providing a seamless and
+          feature-rich communication experience.
         </p>
         <div class="offer-container">
-            <h2>What <span class="highlight">We Offer</span></h2>
-            <ul>
-                <li><span class="highlight">Secure Messaging</span> 
-                    <p>End-to-end encryption ensures your conversations remain private.</p> </li>
-                <li><span class="highlight">Real-Time Collaboration</span>  
-                    <p>Engage in group chats and share files effortlessly.</p></li>
-                <li><span class="highlight">Open-Source Innovation</span>  
-                    <p>A community-driven platform built with transparency.</p></li>
-            </ul>
+          <h2>What <span class="highlight">We Offer</span></h2>
+          <ul>
+            <li>
+              <span class="highlight">Secure Messaging</span>
+              <p>
+                End-to-end encryption ensures your conversations remain private.
+              </p>
+            </li>
+            <li>
+              <span class="highlight">Real-Time Collaboration</span>
+              <p>Engage in group chats and share files effortlessly.</p>
+            </li>
+            <li>
+              <span class="highlight">Open-Source Innovation</span>
+              <p>A community-driven platform built with transparency.</p>
+            </li>
+          </ul>
         </div>
-       
+
         <div class="choose-container">
-            <h2>Why <span class="highlight">Choose Samnwadh?</span></h2>
-        <ul>
-            <li><span class="highlight">Privacy-First Approach</span>
-                <p>Your data stays yours, always.</p></li>
-            <li><span class="highlight">User-Centric Features</span>
-                <p>Designed to enhance your online interactions.</p></li>
-            <li><span class="highlight">Driven by Community</span>
-                <p>Built for users, by users.</p></li>
-        </ul>
+          <h2>Why <span class="highlight">Choose Samnwadh?</span></h2>
+          <ul>
+            <li>
+              <span class="highlight">Privacy-First Approach</span>
+              <p>Your data stays yours, always.</p>
+            </li>
+            <li>
+              <span class="highlight">User-Centric Features</span>
+              <p>Designed to enhance your online interactions.</p>
+            </li>
+            <li>
+              <span class="highlight">Driven by Community</span>
+              <p>Built for users, by users.</p>
+            </li>
+          </ul>
         </div>
-        
+      </div>
     </div>
-</div>
 
     <!-- footer section -->
     <footer class="bg-blue-600 text-white py-8">
-        <div class="footer-container">
-          <div class="newsletter">
-            <h3>Subscribe to our Newsletter</h3>
-            <form id="subscribeForm">
-              <input
-                type="email"
-                id="emailInput"
-                placeholder="Enter your email"
-                required
-              />
-              <button class="submit" type="submit">Subscribe</button>
-            </form>
-          </div>
-          <div class="footerLinksForAdminInfo">
-            <p>📍 Location: xyz, India</p>
-            <p>📞 Phone: <a href="tel:+919876543210">+91 99999 99990</a></p>
-            <p>
-              📧 Email:
-              <a href="mailto:your-email@example.com">your-email@example.com</a>
-            </p>
-          </div>
-          <!-- Footer Links (Right Side) -->
-          <div class="footer-links">
-            <a href="about.html" class="text-white hover:underline">About Us</a>
-            <a href="contact.html" class="text-white hover:underline"
-              >Contact Us</a
-            >
-            <a href="review.html" class="text-white hover:underline">Review</a>
-            <a href="faq.html" class="text-white hover:underline">FAQ</a>
-            <a href="feedback.html" class="text-white hover:underline"
-              >Feedback</a
-            >
-            <a href="terms.html" class="text-white hover:underline"
-              >Terms & Conditions</a
-            >
-            <a href="blog.html" class="text-white hover:underline"> Blog </a>
-            <a href="privacy.html" class="text-white hover:underline"
-              >Privacy Policy</a
-            >
-          </div>
+      <div class="footer-container">
+        <div class="newsletter">
+          <h3>Subscribe to our Newsletter</h3>
+          <form id="subscribeForm">
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Enter your email"
+              required
+            />
+            <button class="submit" type="submit">Subscribe</button>
+          </form>
         </div>
-  
-        <!-- Social Links & Copyright (Centered at Bottom) -->
-        <div class="bottom-footer">
-          <p>&copy; 2025 Samnwadh. All rights reserved.</p>
-          <div class="social-links">
-            <a href="https://github.com/ak-0283"><i class="fab fa-github"></i></a>
-            <a href="https://discord.com/users/762235277263241236"
-              ><i class="fa-brands fa-discord"></i
-            ></a>
-            <a href="https://x.com/AK_2805"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-            <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-          </div>
+        <div class="footerLinksForAdminInfo">
+          <p>📍 Location: xyz, India</p>
+          <p>📞 Phone: <a href="tel:+919876543210">+91 99999 99990</a></p>
+          <p>
+            📧 Email:
+            <a href="mailto:your-email@example.com">your-email@example.com</a>
+          </p>
         </div>
-      </footer>
-    
+        <!-- Footer Links (Right Side) -->
+        <div class="footer-links">
+          <a href="about.html" class="text-white hover:underline">About Us</a>
+          <a href="contact.html" class="text-white hover:underline"
+            >Contact Us</a
+          >
+          <a href="review.html" class="text-white hover:underline">Review</a>
+          <a href="faq.html" class="text-white hover:underline">FAQ</a>
+          <a href="feedback.html" class="text-white hover:underline"
+            >Feedback</a
+          >
+          <a href="community.html" class="text-white hover:underline"
+            >Community</a
+          >
+          <a href="terms.html" class="text-white hover:underline"
+            >Terms & Conditions</a
+          >
+          <a href="blog.html" class="text-white hover:underline"> Blog </a>
+          <a href="privacy.html" class="text-white hover:underline"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
 
-</body>
-<script src="script.js"></script>
+      <!-- Social Links & Copyright (Centered at Bottom) -->
+      <div class="bottom-footer">
+        <p>&copy; 2025 Samnwadh. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://github.com/ak-0283"><i class="fab fa-github"></i></a>
+          <a href="https://discord.com/users/762235277263241236"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+          <a href="https://x.com/AK_2805"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
 </html>
