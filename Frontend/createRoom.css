@@ -57,6 +57,8 @@ body {
 
 /* Form Container */
 .form-container {
+  margin-top: 700px;
+  margin-bottom: 65px;
   background: white;
   padding: 25px;
   border-radius: 10px;
