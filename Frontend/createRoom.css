@@ -7,11 +7,52 @@
 }
 
 body {
+  font-family: Arial, sans-serif;
+  /* background: linear-gradient(to right, #2a69ae, #20418f); */
+  color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  overflow-x: hidden;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   height: 100vh;
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* background: rgba(255, 255, 255, 0.2); */
+  padding: 15px;
+  display: flex;
+  height: 60px;
+  justify-content: flex-start;
+  /* box-shadow: 0 4px 4px rgb(44, 44, 44); */
+}
+.dark-mode .navbar {
+  background: #444;
+}
+/* Back Button */
+.back-button {
+  background: #204290;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #0190f6;
+  transform: scale(1.05);
 }
 
 /* Form Container */
