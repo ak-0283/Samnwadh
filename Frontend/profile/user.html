@@ -196,7 +196,6 @@
     /* Dark Mode Button */
     .toggle {
       margin-left: auto;
-      /* Push the dark mode button to the far right */
       padding: 10px 15px;
       border: none;
       border-radius: 30px;
@@ -217,7 +216,6 @@
       background: linear-gradient(135deg, #ffa500, #ff4500);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
       transform: translateY(-2px);
-      /* Slight lift on hover */
     }
 
     body.dark-mode {
@@ -263,9 +261,9 @@
     </button>
   </nav>
   <div class="profile-container">
-    <img src="https://i.pravatar.cc/150" alt="Profile Picture" class="profile-pic">
-    <h2 class="username">John Doe</h2>
-    <p class="email">@johndoe</p>
+    <img id="profilePic" src="https://i.pravatar.cc/150" alt="Profile Picture" class="profile-pic">
+    <h2 id="displayName" class="username">John Doe</h2>
+    <p id="displayEmail" class="email">@johndoe</p>
     <div class="stats">
       <div class="stat">
         <p>Tech Completed</p><span>1</span>
@@ -282,19 +280,76 @@
       <button id="settings-btn">Settings</button>
     </div>
   </div>
+
+  <div id="modal-container"></div>
+
   <script>
-    document.getElementById("edit-btn").addEventListener("click", function () {
-      document.getElementById("modal").style.display = "flex";
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("edituser.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("modal-container").innerHTML = data;
+
+          setTimeout(() => {
+            const editBtn = document.getElementById("edit-btn");
+            const closeBtn = document.querySelector(".close");
+            const saveBtn = document.getElementById("save-btn");
+
+            const profileName = document.querySelector(".username");
+            const profileEmail = document.querySelector(".email");
+            const profilePic = document.querySelector(".profile-pic");
+
+            const nameInput = document.getElementById("edit-name");
+            const emailInput = document.getElementById("edit-email");
+            const imageInput = document.getElementById("image-upload");
+            const previewImg = document.getElementById("preview-img");
+
+            editBtn.addEventListener("click", function () {
+              document.getElementById("modal").style.display = "flex";
+
+              nameInput.value = profileName.textContent;
+              emailInput.value = profileEmail.textContent;
+              previewImg.src = profilePic.src;
+            });
+
+            closeBtn.addEventListener("click", function () {
+              document.getElementById("modal").style.display = "none";
+            });
+
+            imageInput.addEventListener("change", function () {
+              const file = imageInput.files[0];
+              if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                  previewImg.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+              }
+            });
+
+            saveBtn.addEventListener("click", function () {
+              const newName = nameInput.value;
+              const newEmail = emailInput.value;
+
+              profileName.textContent = newName;
+              profileEmail.textContent = newEmail;
+
+              if (imageInput.files.length > 0) {
+                profilePic.src = previewImg.src;
+              }
+
+              document.getElementById("modal").style.display = "none";
+            });
+          }, 100);
+        });
     });
-    document.querySelector(".close").addEventListener("click", function () {
-      document.getElementById("modal").style.display = "none";
-    });
+
   </script>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const darkModeToggle = document.getElementById("darkModeToggle");
 
-      // Check if user has a saved preference
       const isDarkMode = localStorage.getItem("darkMode") === "enabled";
       if (isDarkMode) {
         document.body.classList.add("dark-mode");
@@ -305,12 +360,12 @@
         darkModeToggle.querySelector(".moon").style.display = "none";
       }
 
-      // Toggle dark mode on click
+
       darkModeToggle.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
         const isDarkModeActive = document.body.classList.contains("dark-mode");
 
-        // Update icons
+
         if (isDarkModeActive) {
           darkModeToggle.querySelector(".sun").style.display = "none";
           darkModeToggle.querySelector(".moon").style.display = "inline";
