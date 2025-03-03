@@ -27,6 +27,63 @@
 <link rel="stylesheet" href="toggle.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
+<style>
+    .team {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+            font-size: 16px;
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .member {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .member h4 {
+            margin: 10px 0 5px;
+        }
+
+        .role {
+            font-weight: bold;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .team-members {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+</style>
 <body>
   <header class="bg-blue-600 text-white p-6">
     <div class="container">
@@ -52,6 +109,7 @@
      <button id="scrollBtn" onclick="scrollToTop()">
       <i class="fas fa-arrow-up"></i>
     </button>
+
     <nav class="navbar">
         <button class="back-button" onclick="window.location.href = 'index.html'">
             <i class="fa-solid fa-arrow-left fa-xl"></i>
@@ -62,51 +120,68 @@
         </button>
     </nav>
     <section id="about">
-        <div class="about-container">
-        
+      <div class="about-container">
     
-          <div class="team">
-            <h3>Our Community</h3>
-            <div class="team-members">
+        <div class="team">
+          <h3>Our Community</h3>
+          <input type="text" id="searchInput" class="search-bar" placeholder="Search by name or role..." onkeyup="filterMembers()">
+          <div class="team-members" id="teamContainer">
               <div class="member">
-                <img src="jen.jpg" alt="//">
-                <h4>Jeniffer Rosh</h4>
-                <p class="role">Frontend Developer</p>
-                <p class="more-info">Jennifer is a frontend developer working on the user interface.</p>
+                  <img src="jen.jpg" alt="//">
+                  <h4>Jeniffer Rosh</h4>
+                  <p class="role">Frontend Developer</p>
+                  <p class="more-info">Jennifer is a frontend developer working on the user interface.</p>
               </div>
               <div class="member">
-                <img src="joe.jpg" alt="//">
-                <h4>Abhay</h4>
-                <p class="role">Project Manager</p>
-                <p class="more-info">Abhay leads the team, ensuring timely delivery of projects and effective communication within the team.</p>
+                  <img src="joe.jpg" alt="//">
+                  <h4>Abhay</h4>
+                  <p class="role">Project Manager</p>
+                  <p class="more-info">Abhay leads the team, ensuring timely delivery of projects.</p>
               </div>
               <div class="member">
-                <img src="jane.jpg" alt="//">
-                <h4>Joe Dohn</h4>
-                <p class="role">Backend Developer</p>
-                <p class="more-info">Joe is a backend developer working on the backend of the website.</p>
+                  <img src="jane.jpg" alt="//">
+                  <h4>Joe Dohn</h4>
+                  <p class="role">Backend Developer</p>
+                  <p class="more-info">Joe is a backend developer working on the backend of the website.</p>
               </div>
               <div class="member">
-                <img src="joe.jpg" alt="//">
-                <h4>Alaistair Max</h4>
-                <p class="role">Data Scientist</p>
-                <p class="more-info">Alaistair specializes in data science working on the data.</p>
+                  <img src="joe.jpg" alt="//">
+                  <h4>Alaistair Max</h4>
+                  <p class="role">Data Scientist</p>
+                  <p class="more-info">Alaistair specializes in data science.</p>
               </div>
               <div class="member">
-                <img src="jen.jpg" alt="//">
-                <h4>Cally Camille</h4>
-                <p class="role">AI/ML</p>
-                <p class="more-info">Cally Camille is an AI engineer an is working on enhancing the AI section<p>
+                  <img src="jen.jpg" alt="//">
+                  <h4>Cally Camille</h4>
+                  <p class="role">AI/ML</p>
+                  <p class="more-info">Cally is an AI engineer working on AI enhancements.</p>
               </div>
               <div class="member">
-                <img src="jane.jpg" alt="//">
-                <h4>Jane Smith</h4>
-                <p class="role">Backend Developer</p>
-                <p class="more-info">Jane works on backend architecture, optimizing performance, and ensuring data security
-                  for our applications.</p>
+                  <img src="jane.jpg" alt="//">
+                  <h4>Jane Smith</h4>
+                  <p class="role">Backend Developer</p>
+                  <p class="more-info">Jane works on backend architecture.</p>
               </div>
-            </div>
           </div>
+      </div>
+  
+      <script>
+          function filterMembers() {
+              let input = document.getElementById("searchInput").value.toLowerCase();
+              let members = document.getElementsByClassName("member");
+  
+              for (let i = 0; i < members.length; i++) {
+                  let name = members[i].getElementsByTagName("h4")[0].innerText.toLowerCase();
+                  let role = members[i].getElementsByClassName("role")[0].innerText.toLowerCase();
+  
+                  if (name.includes(input) || role.includes(input)) {
+                      members[i].style.display = "block";
+                  } else {
+                      members[i].style.display = "none";
+                  }
+              }
+          }
+      </script>
         </div>
       </section>
           <footer class="bg-blue-600 text-white py-8">
