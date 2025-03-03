@@ -4,121 +4,196 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Samnwadh</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="toggle.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-      }
-      body {
-        background-color: #f5f5f5;
-        color: #333;
-      }
-      .testimonial-section {
-        max-width: 800px;
-        margin: auto;
-        text-align: center;
-        padding: 40px 20px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      h2 {
-        color: #2c3e50;
-        margin-bottom: 20px;
-      }
-      .testimonials {
-        display: flex;
-        overflow: hidden;
-        position: relative;
-      }
-      .testimonial {
-        min-width: 100%;
-        padding: 20px;
-        text-align: center;
-        animation: slide 15s infinite;
-      }
-      @keyframes slide {
-        0%,
-        100% {
-          transform: translateX(0);
-        }
-        25% {
-          transform: translateX(-100%);
-        }
-        50% {
-          transform: translateX(-200%);
-        }
-        75% {
-          transform: translateX(-300%);
-        }
-      }
-      .profile-img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 10px;
-        border: 3px solid #2c3e50;
-      }
-      .testimonial p {
-        font-style: italic;
-        font-size: 16px;
-        margin-bottom: 10px;
-      }
-      .testimonial h4 {
-        color: #1f618d;
-        font-size: 18px;
-        margin-top: 10px;
-      }
-      .stars {
-        color: #f4c542;
-        font-size: 18px;
-      }
-      .dark-mode .testimonial-section{
-        background: #333;
-      }
-      .dark-mode .testimonial-section h2, 
-      .dark-mode .testimonial-section h4{
-        color: #1E90FF;
-      }
-    </style>
-  </head>
-  <body>
-    <header class="bg-blue-600 text-white p-6">
-      <div class="container">
-        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samnwadh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="toggle.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    
+    .navbar.active {
+      display: block;
+    }
 
-        <a href="index.html"><img src="logo.webp" alt="Samnwadh" /></a>
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      overflow-y: scroll;
+    }
 
-        <nav class="navbar" id="navbar">
-          <ul class="nav-links">
-            <li><a href="index.html">Features</a></li>
-            <li><a href="techstack.html">Tech Stack</a></li>
-            <li><a href="contributor/contributor.html">Contribute</a></li>
-            <li><a href="#community">Community</a></li>
-            <li><a href="review.html">Review</a></li>
-            <li><a href="login.html">Login</a></li>
-          </ul>
-          <button type="button" id="darkModeToggle" class="toggle">
-            <span class="icon sun">☀️</span>
-            <span class="icon moon">🌙</span>
-          </button>
-        </nav>
+    .testimonial-section {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .testimonials {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .testimonial {
+      min-width: 100%;
+      padding: 20px;
+      text-align: center;
+      animation: slide 15s infinite;
+    }
+
+    #darkModeToggle {
+      align-items: center;
+      justify-content: center;
+      margin: 1rem auto;
+    }
+
+    @keyframes slide {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-100%);
+      }
+
+      50% {
+        transform: translateX(-200%);
+      }
+
+      75% {
+        transform: translateX(-300%);
+      }
+    }
+
+    .profile-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 3px solid #2c3e50;
+    }
+
+    .testimonial p {
+      font-style: italic;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .testimonial h4 {
+      color: #1f618d;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .stars {
+      color: #f4c542;
+      font-size: 18px;
+    }
+
+    .dark-mode .testimonial-section {
+      background: #333;
+    }
+
+    .dark-mode .testimonial-section h2,
+    .dark-mode .testimonial-section h4 {
+      color: #1E90FF;
+    }
+
+    footer {
+      width: 100%
+    }
+
+    .footer-container {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 1rem;
+    }
+
+    .footerLinksForAdminInfo {
+      width: 60%;
+    }
+
+    .submit {
+      margin-top: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      .footerLinksForAdminInfo {
+        margin: 0.5rem auto;
+        align-items: center;
+      }
+
+      .navbar {
+        display: none !important;
+      }
+
+      .navbar.active {
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="bg-blue-600 text-white p-6">
+    <div class="container">
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+      <a href="index.html"><img src="logo.webp" alt="Samnwadh" /></a>
+
+      <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Features</a></li>
+          <li><a href="techstack.html">Tech Stack</a></li>
+          <li><a href="contributor/contributor.html">Contribute</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="review.html">Review</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+        <button type="button" id="darkModeToggle" class="toggle">
+          <span class="icon sun">☀️</span>
+          <span class="icon moon">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="testimonial-section">
+    <h2>What Our Users Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <img src="https://i.pravatar.cc/80?img=8" alt="Emma R." class="profile-img" />
+        <p>
+          "An incredible place to collaborate on projects! The community is so
+          supportive."
+        </p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h4>- Emma R.</h4>
       </div>
     </header>
 
@@ -207,30 +282,37 @@
           </p>
         </div>
         <!-- Footer Links (Right Side) -->
-        <div class="bottom-footer">  <div class="footer-links">
-          <a href="about.html" class="text-white hover:underline">About Us</a>
-          <a href="contact.html" class="text-white hover:underline"
-            >Contact Us</a
-          >
-          <a href="review.html" class="text-white hover:underline">Review</a>
-          <a href="faq.html" class="text-white hover:underline">FAQ</a>
-          <a href="feedback.html" class="text-white hover:underline"
-            >Feedback</a
-          >
-          <a href="terms.html" class="text-white hover:underline"
-            >Terms & Conditions</a
-          >
-          <a href="blog.html" class="text-white hover:underline"> Blog </a>
-          <a href="privacy.html" class="text-white hover:underline"
-            >Privacy Policy</a
-          >
-          <a href="privacy.html" class="text-white hover:underline"
-            >Privacy Policy</a
-          >
-          <a href="terms.html" class="text-white hover:underline"
-            >Terms & Conditions</a
-          >
+        <div class="bottom-footer">
+          <div class="footer-links">
+            <a href="about.html" class="text-white hover:underline">About Us</a>
+            <a href="contact.html" class="text-white hover:underline"
+              >Contact Us</a
+            >
+            <a href="review.html" class="text-white hover:underline">Review</a>
+            <a href="faq.html" class="text-white hover:underline">FAQ</a>
+            <a href="feedback.html" class="text-white hover:underline"
+              >Feedback</a
+            >
+            <a href="terms.html" class="text-white hover:underline"
+              >Terms & Conditions</a
+            >
+            <a href="blog.html" class="text-white hover:underline"> Blog </a>
+            <a href="privacy.html" class="text-white hover:underline"
+              >Privacy Policy</a
+            >
+            <a href="terms.html" class="text-white hover:underline"
+              >Terms & Conditions</a
+            >
+          </div>
         </div>
+    <!-- Social Links & Copyright (Centered at Bottom) -->
+    <div class="bottom-footer">
+      <p>&copy; 2025 Samnwadh. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://github.com/ak-0283"><i class="fab fa-github"></i></a>
+        <a href="https://discord.com/users/762235277263241236"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://x.com/AK_2805"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/"><i class="fa-brands fa-linkedin"></i></a>
       </div>
 
       <!-- Social Links & Copyright (Centered at Bottom) -->

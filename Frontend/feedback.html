@@ -4,26 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback</title>
-    <link rel="stylesheet" href="feedback.css" >
-    
+    <link rel="stylesheet" href="feedback.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
+  <style>
+    .reset-button {
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: #ff5c5c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .reset-button:hover {
+        background-color: #e04b4b;
+    }
+</style>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
       <button class="back-button" onclick="window.location.href = 'index.html'">
-          <i class="fa-solid fa-arrow-left fa-xl"></i>
+        <i class="fa-solid fa-arrow-left fa-xl"></i>
       </button>
-  </nav>
+    </nav>
 
-    <div class="feedback-container">
-      <h2 class="feedback-title">We Value Your Feedback!</h2>
-      <p class="feedback-subtext">Let us know how we can improve.</p>
+  <div class="feedback-container"> 
+    <h2 class="feedback-title">We Value Your Feedback!</h2>
+    <p class="feedback-subtext">Let us know how we can improve.</p>
 
-      <form id="feedback-form">
+    <form id="feedback-form">
         <label for="name">Name:</label>
         <input
           type="text"
@@ -61,10 +77,18 @@
         ></textarea>
 
         <button type="submit" class="feedback-button">Submit Feedback</button>
-      </form>
+        <button type="button" class="reset-button" onclick="resetForm()">Reset</button>
+    </form>
 
-      <p id="feedback-message" class="feedback-message"></p>
-    </div>
+    <p id="feedback-message" class="feedback-message"></p>
+</div>
+
+<script>
+    function resetForm() {
+        document.getElementById("feedback-form").reset();
+    }
+</script>
+
     <footer class="bg-blue-600 text-white py-8">
       <div class="footer-container">
         <div class="newsletter">
@@ -98,6 +122,9 @@
           <a href="feedback.html" class="text-white hover:underline"
             >Feedback</a
           >
+          <a href="community.html" class="text-white hover:underline"
+            >Community</a
+          >
           <a href="terms.html" class="text-white hover:underline"
             >Terms & Conditions</a
           >
@@ -125,7 +152,6 @@
         </div>
       </div>
     </footer>
-  
 
     <script src="feedback.js"></script>
   </body>
