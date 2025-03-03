@@ -8,14 +8,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-<<<<<<<<< Temporary merge branch 1
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
+    <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="blog.css" />
     <link rel="stylesheet" href="toggle.css" />
-    <link rel="stylesheet" href="style.css">
     <!-- styling for the add blog page  -->
     <style>
       .add-blog-section {
@@ -84,16 +83,15 @@
   </head>
 
   <body>
-<<<<<<<<< Temporary merge branch 1
+
     <!-- scroll top button -->
     <button id="scrollToTopBtn">⬆</button>
-=========
->>>>>>>>> Temporary merge branch 2
+
     <header class="bg-blue-600 text-white p-6">
       <div class="container">
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
         <a href="index.html"><img src="logo.webp" alt="Samnwadh" /></a>
-        <nav class="navbar" id="navbar">
+        <nav class="navbar" >
           <ul class="nav-links">
             <li><a href="index.html">Features</a></li>
             <li><a href="techstack.html">Tech Stack</a></li>
@@ -109,6 +107,10 @@
         </nav>
       </div>
     </header>
+     <!-- scroll button -->
+     <button id="scrollBtn" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+    </button>
     <section class="add-blog-section">
       <h2>Add a New Blog</h2>
       <form class="add-blog-form" id="blogForm">
@@ -309,6 +311,5 @@
     <script src="toggle.js"></script>
     <script src="blog.js"></script>
     <script src="script.js"></script>
->>>>>>>>> Temporary merge branch 2
   </body>
 </html>
