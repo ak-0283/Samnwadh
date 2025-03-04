@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback</title>
     <link rel="stylesheet" href="feedback.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="toggle.css" />
 
     <link
       rel="stylesheet"
@@ -32,6 +34,10 @@
     <nav class="navbar">
       <button class="back-button" onclick="window.location.href = 'index.html'">
         <i class="fa-solid fa-arrow-left fa-xl"></i>
+      </button>
+      <button type="button" id="darkModeToggle" class="toggle">
+        <span class="icon sun">☀️</span>
+        <span class="icon moon">🌙</span>
       </button>
     </nav>
 
@@ -154,5 +160,7 @@
     </footer>
 
     <script src="feedback.js"></script>
+    <script src="script.js"></script>
+    <script src="toggle.js"></script>
   </body>
 </html>
