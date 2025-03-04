@@ -92,3 +92,63 @@ h1 {
     background: #0190f6;
     transform: scale(1.05);
 }
+
+/* Dark Mode Button */
+.toggle {
+    margin-left: auto; /* Push the dark mode button to the far right */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ffd700, #ffa500);
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.toggle:hover {
+    background: linear-gradient(135deg, #ffa500, #ff4500);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.dark-mode .toggle {
+    background: linear-gradient(135deg, #4b4b4b, #000);
+}
+
+.dark-mode .toggle:hover {
+    background: linear-gradient(135deg, #6b6b6b, #222);
+}
+
+/* Icon Visibility */
+.sun {
+    display: inline;
+}
+
+.moon {
+    display: none;
+}
+
+.dark-mode .sun {
+    display: none;
+}
+
+.dark-mode .moon {
+    display: inline;
+}
+
+body.dark-mode{
+    background: #333;
+    color: #fff;
+}
+.dark-mode .navbar{
+    background: #4b4b4b;
+}
+.dark-mode .contact-container{
+    background: #4b4b4b;
+}
