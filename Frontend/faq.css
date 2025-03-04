@@ -42,7 +42,7 @@ body {
 }
 
 .dark-mode h2 {
-  color: gold;
+  color:#007bff;
 }
 
 .dark-mode .question {
@@ -78,7 +78,7 @@ h2 {
 }
 
 /* Question Section */
-.faq-question {
+.question {
   font-weight: bold;
   font-size: 22px;
   display: flex;
@@ -98,6 +98,9 @@ h2 {
 }
 .dark-mode .faq-item:hover .question {
   color: white;
+}
+.dark-mode .question{
+  color: #ddd;
 }
 
 /* Answer Section */
