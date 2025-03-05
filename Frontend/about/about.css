@@ -135,3 +135,10 @@ p {
     }
 }
 
+.navbar {
+    justify-content: flex-start !important;
+  }
+  footer {
+    padding: 10px;
+  }
+
