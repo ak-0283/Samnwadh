@@ -301,3 +301,66 @@ footer {
   box-shadow: 0 0 20px rgba(0, 123, 255, 1), 0 0 30px rgba(0, 123, 255, 0.8);
   transform: scale(1.1);
 }
+
+.add-blog-section {
+  background: #f8f9fa;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-blog-section h2 {
+  text-align: center;
+  color: #333;
+}
+
+.add-blog-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-blog-form input,
+.add-blog-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-blog-form button {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-blog-form button:hover {
+  background: #0056b3;
+}
+.dark-mode h1,.dark-mode h2{
+  color: goldenrod
+}
+.dark-mode p{
+  color: white;
+}
+.dark-mode a{
+  background-color: #333;
+}
+.dark-mode .add-blog-section{
+  background-color: #333;
+  color: white;
+
+}
+.dark-mode .add-blog-form input,
+.dark-mode .add-blog-form textarea {
+  background-color: #333;
+  color: white;
+}
