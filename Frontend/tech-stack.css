@@ -17,6 +17,7 @@ body.dark-mode {
   padding: 20px 0;
   font-size: 2rem;
   border-radius: 0%;
+  margin-top: 110px;
 }
 
 body.dark-mode .head {
