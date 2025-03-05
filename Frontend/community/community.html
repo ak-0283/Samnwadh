@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community</title>
-    <link rel="stylesheet" href="community.css">
+    <link rel="stylesheet" href="./community.css">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 />
-<link rel="manifest" href="/site.webmanifest" />
+<link rel="manifest" href="../site.webmanifest" />
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -22,73 +22,11 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
 />
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="contributor.css">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="toggle.css">
+<link rel="stylesheet" href="../contributor/contributor.css">
+<link rel="stylesheet" href="../mainpage/style.css">
+<link rel="stylesheet" href="../toggle/toggle.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
-<style>
-    .team {
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .search-bar {
-            width: 100%;
-            max-width: 400px;
-            padding: 10px;
-            margin: 10px auto;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            display: block;
-            font-size: 16px;
-        }
-
-        .team-members {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-    
-        .member {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            width: 250px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .member img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .member h4 {
-            margin: 10px 0 5px;
-        }
-        
-
-        .role {
-            font-weight: bold;
-            color: #555;
-        }
-        .navbar{
-          padding: 2rem 1rem !important;
-        }
-
-        @media (max-width: 600px) {
-            .team-members {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-</style>
 <body>
      <!-- scroll button -->
      <button id="scrollBtn" onclick="scrollToTop()">
@@ -96,7 +34,7 @@
     </button>
 
     <nav class="navbar">
-        <button class="back-button" onclick="window.location.href = 'index.html'">
+        <button class="back-button" onclick="window.location.href = '../index.html'">
             <i class="fa-solid fa-arrow-left fa-xl"></i>
         </button>
         <button type="button" id="darkModeToggle" class="toggle">
@@ -112,37 +50,37 @@
           <input type="text" id="searchInput" class="search-bar" placeholder="Search by name or role..." onkeyup="filterMembers()">
           <div class="team-members" id="teamContainer">
               <div class="member">
-                  <img src="jen.jpg" alt="//">
+                  <img src="../images/jen.jpg" alt="//">
                   <h4>Jeniffer Rosh</h4>
                   <p class="role">Frontend Developer</p>
                   <p class="more-info">Jennifer is a frontend developer working on the user interface.</p>
               </div>
               <div class="member">
-                  <img src="joe.jpg" alt="//">
+                  <img src="../images/joe.jpg" alt="//">
                   <h4>Abhay</h4>
                   <p class="role">Project Manager</p>
                   <p class="more-info">Abhay leads the team, ensuring timely delivery of projects.</p>
               </div>
               <div class="member">
-                  <img src="jane.jpg" alt="//">
+                  <img src="../images/jane.jpg" alt="//">
                   <h4>Joe Dohn</h4>
                   <p class="role">Backend Developer</p>
                   <p class="more-info">Joe is a backend developer working on the backend of the website.</p>
               </div>
               <div class="member">
-                  <img src="joe.jpg" alt="//">
+                  <img src="../images/joe.jpg" alt="//">
                   <h4>Alaistair Max</h4>
                   <p class="role">Data Scientist</p>
                   <p class="more-info">Alaistair specializes in data science.</p>
               </div>
               <div class="member">
-                  <img src="jen.jpg" alt="//">
+                  <img src="../images/jen.jpg" alt="//">
                   <h4>Cally Camille</h4>
                   <p class="role">AI/ML</p>
                   <p class="more-info">Cally is an AI engineer working on AI enhancements.</p>
               </div>
               <div class="member">
-                  <img src="jane.jpg" alt="//">
+                  <img src="../images/jane.jpg" alt="//">
                   <h4>Jane Smith</h4>
                   <p class="role">Backend Developer</p>
                   <p class="more-info">Jane works on backend architecture.</p>
@@ -193,22 +131,22 @@
               </div>
               <!-- Footer Links (Right Side) -->
               <div class="footer-links">
-                <a href="about.html" class="text-white hover:underline">About Us</a>
-                <a href="contact.html" class="text-white hover:underline"
+                <a href="../about/about.html" class="text-white hover:underline">About Us</a>
+                <a href="../contact/contact.html" class="text-white hover:underline"
                   >Contact Us</a
                 >
-                <a href="review.html" class="text-white hover:underline">Review</a>
-                <a href="faq.html" class="text-white hover:underline">FAQ</a>
-                <a href="feedback.html" class="text-white hover:underline"
+                <a href="../review/review.html" class="text-white hover:underline">Review</a>
+                <a href="../faq/faq.html" class="text-white hover:underline">FAQ</a>
+                <a href="../feedback/feedback.html" class="text-white hover:underline"
                   >Feedback</a
                 >
-                <a href="community.html" class="text-white hover:underline"
+                <a href="./community.html" class="text-white hover:underline"
             >Community</a>
-                <a href="terms.html" class="text-white hover:underline"
+                <a href="../terms/terms.html" class="text-white hover:underline"
                   >Terms & Conditions</a
                 >
-                <a href="blog.html" class="text-white hover:underline"> Blog </a>
-                <a href="privacy.html" class="text-white hover:underline"
+                <a href="../blog/blog.html" class="text-white hover:underline"> Blog </a>
+                <a href="../privacy/privacy.html" class="text-white hover:underline"
                   >Privacy Policy</a
                 >
               </div>
@@ -231,6 +169,6 @@
               </div>
             </div>
           </footer>
-          <script src="script.js"></script>
+          <script src="../mainpage/script.js"></script>
 </body>
 </html>

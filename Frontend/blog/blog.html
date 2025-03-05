@@ -12,74 +12,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="blog.css" />
-    <link rel="stylesheet" href="toggle.css" />
-    <!-- styling for the add blog page  -->
-    <style>
-      .add-blog-section {
-        background: #f8f9fa;
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 600px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      .add-blog-section h2 {
-        text-align: center;
-        color: #333;
-      }
-
-      .add-blog-form {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .add-blog-form input,
-      .add-blog-form textarea {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-      }
-
-      .add-blog-form button {
-        background: #007bff;
-        color: white;
-        padding: 10px;
-        font-size: 18px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-
-      .add-blog-form button:hover {
-        background: #0056b3;
-      }
-      .dark-mode h1,.dark-mode h2{
-        color: goldenrod
-      }
-      .dark-mode p{
-        color: white;
-      }
-      .dark-mode a{
-        background-color: #333;
-      }
-      .dark-mode .add-blog-section{
-        background-color: #333;
-        color: white;
-
-      }
-      .dark-mode .add-blog-form input,
-      .dark-mode .add-blog-form textarea {
-        background-color: #333;
-        color: white;
-      }
-    </style>
+    <link rel="stylesheet" href="../mainpage/style.css"/>
+    <link rel="stylesheet" href="./blog.css" />
+    <link rel="stylesheet" href="../toggle/toggle.css" />
   </head>
 
   <body>
@@ -90,14 +25,14 @@
     <header class="bg-blue-600 text-white p-6">
       <div class="container">
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-        <a href="index.html"><img src="logo.webp" alt="Samnwadh" /></a>
+        <a href="../index.html"><img src="../images/logo.webp" alt="Samnwadh" /></a>
         <nav class="navbar" >
           <ul class="nav-links">
-            <li><a href="index.html">Features</a></li>
-            <li><a href="techstack.html">Tech Stack</a></li>
-            <li><a href="contributor/contributor.html">Contribute</a></li>
-            <li><a href="community.html">Community</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="../index.html">Features</a></li>
+            <li><a href="../tech-stack/techstack.html">Tech Stack</a></li>
+            <li><a href="../contributor/contributor.html">Contribute</a></li>
+            <li><a href="../community/community.html">Community</a></li>
+            <li><a href="../login/login.html">Login</a></li>
             <!-- <li><a href="createBlog.html">Create A Blog</a></li> -->
           </ul>
           <button type="button" id="darkModeToggle" class="toggle">
@@ -226,23 +161,23 @@
       <div class="footer-container">
         <!-- Footer Links (Right Side) -->
         <div class="footer-links">
-          <a href="about.html" class="text-white hover:underline">About Us</a>
-          <a href="contact.html" class="text-white hover:underline"
+          <a href="../about/about.html" class="text-white hover:underline">About Us</a>
+          <a href="../contact/contact.html" class="text-white hover:underline"
             >Contact Us</a
           >
-          <a href="review.html" class="text-white hover:underline">Review</a>
-          <a href="faq.html" class="text-white hover:underline">FAQ</a>
-          <a href="feedback.html" class="text-white hover:underline"
+          <a href="../review/review.html" class="text-white hover:underline">Review</a>
+          <a href="../faq/faq.html" class="text-white hover:underline">FAQ</a>
+          <a href="../feedback/feedback.html" class="text-white hover:underline"
             >Feedback</a
           >
-          <a href="community.html" class="text-white hover:underline"
+          <a href="../community/community.html" class="text-white hover:underline"
             >Community</a
           >
-          <a href="terms.html" class="text-white hover:underline"
+          <a href="../terms/terms.html" class="text-white hover:underline"
             >Terms & Conditions</a
           >
-          <a href="blog.html" class="text-white hover:underline"> Blog </a>
-          <a href="privacy.html" class="text-white hover:underline"
+          <a href="./blog.html" class="text-white hover:underline"> Blog </a>
+          <a href="../privacy/privacy.html" class="text-white hover:underline"
             >Privacy Policy</a
           >
         </div>
@@ -300,16 +235,16 @@
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="toggle.js"></script>
-    <script src="blog.js"></script>
+    <script src="../toggle/toggle.js"></script>
+    <script src="../blog/blog.html"></script>
     <script>
 
     </script>
 
   </script>
   
-    <script src="toggle.js"></script>
-    <script src="blog.js"></script>
-    <script src="script.js"></script>
+    <script src="../toggle/toggle.js"></script>
+    <script src="../blog.js"></script>
+    <script src="../mainpage/script.js"></script>
   </body>
 </html>

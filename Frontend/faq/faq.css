@@ -137,3 +137,44 @@ h2 {
   display: flex;
   justify-content: flex-end;
 }
+
+header {
+  padding: 24px 2px;
+}
+ul {
+  line-height: 1.8;
+  margin-bottom: 15px; /* Added spacing below paragraphs and lists */
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+.logo{
+  margin-left: 10px;
+ 
+}
+a:hover {
+  text-decoration: underline;
+}
+/* Search bar styling */
+.search-container {
+  text-align: center;
+  margin: 10%;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+
+  font-size: 16px;
+  outline: none;
+}
+
+.highlight {
+  background-color: yellow;
+}
