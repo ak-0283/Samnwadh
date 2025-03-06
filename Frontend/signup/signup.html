@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signup</title>
+  <link rel="stylesheet" href="./signup.css" />
+  <link rel="stylesheet" href="../CSS/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <button class="back-button" onclick="window.location.href = '../index.html'">
+      <i class="fa-solid fa-arrow-left fa-xl"></i>
+    </button>
+    <button type="button" id="darkModeToggle" class="toggle">
+      <span class="icon sun">☀️</span>
+      <span class="icon moon">🌙</span>
+    </button>
+  </nav>
+
+  <!--Sign up section  -->
+<div class="signup-wrapper">
+  <h2 class="signup-title">Sign Up</h2>
+
+  <input type="file" name="profilepic" class="signup-profilepic" id="profilepic" accept="image/*" required
+    aria-label="Upload Profile Picture" />
+  <label for="profilepic" class="lab-signup-profile" title="Upload Profile Picture">
+    <img src="../images/download.png" alt="Profile Picture Upload" />
+  </label>
+
+  <input type="text" class="signup-input" id="signup-name" placeholder="Enter Name" title="Enter your full name"
+    required />
+  <input type="date" class="signup-input" id="signup-dateofbirth" title="Select your date of birth" required />
+
+  <div class="user-gender" aria-labelledby="gender-label">
+    <span id="gender-label" class="visually-hidden">Select Gender</span>
+    <div class="female">
+      <input type="radio" name="gender" class="signupinput-gender" id="signup-gender-female" value="Female" />
+      <label for="signup-gender-female">Female</label>
+    </div>
+    <div class="male">
+      <input type="radio" name="gender" class="signupinput-gender" id="signup-gender-male" value="Male" />
+      <label for="signup-gender-male">Male</label>
+    </div>
+    <div class="others">
+      <input type="radio" name="gender" class="signupinput-gender" id="signup-gender-other" value="Other" />
+      <label for="signup-gender-other">Others</label>
+    </div>
+  </div>
+
+  <input type="email" class="signup-input" id="signup-username" placeholder="Enter Email"
+    title="Enter a valid email address" required />
+  <input type="tel" class="signup-input" id="signup-phone" placeholder="Enter Phone (10 digits)" pattern="\d{10}"
+    title="Enter a 10-digit phone number" required />
+
+  <!-- Password Field with Eye Icon -->
+  <div class="password-container">
+    <input type="password" class="signup-input" id="signup-password" placeholder="Enter Password"
+      title="Enter a secure password" required />
+    <i class="fa-solid fa-eye" onclick="togglePassword('signup-password', this)" title="Show/Hide Password"></i>
+  </div>
+
+  <!-- Confirm Password Field with Eye Icon -->
+  <div class="password-container">
+    <input type="password" class="signup-input" id="signup-confirmpassword" placeholder="Confirm Password"
+      title="Re-enter your password" required />
+    <i class="fa-solid fa-eye" onclick="togglePassword('signup-confirmpassword', this)" title="Show/Hide Password"></i>
+  </div>
+
+  <div class="bttn">
+    <button type="reset" class="reset-button" onclick="resetField()">Reset</button>
+    <button type="button" class="signup-button" onclick="signup()">Sign Up</button>
+  </div>
+
+  <p class="signup-text">
+    Already have an account?
+    <a href="../login/login.html" class="signup-link">Login</a>
+  </p>
+  <p id="signup-message" class="signup-message" aria-live="polite"></p>
+</div>
+
+  <!-- Footer Section -->
+  <footer class="bg-blue-600 text-white py-8">
+    <div class="footer-container">
+      <div class="newsletter">
+        <h3>Subscribe to our Newsletter</h3>
+        <form id="subscribeForm">
+          <input type="email" id="emailInput" placeholder="Enter your email" required />
+          <button class="submit" type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="footerLinksForAdminInfo">
+        <p>📍 Location: xyz, India</p>
+        <p>📞 Phone: <a href="tel:+919876543210">+91 99999 99990</a></p>
+        <p>
+          📧 Email:
+          <a href="mailto:your-email@example.com">your-email@example.com</a>
+        </p>
+      </div>
+      <!-- Footer Links (Right Side) -->
+      <div class="footer-links">
+        <a href="../about/about.html" class="text-white hover:underline">About Us</a>
+        <a href="../contact/contact.html" class="text-white hover:underline">Contact Us</a>
+        <a href="../review/review.html" class="text-white hover:underline">Review</a>
+        <a href="../faq/faq.html" class="text-white hover:underline">FAQ</a>
+        <a href="../feedback/feedback.html" class="text-white hover:underline">Feedback</a>
+        <a href="../community/community.html" class="text-white hover:underline">Community</a>
+        <a href="../terms/terms.html" class="text-white hover:underline">Terms & Conditions</a>
+        <a href="../blog/blog.html" class="text-white hover:underline"> Blog </a>
+        <a href="../privacy/privacy.html" class="text-white hover:underline">Privacy Policy</a>
+      </div>
+    </div>
+
+    <!-- Social Links & Copyright (Centered at Bottom) -->
+    <div class="bottom-footer">
+      <p>&copy; 2025 Samnwadh. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://github.com/ak-0283"><i class="fab fa-github"></i></a>
+        <a href="https://discord.com/users/762235277263241236"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://x.com/AK_2805"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Signup script -->
+
+  <script>
+    function togglePassword(fieldId, eyeIcon) {
+      let field = document.getElementById(fieldId);
+      if (field.type === "password") {
+        field.type = "text";
+        eyeIcon.classList.replace("fa-eye", "fa-eye-slash");
+      } else {
+        field.type = "password";
+        eyeIcon.classList.replace("fa-eye-slash", "fa-eye");
+      }
+    }
+
+    function resetField() {
+      document.getElementById("signup-name").value = "";
+      document.getElementById("signup-dateofbirth").value = "";
+      document.getElementById("signup-username").value = "";
+      document.getElementById("signup-phone").value = "";
+      document.getElementById("signup-password").value = "";
+      document.getElementById("signup-confirmpassword").value = "";
+      document.getElementById("signup-message").textContent = "";
+      let genderInputs = document.getElementsByName("gender");
+      genderInputs.forEach(input => input.checked = false);
+    }
+
+    function signup() {
+      let email = document.getElementById("signup-username").value;
+      let phone = document.getElementById("signup-phone").value;
+      let password = document.getElementById("signup-password").value;
+      let confirmPassword = document.getElementById("signup-confirmpassword").value;
+      let message = document.getElementById("signup-message");
+
+      let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      let phonePattern = /^\d{10}$/;
+
+      if (!emailPattern.test(email)) {
+        message.textContent = "Please enter a valid email address.";
+        message.style.color = "red";
+        return;
+      }
+
+      if (!phonePattern.test(phone)) {
+        message.textContent = "Phone number must be exactly 10 digits.";
+        message.style.color = "red";
+        return;
+      }
+
+      if (password.length < 6) {
+        message.textContent = "Password must be at least 6 characters long.";
+        message.style.color = "red";
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        message.textContent = "Passwords do not match!";
+        message.style.color = "red";
+        return;
+      }
+
+      message.textContent = "Sign-up successful!";
+      message.style.color = "green";
+    }
+  </script>
+
+  <script>
+    function togglePassword(fieldId, eyeIcon) {
+      const passwordField = document.getElementById(fieldId);
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+      } else {
+        passwordField.type = "password";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+      }
+    }
+  </script>
+  <script src="../mainpage/script.js"></script>
+</body>
+
+</html>

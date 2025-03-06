@@ -1,0 +1,328 @@
+/* General styling */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+  background-color: #3e82cbdf;
+}
+
+::-webkit-scrollbar:hover {
+  background-color: #57bff3;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: 2px 2px 5px #00b3ee;
+  background: linear-gradient(45deg, #003b6c, #0569dd);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #0569dd, #003b6c);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #2A69AE, #20418F);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+body.dark-mode {
+  background: #444;
+}
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  display: flex;
+  height: 65px;
+  justify-content: flex-start;
+  box-shadow: 0 4px 4px rgb(44, 44, 44);
+}
+.dark-mode .navbar{
+  background: #444;
+}
+/* Back Button */
+.back-button {
+  background: #204290;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #0190f6;
+  transform: scale(1.05);
+}
+
+/* Feedback container */
+.feedback-container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 60px; 
+}
+
+/* Title */
+.feedback-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 2px #007bff;
+}
+
+/* Subtext */
+.feedback-subtext {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Input fields */
+.feedback-input,
+.feedback-textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  color: black;
+}
+
+.feedback-textarea {
+  resize: none;
+}
+
+/* Button */
+.feedback-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background:linear-gradient(to right, #2965AB, #204290);    color: white;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.feedback-button:hover {
+  background:linear-gradient(to left, #2965AB, #204290);
+  transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Message */
+.feedback-message {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background: rgba(255, 255, 255, 0.2); */
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Back Button */
+.back-button {
+  background: #204290;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #0190f6;
+  transform: scale(1.05);
+}
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .back-button {
+    padding: 8px 16px; /* Smaller button */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .feedback-container {
+    width: 90%; /* Adjust width for smaller screens */
+    margin-top: 100px; /* Increased margin for proper spacing */
+  }
+
+  .feedback-title {
+    font-size: 20px; /* Slightly reduce text size */
+  }
+}
+footer {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 40px 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+}
+
+/* Footer Main Layout */
+.footer-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between; /* Keeps links on right */
+  align-items: center;
+  flex-wrap: wrap; /* Prevents overlap */
+}
+
+/* Footer Links (Always on Right) */
+.footerLinksForAdminInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns to the right */
+  text-align: left;
+  margin-right: auto; /* Pushes links to the right */
+}
+.footerLinksForAdminInfo a {
+  color: white;
+}
+.footerLinksForAdminInfo a:hover {
+  color: black;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns to the right */
+  text-align: right;
+  margin-left: auto; /* Pushes links to the right */
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  margin: 5px 0;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  color: #ffcb00;
+  text-decoration: underline;
+}
+
+/* Social Links & Copyright (Centered at Bottom) */
+.bottom-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.bottom-footer p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.newsletter {
+  margin: 20px;
+}
+
+.newsletter input {
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+.newsletter button {
+  background: linear-gradient(135deg, #6d6a6a, #ffffff);
+}
+#subscribeForm {
+  margin-top: 10px;
+}
+.submit {
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.social-links a:hover {
+  color: #ffcb00;
+  background-color: purple;
+}
+
+/* Responsive Fix for Small Screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    /* align-items: flex-end; */
+  }
+
+  .footer-links {
+    align-items: center; /* Center the links on small screens */
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+.reset-button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.reset-button:hover {
+  background-color: #e04b4b;
+}

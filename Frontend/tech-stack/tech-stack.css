@@ -1,0 +1,222 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.dark-mode-toggle{
+  margin-right: 25px;
+  width: 50px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.dark-mode-toggle:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.head {
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  color: #585555;
+  padding: 20px 0;
+  font-size: 2rem;
+  border-radius: 0%;
+  margin-top: 110px;
+}
+
+body.dark-mode .head {
+  color: #ffffff;
+}
+
+.tech-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.tech-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+body.dark-mode .tech-card {
+  background: #1e1e1e;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.tech-card:hover {
+  transform: scale(1.05);
+}
+
+.tech-card img {
+  width: 90px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.tech-card h2 {
+  margin: 15px 0 10px;
+}
+
+body.dark-mode .tech-card h2 {
+  color: #ffffff;
+}
+
+.tech-card p {
+  color: #555;
+}
+
+body.dark-mode .tech-card p {
+  color: #bbbbbb;
+}
+
+.tech-card span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #2b6cb0;
+}
+
+body.dark-mode .tech-card span {
+  color: #4db8ff;
+}
+
+/* Back Button */
+.back-button {
+  background: #2867f0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .back-button {
+  background: #4db8ff;
+  color: #121212;
+}
+
+.back-button:hover {
+  background: #0190f6;
+  transform: scale(1.05);
+}
+
+body.dark-mode .back-button:hover {
+  background: #66c2ff;
+}
+
+/* searchbar design */
+.search-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 50%;
+  padding: 12px;
+  margin: 20px 0;
+  font-size: 18px;
+  border: 2px solid #3498db;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  padding-right: 40px; /* Space for clear button */
+}
+
+body.dark-mode .search-bar {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-color: #4db8ff;
+}
+
+.search-bar:focus {
+  border-color: #2ecc71;
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+}
+
+body.dark-mode .search-bar:focus {
+  border-color: #66ff99;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 27%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #7c7877;
+  padding: 5px 10px;
+  border-radius: 50%;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .clear-btn {
+  color: #bbbbbb;
+}
+
+.clear-btn:hover {
+  color: #c0392b;
+}
+
+body.dark-mode .clear-btn:hover {
+  color: #ff6b6b;
+}
+
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+  margin-top: 15px;
+}
+
+body.dark-mode .no-results {
+  color: #ff5c5c;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+/* Scroll to Top Button Styles */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  display: none;
+  padding: 10px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #00ff51;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.8), 0 0 20px rgba(0, 123, 255, 0.6);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+#scrollToTopBtn:hover {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 1), 0 0 30px rgba(0, 123, 255, 0.8);
+  transform: scale(1.1);
+}

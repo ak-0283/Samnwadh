@@ -1,0 +1,71 @@
+.close {
+    color: #0f345c;
+}
+
+.dark-mode .close{
+    color: goldenrod;
+}
+
+.modal-content h2 {
+    margin: 1rem;
+    color: #20418F;
+    text-shadow: 2px 2px 2px #9f9c9c;
+}
+
+.dark-mode .modal-content h2{
+    color: goldenrod;
+    text-shadow: none;
+}
+
+.modal-content div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2rem 0.5rem;
+}
+
+.modal-content div label {
+    margin-right: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #20418F;
+}
+
+.dark-mode .modal-content div label{
+    color: goldenrod;
+}
+
+input {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #20418F;
+    border-radius: 5px;
+}
+.dark-mode input{
+    border-color: goldenrod;
+    background: transparent;
+    color: white;
+}
+
+input::placeholder {
+    color: #20418F;
+}
+
+#save-btn {
+    display: block;
+    width: 98%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    background: linear-gradient(to right, #2A67AC, #20418F);
+    color: white;
+    cursor: pointer;
+}
+
+#save-btn:hover {
+    background: linear-gradient(to right, #20418F, #2A67AC);
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 5px #0f345c;
+}
