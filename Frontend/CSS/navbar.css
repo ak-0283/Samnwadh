@@ -1,0 +1,86 @@
+/* Header */
+header {
+    background-color: #2b6cb0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .nav-links li {
+    list-style-type: none;
+}
+
+header .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header .nav-links a:hover {
+    color: #ffcb00;
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 3px 0 0 35px;
+}
+
+.dark-mode header {
+    background-color: #1a1a1a;
+}
+
+/* navbar */
+.navbar {
+    display: flex !important;
+    justify-content: end !important;
+    align-items: center !important;
+    gap: 20px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    /* Adds spacing between list items */
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.dark-mode .navbar {
+    background-color: #333;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.dark-mode .nav-links a {
+    color: #fff;
+}
+
+.dark-mode .nav-links a:hover {
+    color: #ffcb00;
+}

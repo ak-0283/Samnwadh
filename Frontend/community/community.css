@@ -1,0 +1,257 @@
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+  background-color: #3e82cbdf;
+}
+
+::-webkit-scrollbar:hover {
+  background-color: #57bff3;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: 2px 2px 5px #00b3ee;
+  background: linear-gradient(45deg, #003b6c, #0569dd);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #0569dd, #003b6c);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body{
+  overflow-x: hidden;
+} */
+
+
+#about {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 50px;
+  background: #ffffff;
+  /* margin-right: 20px; */
+  width: 100%;
+  /* max-width: 100vw; */
+  box-sizing: border-box;
+}
+
+.dark-mode #about {
+  background: rgb(44, 44, 44);
+  /* width: 100vw; */
+  /* margin-inline-start: -25px; */
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 2px 40px; */
+
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media(max-width:758px) {
+  .team-members {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.team h3 {
+  font-size: 2.5rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 20px;
+  color: #2B6CB0;
+}
+
+.member {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .member {
+  background: #6d6a6a;
+}
+
+.member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.member h4 {
+  margin: 10px 0 5px;
+}
+
+.dark-mode .member p {
+  color: rgb(246, 248, 250);
+}
+
+.member {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(209, 209, 209);
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  color: #000;
+
+
+}
+
+.member h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.member .role {
+  font-style: italic;
+  font-size: 18px;
+}
+
+.member .more-info {
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+.member img {
+  object-position: center;
+  width: 120px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.dark-mode footer {
+  background: #444;
+}
+
+
+/* Dark Mode Button */
+.toggle {
+  /* margin-left: -12rem;  */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ffd700, #ffa500);
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.toggle:hover {
+  background: linear-gradient(135deg, #ffa500, #ff4500);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  /* Slight lift on hover */
+}
+
+.dark-mode .toggle {
+  background: linear-gradient(135deg, #4b4b4b, #000);
+}
+
+.dark-mode .toggle:hover {
+  background: linear-gradient(135deg, #6b6b6b, #222);
+}
+
+/* Icon Visibility */
+.sun {
+  display: inline;
+}
+
+.moon {
+  display: none;
+}
+
+.dark-mode .sun {
+  display: none;
+}
+
+.dark-mode .moon {
+  display: inline;
+}
+
+.dark-mode .member {
+  background-color: #444;
+  color: white;
+}
+
+.team {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.member {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.member h4 {
+  margin: 10px 0 5px;
+}
+
+
+.role {
+  font-weight: bold;
+  color: #555;
+}
+
+
+@media (max-width: 600px) {
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+}
