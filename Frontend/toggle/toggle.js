@@ -1,10 +1,17 @@
-// Toggle the navbar visibility on small screens
-document.getElementById("menu-toggle").addEventListener("click", function () {
-  const navbar = document.querySelector(".navbar");
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const darkModeToggle = document.getElementById('darkModeToggle');
+const sunIcon = darkModeToggle.querySelector('.sun');
+const moonIcon = darkModeToggle.querySelector('.moon');
 
-  // Toggle the "active" class to show/hide the menu
-  navbar.classList.toggle("active");
+// Mobile Menu Toggle
+menuToggle.addEventListener('click', () => {
+  mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+});
 
-  // Optionally, prevent body scroll when the menu is open
-  document.body.classList.toggle("menu-open");
+// Dark Mode Toggle (Basic Example)
+darkModeToggle.addEventListener('click', () => {
+  sunIcon.classList.toggle('hidden');
+  moonIcon.classList.toggle('hidden');
+  document.documentElement.classList.toggle('dark');
 });
