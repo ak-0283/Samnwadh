@@ -1,11 +1,8 @@
-// Toggle the navbar visibility on small screens
-let isMenuOpen = false;
-document.getElementById("menu-toggle").addEventListener("click",  ()=> {
-  if(!isMenuOpen){
-    document.querySelector(".navbar").classList.add("active");
-    isMenuOpen = true;
-  } else {
-    document.querySelector(".navbar").classList.remove("active");
-    isMenuOpen = false;
-  }
+
+
+// Dark Mode Toggle (Basic Example)
+darkModeToggle.addEventListener('click', () => {
+  sunIcon.classList.toggle('hidden');
+  moonIcon.classList.toggle('hidden');
+  document.documentElement.classList.toggle('dark');
 });
