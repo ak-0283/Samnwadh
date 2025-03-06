@@ -57,20 +57,11 @@ body {
 
 /* Form Container */
 .form-container {
-<<<<<<< HEAD:Frontend/createRoom.css
-  margin-top: 700px;
-  margin-bottom: 65px;
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-=======
   /* background: linear-gradient(to right, #2a69ae, #20418f); */
   background: #5175B1;
   padding: 2rem;
   border-radius: 1.5rem;
   box-shadow: 14px 14px 10px rgba(0, 0, 0, 0.2);
->>>>>>> upstream/main:Frontend/createroom/createRoom.css
   text-align: center;
   outline: 1rem solid #5175B1;
   border: 2px solid #204290;
