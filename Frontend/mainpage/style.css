@@ -198,7 +198,12 @@ header .nav-links a:hover {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
   transform: scale(1.15);
 }
-
+@media screen and (max-width: 768px) {
+  #hero a {
+    font-size: medium;
+    padding: 7px 16px;
+  }
+}
 /* Features Section */
 #features {
   padding: 60px 0;
