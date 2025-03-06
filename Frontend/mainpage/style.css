@@ -135,7 +135,12 @@ body {
   transform: scale(1.1);
   text-decoration: none;
 }
-
+@media screen and (max-width: 768px) {
+  #hero a {
+    font-size: medium;
+    padding: 7px 16px;
+  }
+}
 /* Features Section */
 #features {
   padding: 60px 0;

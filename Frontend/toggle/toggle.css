@@ -32,7 +32,7 @@ body {
   }
 
   .navbar {
-    display: none;
+    display: none !important;
     width: 100%;
     background: #2b6cb0;
     border-radius: 5px;
@@ -42,7 +42,7 @@ body {
     z-index: 1000;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: 0.3s ease;
+    transition: 2s ease;
   }
 
   .nav-links {
@@ -55,7 +55,7 @@ body {
   }
 
   .navbar.active {
-    display: block;
+    display: block !important;
   }
 
   .content {
