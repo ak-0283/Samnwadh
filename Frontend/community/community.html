@@ -1,174 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community</title>
-    <link rel="stylesheet" href="./community.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>
-<link rel="manifest" href="../site.webmanifest" />
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-/>
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-/>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../contributor/contributor.css">
-<link rel="stylesheet" href="../mainpage/style.css">
-<link rel="stylesheet" href="../toggle/toggle.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-</head>
-<body>
-     <!-- scroll button -->
-     <button id="scrollBtn" onclick="scrollToTop()">
-      <i class="fas fa-arrow-up"></i>
-    </button>
 
-    <nav class="navbar">
-        <button class="back-button" onclick="window.location.href = '../index.html'">
-            <i class="fa-solid fa-arrow-left fa-xl"></i>
-        </button>
-        <button type="button" id="darkModeToggle" class="toggle">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community</title>
+  <link rel="stylesheet" href="./community.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../contributor/contributor.css">
+  <link rel="stylesheet" href="../CSS/navbar.css">
+  <link rel="stylesheet" href="../CSS/footer.css">
+  <link rel="stylesheet" href="../mainpage/style.css">
+  <link rel="stylesheet" href="../toggle/toggle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+<body>
+  <!-- scroll button -->
+  <button id="scrollBtn" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Navbar and Heading -->
+  <header class="header">
+    <div class="container">
+      <!-- Logo Section -->
+      <a href="../index.html" class="logo-link">
+        <img src="../images/logo.webp" alt="Samnwadh Logo" class="logo" />
+      </a>
+
+      <!-- Hamburger Menu for Mobile -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+        ☰
+      </button>
+
+      <!-- Navigation -->
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="../index.html#features">Features</a></li>
+          <li><a href="../tech-stack/techstack.html">Tech Stack</a></li>
+          <li><a href="../contributor/contributor.html">Contribute</a></li>
+          <li><a href="../community/community.html">Community</a></li>
+          <li><a href="../review/review.html">Review</a></li>
+          <li><a href="../login/login.html" id="auth-link">Login</a></li>
+          <li><a href="../profile/user.html">Profile</a></li>
+        </ul>
+
+        <!-- Dark Mode Toggle -->
+        <button type="button" id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
           <span class="icon sun">☀️</span>
-          <span class="icon moon">🌙</span>
+          <span class="icon moon hidden">🌙</span>
         </button>
-    </nav>
-    <section id="about">
-      <div class="about-container">
-    
-        <div class="team">
-          <h3>Our Community</h3>
-          <input type="text" id="searchInput" class="search-bar" placeholder="Search by name or role..." onkeyup="filterMembers()">
-          <div class="team-members" id="teamContainer">
-              <div class="member">
-                  <img src="../images/jen.jpg" alt="//">
-                  <h4>Jeniffer Rosh</h4>
-                  <p class="role">Frontend Developer</p>
-                  <p class="more-info">Jennifer is a frontend developer working on the user interface.</p>
-              </div>
-              <div class="member">
-                  <img src="../images/joe.jpg" alt="//">
-                  <h4>Abhay</h4>
-                  <p class="role">Project Manager</p>
-                  <p class="more-info">Abhay leads the team, ensuring timely delivery of projects.</p>
-              </div>
-              <div class="member">
-                  <img src="../images/jane.jpg" alt="//">
-                  <h4>Joe Dohn</h4>
-                  <p class="role">Backend Developer</p>
-                  <p class="more-info">Joe is a backend developer working on the backend of the website.</p>
-              </div>
-              <div class="member">
-                  <img src="../images/joe.jpg" alt="//">
-                  <h4>Alaistair Max</h4>
-                  <p class="role">Data Scientist</p>
-                  <p class="more-info">Alaistair specializes in data science.</p>
-              </div>
-              <div class="member">
-                  <img src="../images/jen.jpg" alt="//">
-                  <h4>Cally Camille</h4>
-                  <p class="role">AI/ML</p>
-                  <p class="more-info">Cally is an AI engineer working on AI enhancements.</p>
-              </div>
-              <div class="member">
-                  <img src="../images/jane.jpg" alt="//">
-                  <h4>Jane Smith</h4>
-                  <p class="role">Backend Developer</p>
-                  <p class="more-info">Jane works on backend architecture.</p>
-              </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu (Hidden by Default) -->
+    <!-- <div class="mobile-menu" id="mobile-menu">
+          <ul class="mobile-nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="./tech-stack/techstack.html">Tech Stack</a></li>
+            <li><a href="./contributor/contributor.html">Contribute</a></li>
+            <li><a href="./community/community.html">Community</a></li>
+            <li><a href="./review/review.html">Review</a></li>
+            <li><a href="./login/login.html" id="auth-link-mobile">Login</a></li>
+            <li><a href="./profile/user.html">Profile</a></li>
+          </ul>
+        </div> -->
+  </header>
+
+  <!-- Community section -->
+  <section id="about">
+    <div class="about-container">
+      <div class="team">
+        <h3>Our Community</h3>
+        <input type="text" id="searchInput" class="search-bar" placeholder="Search by name or role..."
+          onkeyup="filterMembers()">
+        <div class="team-members" id="teamContainer">
+          <div class="member">
+            <img src="../images/jen.jpg" alt="//">
+            <h4>Jeniffer Rosh</h4>
+            <p class="role">Frontend Developer</p>
+            <p class="more-info">Jennifer is a frontend developer working on the user interface.</p>
           </div>
-      </div>
-  
-      <script>
-          function filterMembers() {
-              let input = document.getElementById("searchInput").value.toLowerCase();
-              let members = document.getElementsByClassName("member");
-  
-              for (let i = 0; i < members.length; i++) {
-                  let name = members[i].getElementsByTagName("h4")[0].innerText.toLowerCase();
-                  let role = members[i].getElementsByClassName("role")[0].innerText.toLowerCase();
-  
-                  if (name.includes(input) || role.includes(input)) {
-                      members[i].style.display = "block";
-                  } else {
-                      members[i].style.display = "none";
-                  }
-              }
-          }
-      </script>
+          <div class="member">
+            <img src="../images/joe.jpg" alt="//">
+            <h4>Abhay</h4>
+            <p class="role">Project Manager</p>
+            <p class="more-info">Abhay leads the team, ensuring timely delivery of projects.</p>
+          </div>
+          <div class="member">
+            <img src="../images/jane.jpg" alt="//">
+            <h4>Joe Dohn</h4>
+            <p class="role">Backend Developer</p>
+            <p class="more-info">Joe is a backend developer working on the backend of the website.</p>
+          </div>
+          <div class="member">
+            <img src="../images/joe.jpg" alt="//">
+            <h4>Alaistair Max</h4>
+            <p class="role">Data Scientist</p>
+            <p class="more-info">Alaistair specializes in data science.</p>
+          </div>
+          <div class="member">
+            <img src="../images/jen.jpg" alt="//">
+            <h4>Cally Camille</h4>
+            <p class="role">AI/ML</p>
+            <p class="more-info">Cally is an AI engineer working on AI enhancements.</p>
+          </div>
+          <div class="member">
+            <img src="../images/jane.jpg" alt="//">
+            <h4>Jane Smith</h4>
+            <p class="role">Backend Developer</p>
+            <p class="more-info">Jane works on backend architecture.</p>
+          </div>
         </div>
-      </section>
-          <footer class="bg-blue-600 text-white py-8">
-            <div class="footer-container">
-              <div class="newsletter">
-                <h3>Subscribe to our Newsletter</h3>
-                <form id="subscribeForm">
-                  <input
-                    type="email"
-                    id="emailInput"
-                    placeholder="Enter your email"
-                    required
-                  />
-                  <button class="submit" type="submit">Subscribe</button>
-                </form>
-              </div>
-              <div class="footerLinksForAdminInfo">
-                <p>📍 Location: xyz, India</p>
-                <p>📞 Phone: <a href="tel:+919876543210">+91 99999 99990</a></p>
-                <p>
-                  📧 Email:
-                  <a href="mailto:your-email@example.com">your-email@example.com</a>
-                </p>
-              </div>
-              <!-- Footer Links (Right Side) -->
-              <div class="footer-links">
-                <a href="../about/about.html" class="text-white hover:underline">About Us</a>
-                <a href="../contact/contact.html" class="text-white hover:underline"
-                  >Contact Us</a
-                >
-                <a href="../review/review.html" class="text-white hover:underline">Review</a>
-                <a href="../faq/faq.html" class="text-white hover:underline">FAQ</a>
-                <a href="../feedback/feedback.html" class="text-white hover:underline"
-                  >Feedback</a
-                >
-                <a href="./community.html" class="text-white hover:underline"
-            >Community</a>
-                <a href="../terms/terms.html" class="text-white hover:underline"
-                  >Terms & Conditions</a
-                >
-                <a href="../blog/blog.html" class="text-white hover:underline"> Blog </a>
-                <a href="../privacy/privacy.html" class="text-white hover:underline"
-                  >Privacy Policy</a
-                >
-              </div>
-            </div>
-      
-            <!-- Social Links & Copyright (Centered at Bottom) -->
-            <div class="bottom-footer">
-              <p>&copy; 2025 Samnwadh. All rights reserved.</p>
-              <div class="social-links">
-                <a href="https://github.com/ak-0283"><i class="fab fa-github"></i></a>
-                <a href="https://discord.com/users/762235277263241236"
-                  ><i class="fa-brands fa-discord"></i
-                ></a>
-                <a href="https://x.com/AK_2805"
-                  ><i class="fa-brands fa-x-twitter"></i
-                ></a>
-                <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/"
-                  ><i class="fa-brands fa-linkedin"></i
-                ></a>
-              </div>
-            </div>
-          </footer>
-          <script src="../mainpage/script.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer section -->
+  <footer class="bg-blue-600 text-white py-8">
+    <div class="footer-container max-w-7xl mx-auto px-4">
+      <div class="newsletter mb-8">
+        <h3 class="text-2xl font-semibold mb-4">Subscribe to our Newsletter</h3>
+        <form id="subscribeForm" class="flex flex-col md:flex-row items-center gap-4">
+          <input type="email" id="emailInput" placeholder="Enter your email" required
+            class="px-4 py-2 rounded-md w-full md:w-80 text-black focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          <button
+            class="submit py-2 px-6 bg-white text-blue-600 rounded-md hover:bg-gray-100 focus:ring-2 focus:ring-blue-400"
+            type="submit" onclick="subscribeAlert()">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="footerLinksForAdminInfo text-sm mb-8">
+        <p>📍 Location: xyz, India</p>
+        <p>📞 Phone: <a href="tel:+919876543210" class="text-white hover:underline">+91 99999 99990</a></p>
+        <p>📧 Email: <a href="mailto:your-email@example.com"
+            class="text-white hover:underline">your-email@example.com</a>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="bottom-footer text-center">
+      <div class="footer-links mb-4">
+        <a href="./about/about.html" class="text-white hover:underline mx-3">About Us</a>
+        <a href="./contact/contact.html" class="text-white hover:underline mx-3">Contact Us</a>
+        <a href="./review/review.html" class="text-white hover:underline mx-3">Review</a>
+        <a href="./faq/faq.html" class="text-white hover:underline mx-3">FAQ</a>
+        <a href="./feedback/feedback.html" class="text-white hover:underline mx-3">Feedback</a>
+        <a href="./community/community.html" class="text-white hover:underline mx-3">Community</a>
+        <a href="./terms/terms.html" class="text-white hover:underline mx-3">Terms & Conditions</a>
+        <a href="./blog/blog.html" class="text-white hover:underline mx-3">Blog</a>
+        <a href="./privacy/privacy.html" class="text-white hover:underline mx-3">Privacy Policy</a>
+      </div>
+
+      <p class="text-sm mt-4">© 2025 Samnwadh. All rights reserved.</p>
+
+      <div class="social-links mt-4">
+        <a href="https://github.com/ak-0283" class="text-white hover:text-gray-400 mx-3"><i
+            class="fab fa-github"></i></a>
+        <a href="https://discord.com/users/762235277263241236" class="text-white hover:text-gray-400 mx-3"><i
+            class="fab fa-discord"></i></a>
+        <a href="https://x.com/AK_2805" class="text-white hover:text-gray-400 mx-3"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/" class="text-white hover:text-gray-400 mx-3"><i
+            class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="../mainpage/script.js"></script>
+  <script>
+    function filterMembers() {
+      let input = document.getElementById("searchInput").value.toLowerCase();
+      let members = document.getElementsByClassName("member");
+
+      for (let i = 0; i < members.length; i++) {
+        let name = members[i].getElementsByTagName("h4")[0].innerText.toLowerCase();
+        let role = members[i].getElementsByClassName("role")[0].innerText.toLowerCase();
+
+        if (name.includes(input) || role.includes(input)) {
+          members[i].style.display = "block";
+        } else {
+          members[i].style.display = "none";
+        }
+      }
+    }
+  </script>
 </body>
+
 </html>
