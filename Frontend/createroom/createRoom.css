@@ -120,3 +120,48 @@ body {
   transform: scale(1.05);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
+
+/*dark mode button*/
+.toggle {
+  margin-left: auto; /* Push the dark mode button to the far right */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ffd700, #ffa500);
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.toggle:hover {
+  background: linear-gradient(135deg, #ffa500, #ff4500);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.sun {
+  display: inline;
+}
+
+.moon {
+  display: none;
+}
+
+body.dark-mode{
+  background: #333;
+}
+.dark-mode .form-container{
+  background: #444444;
+  outline: 1rem solid #444444;
+  border-color: #fff;
+}
