@@ -201,8 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Check if dark mode is already enabled in localStorage
-// Dark mode toggle logic
+/* Dark Mode Toggle Script */
 document.addEventListener("DOMContentLoaded", () => {
   const darkModeToggle = document.getElementById("darkModeToggle");
 
