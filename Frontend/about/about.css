@@ -168,24 +168,3 @@ p {
 .navbar {
     justify-content: flex-start !important;
   }
-footer {
-    padding: 10px;
-}
-footer{
-    color: white;
-}
-footer a{
-    color: rgb(11, 11, 11);
-}
-footer i{
-    font-size: 2rem;
-}
-.footer-links{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    margin-top: 1rem;
-    gap: 2rem;
-    font-size: large;
-}
