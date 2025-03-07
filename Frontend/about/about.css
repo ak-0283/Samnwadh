@@ -1,22 +1,32 @@
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to right, #2A69AE, #20418F);
-    color: white;
+    color: rgb(50, 49, 49);
     text-align: center;
     padding: 0;
     margin: 0;
 }
 body.dark-mode{
-    background:#000;
+    background:#1e1e1e;
     
 }
 .dark-mode .about-container{
-    background: #333333;
+    background: rgb(100,32,8);
+    background: linear-gradient(120deg, rgba(100,32,8,1) 0%, rgba(21,56,68,1) 50%, rgba(90,5,36,1) 100%);
+}
+.about{
+    display:flex;
+    justify-content: center;
+}
+.about img{
+    margin: 50px;
+    border-radius: 2rem;
 }
 .about-container {
-    margin: 50px auto;
+    margin: 50px;
     max-width: 700px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -25,14 +35,26 @@ h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
-p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-.highlight {
-    color: #ffcb00;
+.dark-mode .highlight{
+    background: linear-gradient(120deg, rgba(86, 96, 244, 1) 0%, rgba(19, 237, 205, 1) 51%, rgba(19, 58, 214, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
     font-weight: bold;
 }
+p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+.highlight {
+    background: linear-gradient(90deg, rgba(39,16,55,1) 0%, rgba(78,14,10,0.9971638313528537) 50%, rgba(25,15,1,1) 100%);
+    /* background: linear-gradient(120deg, rgba(86, 96, 244, 1) 0%, rgba(19, 237, 205, 1) 51%, rgba(19, 58, 214, 1) 100%); */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    font-weight: bold;
+}
+
 
 .navbar {
     display: flex;
@@ -72,8 +94,15 @@ p {
         padding: 20px;
         margin: 30px auto;
     }
+    .about img{
+        margin: 0;
+        height: 300px;
+    }
 }
 @media (max-width: 768px) {
+    .about{
+        flex-direction: column;
+    }
     .about-container {
         padding: 20px;
         margin: 30px auto;
@@ -115,7 +144,7 @@ p {
 .offer-container ul li,
 .choose-container ul li{
     width: 32%;
-    height: 200px;
+    height: 250px;
     margin: 1rem;
     font-size: 1.2rem;
     padding: 1.2rem;
@@ -123,6 +152,7 @@ p {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
 }
+
 @media(max-width: 768px){
     .offer-container ul,
     .choose-container ul{
@@ -138,7 +168,24 @@ p {
 .navbar {
     justify-content: flex-start !important;
   }
-  footer {
+footer {
     padding: 10px;
-  }
-
+}
+footer{
+    color: white;
+}
+footer a{
+    color: rgb(11, 11, 11);
+}
+footer i{
+    font-size: 2rem;
+}
+.footer-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-top: 1rem;
+    gap: 2rem;
+    font-size: large;
+}
