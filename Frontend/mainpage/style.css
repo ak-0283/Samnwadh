@@ -137,8 +137,11 @@ body {
 }
 @media screen and (max-width: 768px) {
   #hero a {
-    font-size: medium;
+    font-size: large;
     padding: 7px 16px;
+  }
+  .hero-section{
+    margin: 250px 10px 5px 10px;
   }
 }
 /* Features Section */
