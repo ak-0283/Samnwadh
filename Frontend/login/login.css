@@ -28,13 +28,13 @@
 
 /* Full-Screen Centering */
 body {
-  background: linear-gradient(to right, #f0f8ff, #dbeafe);
+  background: linear-gradient(to right, #3c87d7, #6ccfeb);
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto;
+  height: 100vh;
   overflow-x: hidden;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -52,7 +52,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: #161f44;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
   padding: 15px;
   display: flex;
   justify-content: flex-start;
@@ -131,7 +131,7 @@ body {
 }
 
 .back-button:hover {
-  background: #8d8d8d;
+  background: #0190f6;
   transform: scale(1.05);
 }
 
@@ -140,12 +140,11 @@ body {
   width: 100%;
   max-width: 400px;
   padding: 30px;
-  background: rgba(58, 58, 58, 0.4);
+  background: rgba(240, 128, 128, 0.1);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   text-align: center;
-  height: 300px;
-  margin-top: 150px;
+  margin-top: 300px;
   margin-bottom: 50px;
 }
 
@@ -330,8 +329,135 @@ body {
   color: #000;
 }
 
-footer{
+footer {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+}
+
+/* Footer Main Layout */
+.footer-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  /* Keeps links on right */
+  align-items: center;
+  flex-wrap: wrap;
+  /* Prevents overlap */
+}
+
+/* Footer Links (Always on Right) */
+.footerLinksForAdminInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Aligns to the right */
+  text-align: left;
+  margin-right: auto;
+  /* Pushes links to the right */
+}
+
+.footerLinksForAdminInfo a {
+  color: white;
+}
+
+.footerLinksForAdminInfo a:hover {
+  color: black;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* Aligns to the right */
+  text-align: right;
+  margin-left: auto;
+  /* Pushes links to the right */
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  margin: 5px 0;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  color: #ffcb00;
+  text-decoration: underline;
+}
+
+/* Social Links & Copyright (Centered at Bottom) */
+.bottom-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.bottom-footer p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.newsletter {
+  margin: 20px;
+}
+
+.newsletter input {
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.newsletter button {
+  background: linear-gradient(135deg, #6d6a6a, #ffffff);
+}
+
+#subscribeForm {
+  margin-top: 10px;
+}
+
+.submit {
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.social-links a:hover {
+  color: #ffcb00;
+  background-color: purple;
 }
 
 /* Responsive Fix for Small Screens */
@@ -348,4 +474,3 @@ footer{
     margin-left: 0;
   }
 }
-
