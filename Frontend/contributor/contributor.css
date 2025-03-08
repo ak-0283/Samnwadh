@@ -5,106 +5,92 @@
 }
 
 body {
-  /* background-color: linear-gradient(180deg, #0bfcfc, #037cf5); */
-  /* background: linear-gradient(135deg, #bcbcbc, #767676); */
-  background: #f8f9fa;
+  background-color: linear-gradient(180deg, #0bfcfc, #037cf5);
   background-position: center;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  color: #fff;
-}
-
-.dark-mode-toggle{
-  margin-right: 20px;
-  width: 50px;
-  height: 40px;
-  border-radius: 10px;
-}
-
-.dark-mode-toggle:hover{
-  transform: scale(1.1);
-  cursor: pointer;
-  transition: smooth 0.2s ease-in;
+  font-family: Arial, sans-serif; 
+  color: #fff; 
 }
 
 .head {
-  margin-top: 90px;
-  padding: 20px 0;
-  font-size: 24px;
-  border-radius: 0%;
+margin-top: 190px;
+padding: 20px 0;
+font-size: 24px;
+border-radius: 0%;
 }
 
-.title {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  /* You can use any font of your choice */
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333333;
-  text-transform: uppercase;
-  /* Makes the text uppercase */
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-  /* Adds spacing between letters */
-  text-align: center;
-  /* Centers the text */
+  
+.container {
+      text-align: center;
+      margin: 0 auto;
+      padding: 20px;
+      max-width: 1200px;
+      
 }
 
-body.dark-mode .title {
-  color: #ffffff;
-}
-
-/* Contributors Grid */
-.contributors-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* Ensures 3 cards per row */
-  gap: 20px;
-  margin: 40px auto;
-  padding: 0 20px;
-  max-width: 1000px;
-  /* Adjusted to fit exactly 3 cards */
-  justify-content: center;
+  .title {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* You can use any font of your choice */
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #333333;
+      text-transform: uppercase; /* Makes the text uppercase */
+      margin-bottom: 20px;
+      letter-spacing: 1px; /* Adds spacing between letters */
+      text-align: center; /* Centers the text */
+  }
+  
+  body.dark-mode .title {
+    color: #ffffff;
+  }
+  /* Contributors Grid */
+  .contributors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures 3 cards per row */
+    gap: 20px;
+    margin: 40px auto;
+    padding: 0 20px;
+    max-width: 1000px; /* Adjusted to fit exactly 3 cards */
+    justify-content: center;
 }
 
 /* Contributor Card */
 .contributor-card {
-  background: linear-gradient(135deg, #FEE140, #FA709A);
-  padding: 20px;
-  height: 250px;
-  width: 300px;
-  /* Ensure each card has a fixed width */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg,#FEE140,#FA709A);
+    padding: 20px;
+    height: 250px;
+    width: 300px; /* Ensure each card has a fixed width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
 .contributor-card:hover {
   transform: scale(1.01);
-  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.6);
+  box-shadow: 0 5px 15px rgba(255,105,180,0.6);
 }
 
 /* Fix container responsiveness */
 @media (max-width: 1024px) {
   .contributors-grid {
-    grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media (max-width: 768px) {
   .contributors-grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
   }
-
+ 
 }
 
 .contributor-card img {
@@ -143,16 +129,32 @@ body.dark-mode .title {
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
-
 #scrollBtn:hover {
   background-color: rgb(34, 139, 34);
   transform: scale(1.1);
   box-shadow: 0px 0px 12px rgba(0, 123, 255, 0.8);
 }
 
+/* Back Button */
+.back-button {
+  background: #2867f0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #0190f6;
+  transform: scale(1.05);
+}
+
+
 .certificate-btn {
-  background: #6A1B9A;
-  /* Light Blue Gradient */
+background: #6A1B9A;  /* Light Blue Gradient */
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -172,8 +174,7 @@ body.dark-mode .title {
 
 /* Button Hover Effect */
 .certificate-btn:hover {
-  background: #532a5f;
-  /* Reverse Gradient */
+  background: #532a5f;/* Reverse Gradient */
   transform: scale(1.01);
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
 }
