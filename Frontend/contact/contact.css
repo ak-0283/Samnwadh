@@ -152,3 +152,27 @@ body.dark-mode{
 .dark-mode .contact-container{
     background: #4b4b4b;
 }
+.social-media i{
+    font-size: 2rem;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.social-media i:hover{
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+.fa-instagram{
+    color: #c13584;
+}
+.fa-twitter{
+    color: #1da1f2;
+}
+.fa-pinterest{
+    color: #e60023;
+}
+.fa-facebook{
+    color: #1877f2;
+}
+.fa-linkedin{
+    color: #0a66c2;
+}
