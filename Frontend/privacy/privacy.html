@@ -160,6 +160,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init({ duration: 600, once: false });
+    document.getElementById('menu-toggle').addEventListener('click',()=>{
+        console.log('clicked')
+        document.querySelector('.navbar').classList.toggle('active')
+      })
   </script>
 </body>
 
