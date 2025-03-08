@@ -579,3 +579,37 @@ body.dark-mode ::-webkit-scrollbar {
 body.dark-mode ::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, #666, #888);
 }
+
+.content {
+  padding: 50px;
+  transition: filter 0.3s ease-in-out;
+}
+/* Success Message Styling */
+#success-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+#success-message button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#success-message button:hover {
+  background: #218838;
+}
+
