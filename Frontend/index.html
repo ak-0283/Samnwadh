@@ -1,414 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samnwadh - Connect & Collaborate</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./mainpage/style.css" />
+    <link rel="stylesheet" href="./faq/faq.css" />
+    <link rel="stylesheet" href="./card/card.css" />
+    <link rel="stylesheet" href="./toggle/toggle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="./feedback/homefeedback.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Samnwadh - An open-source platform to connect, share, and collaborate in real-time." />
-  <meta property="og:title" content="Samnwadh - Connect & Collaborate" />
-  <meta property="og:description" content="An open-source platform to connect, share, and collaborate in real-time." />
-  <meta property="og:image" content="./images/logo.webp" />
-  <meta property="og:url" content="https://www.samnwadh.com" />
-  <title>Samnwadh - Connect & Collaborate</title>
-  <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png" />
-  <link rel="stylesheet" href="./CSS/navbar.css">
-  <link rel="stylesheet" href="./CSS/footer.css">
-  <link rel="stylesheet" href="./mainpage/style.css" />
-  <link rel="stylesheet" href="./faq/faq.css" />
-  <link rel="stylesheet" href="./card/card.css" />
-  <link rel="stylesheet" href="./toggle/toggle.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Russo+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <link rel="stylesheet" href="./feedback/homefeedback.css" />
-  <style>
-    .faq-section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: white;
-      padding-top: 20px;
-    }
+    <style>
+      .faq-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding-top: 20px;
+      }
 
-    .faq-container {
-      margin-top: 0px;
-    }
+      .faq-container {
+        margin-top: 0px;
+      }
 
-    .faq-item h1 {
-      color: black;
-    }
+      .faq-item h1 {
+        color: black;
+      }
 
-    .search-container {
-      text-align: center;
-      margin: 10%;
-      margin-bottom: 20px;
-    }
+      .search-container {
+        text-align: center;
+        margin: 10%;
+        margin-bottom: 20px;
+      }
 
-    .search-box {
-      width: 100%;
-      max-width: 400px;
-      padding: 10px;
-      border: 2px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-      outline: none;
-    }
-  </style>
-</head>
+      .search-box {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
 
-<body class="bg-gray-100 text-gray-900">
-  <!-- Greeting card code -->
-  <div class="overlay" id="overlay">
-    <div class="card">
-      <button class="close-btn" aria-label="Close" onclick="closeCard()">X</button>
-      <h1 id="greeting"></h1>
+        font-size: 16px;
+        outline: none;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-900">
+    <!--greeting card code-->
+
+    <div class="overlay" id="overlay">
+      <div class="card">
+        <button class="close-btn" onclick="closeCard()">X</button>
+        <h1 id="greeting"></h1>
+      </div>
     </div>
-  </div>
 
-  <!-- Navbar and Heading -->
-<header class="header">
-  <div class="container">
-    <!-- Logo Section -->
-    <a href="./index.html" class="logo-link">
-      <img src="./images/logo.webp" alt="Samnwadh Logo" class="logo" />
-    </a>
+    <header class="bg-blue-600 text-white p-6">
+      <div class="container">
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
 
-    <!-- Hamburger Menu for Mobile -->
-    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
-      ☰
+        <a href="index.html"
+          ><img
+            src="./images/logo.webp"
+            alt="Samnwadh"
+            class="logo"
+            style="margin: 18px"
+        /></a>
+
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="./tech-stack/techstack.html">Tech Stack</a></li>
+            <li><a href="contributor/contributor.html">Contribute</a></li>
+            <li><a href="./community/community.html">Community</a></li>
+            <li><a href="./review/review.html">Review</a></li>
+
+            <li><a href="./login/login.html" id="auth-link">Login</a></li>
+            <li><a href="./profile/user.html">Profile</a></li>
+          </ul>
+          <button type="button" id="darkModeToggle" class="toggle">
+            <span class="icon sun">☀️</span>
+            <span class="icon moon">🌙</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- scroll button -->
+    <button id="scrollBtn" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="./tech-stack/techstack.html">Tech Stack</a></li>
-        <li><a href="./contributor/contributor.html">Contribute</a></li>
-        <li><a href="./community/community.html">Community</a></li>
-        <li><a href="./review/review.html">Review</a></li>
-        <li><a href="./login/login.html" id="auth-link">Login</a></li>
-        <li><a href="./profile/user.html">Profile</a></li>
-      </ul>
+    <section id="hero" class="bg-blue-600 text-white text-center py-24">
+      <h2 data-aos="fade-up" class="text-3xl font-bold mb-4">
+        Welcome to Samnwadh!
+      </h2>
 
-      <!-- Dark Mode Toggle -->
-      <button type="button" id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-        <span class="icon sun">☀️</span>
-        <span class="icon moon hidden">🌙</span>
-      </button>
-    </nav>
-  </div>
+      <p data-aos="fade-up" class="text-lg mb-6">
+        An open-source platform to connect, share, and collaborate in real-time.
+      </p>
 
-  <!-- Mobile Menu (Hidden by Default) -->
-  <!-- <div class="mobile-menu" id="mobile-menu">
-    <ul class="mobile-nav-links">
-      <li><a href="#features">Features</a></li>
-      <li><a href="./tech-stack/techstack.html">Tech Stack</a></li>
-      <li><a href="./contributor/contributor.html">Contribute</a></li>
-      <li><a href="./community/community.html">Community</a></li>
-      <li><a href="./review/review.html">Review</a></li>
-      <li><a href="./login/login.html" id="auth-link-mobile">Login</a></li>
-      <li><a href="./profile/user.html">Profile</a></li>
-    </ul>
-  </div> -->
-</header>
+      <a
+        href="#contribute"
+        onclick="window.location.href = './signup/signup.html'"
+        class="home-bttn"
+        >Get Started</a
+      >
 
-  <!-- Scroll button -->
-  <button id="scrollBtn" onclick="scrollToTop()" aria-label="Scroll to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-<main>
+      <a
+        href="#contribute"
+        onclick="window.location.href = './createroom/createRoom.html'"
+        class="bg-yellow-500 text-black py-2 px-6 rounded-lg hover:bg-yellow-400 hover:text-white transition-colors duration-300"
+        >Create Room</a
+      >
+    </section>
 
-  <!-- Intro Section -->
-<section id="hero" class="hero-container">
-  <div class="hero-section">
-  <h2 data-aos="fade-up" class="hero-title">
-    Welcome to Samnwadh!
-  </h2>
+    <section data-aos="fade-up" id="features" class="py-16 bg-white">
+      <h3 data-aos="fade-up" class="text-2xl font-bold mb-8">Features</h3>
+      <div data-aos="fade-up" class="container text-center">
+        <div data-aos="fade-up" class="grid">
+          <div class="feature-item">
+            <h4 data-aos="fade-up">Real-time Messaging</h4>
+            <p data-aos="fade-up">
+              Chat instantly with friends and colleagues in real-time.
+            </p>
+          </div>
 
-  <p data-aos="fade-up" class="hero-subtext">
-    An open-source platform to connect, share, and collaborate in real-time.
-  </p>
+          <div class="feature-item">
+            <h4 data-aos="fade-up">Group Chats</h4>
+            <p data-aos="fade-up">
+              Create communities and have group discussions.
+            </p>
+          </div>
 
-  <a href="#contribute" onclick="window.location.href = './signup/signup.html'" class="home-bttn">Get Started</a>
-  <a href="#contribute" onclick="window.location.href = './createroom/createRoom.html'" class="create-room-btn">
-    Create Room
-  </a>
-  </div>
-</section>
-
-  <!-- Feature Section -->
-    <section data-aos="fade-up" id="features" class="features-section">
-      <h3 data-aos="fade-up" class="features-title">Features</h3>
-      <div data-aos="fade-up" class="features-container">
-        <div class="feature-item">
-          <h4 data-aos="fade-up" class="feature-heading">Real-time Messaging</h4>
-          <p data-aos="fade-up" class="feature-description">Chat instantly with friends and colleagues in real-time.</p>
-        </div>
-    
-        <div class="feature-item">
-          <h4 data-aos="fade-up" class="feature-heading">Group Chats</h4>
-          <p data-aos="fade-up" class="feature-description">Create communities and have group discussions.</p>
-        </div>
-    
-        <div class="feature-item">
-          <h4 data-aos="fade-up" class="feature-heading">End-to-End Encryption</h4>
-          <p data-aos="fade-up" class="feature-description">Ensure privacy with end-to-end encryption for all chats.</p>
+          <div class="feature-item">
+            <h4 data-aos="fade-up">End-to-End Encryption</h4>
+            <p data-aos="fade-up">
+              Ensure privacy with end-to-end encryption for all chats.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-  <!-- Feedback section -->
-<section data-aos="fade-up" class="feedback-section">
-  <div data-aos="fade-up" class="feedback-container">
-    <h2 data-aos="fade-up" class="feedback-title">We Value Your Feedback!</h2>
-    <p data-aos="fade-up" class="feedback-subtext">Let us know how we can improve.</p>
+    <!-- feedback section -->
+    <section data-aos="fade-up" class="feedback-section">
+      <div data-aos="fade-up" class="feedback-container">
+        <h2 data-aos="fade-up" class="feedback-title">
+          We Value Your Feedback!
+        </h2>
+        <p data-aos="fade-up" class="feedback-subtext">
+          Let us know how we can improve.
+        </p>
 
-    <form data-aos="fade-up" id="feedback-form" class="feedback-form">
-      <div class="feedback-input-container">
-        <label for="name" class="feedback-label">Your Name</label>
-        <input data-aos="fade-up" type="text" id="name" class="feedback-input" placeholder="Enter your name" required />
+        <form data-aos="fade-up" id="feedback-form">
+          <input
+            data-aos="fade-up"
+            type="text"
+            id="name"
+            class="feedback-input"
+            placeholder="Enter your name"
+            required
+          />
+
+          <input
+            data-aos="fade-up"
+            type="email"
+            id="email"
+            class="feedback-input"
+            placeholder="Enter your email"
+            required
+          />
+
+          <select id="rating" data-aos="fade-up" class="feedback-input">
+            <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+            <option value="4">⭐⭐⭐⭐ - Very Good</option>
+            <option value="3">⭐⭐⭐ - Good</option>
+            <option value="2">⭐⭐ - Fair</option>
+            <option value="1">⭐ - Poor</option>
+          </select>
+
+          <textarea
+            data-aos="fade-up"
+            id="message"
+            class="feedback-textarea"
+            rows="4"
+            placeholder="Write your feedback here..."
+            required
+          ></textarea>
+
+          <button type="submit" data-aos="fade-up" class="feedback-button">
+            Submit Feedback
+          </button>
+        </form>
+
+        <p id="feedback-message" class="feedback-message"></p>
       </div>
-
-      <div class="feedback-input-container">
-        <label for="email" class="feedback-label">Your Email</label>
-        <input data-aos="fade-up" type="email" id="email" class="feedback-input" placeholder="Enter your email"
-          required />
-      </div>
-
-      <div class="feedback-input-container">
-        <label for="rating" class="feedback-label">Rating</label>
-        <select id="rating" data-aos="fade-up" class="feedback-input">
-          <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
-          <option value="4">⭐⭐⭐⭐ - Very Good</option>
-          <option value="3">⭐⭐⭐ - Good</option>
-          <option value="2">⭐⭐ - Fair</option>
-          <option value="1">⭐ - Poor</option>
-        </select>
-      </div>
-
-      <div class="feedback-input-container">
-        <label for="message" class="feedback-label">Your Feedback</label>
-        <textarea data-aos="fade-up" id="message" class="feedback-textarea" rows="4"
-          placeholder="Write your feedback here..." required></textarea>
-      </div>
-
-      <button type="submit" data-aos="fade-up" class="feedback-button">Submit Feedback</button>
-      <p id="feedback-message" class="feedback-message"></p>
-    </form>
-  </div>
-</section>
-
-
-  <!-- FAQ section -->
-<!-- FAQ Section -->
-<div class="search-container">
-  <label for="faq-search" class="sr-only">Search FAQs</label>
-  <input type="text" id="faq-search" class="search-box" placeholder="Search FAQs..." onkeyup="searchFAQ()" />
-</div>
-
-<section class="faq-box">
-  <h2 data-aos="fade-up" class="text-2xl font-bold text-center mb-8">
-    Frequently Asked Questions
-  </h2>
-
-  <p id="no-results" style="display: none; color: red;">No results found</p>
-
-  <div data-aos="fade-up" class="faq-container">
-    <article data-aos="fade-up" class="faq-item">
-      <h3 class="question" onclick="toggleAnswer(this)">
-        What is Samnwadh? <i class="fas fa-chevron-down"></i>
-      </h3>
-      <div class="faq-answer">
-        Samnwadh is an open-source platform designed to facilitate real-time
-        collaboration, messaging, and community building.
-      </div>
-    </article>
-
-    <article data-aos="fade-up" class="faq-item">
-      <h3 class="question" onclick="toggleAnswer(this)">
-        Is Samnwadh free to use? <i class="fas fa-chevron-down"></i>
-      </h3>
-      <div class="faq-answer">
-        Yes! Samnwadh is completely free and open-source. You can contribute
-        to its development on GitHub.
-      </div>
-    </article>
-
-    <article data-aos="fade-up" class="faq-item">
-      <h3 class="question" onclick="toggleAnswer(this)">
-        How do I contribute to Samnwadh? <i class="fas fa-chevron-down"></i>
-      </h3>
-      <div class="faq-answer">
-        You can contribute by visiting our
-        <a href="./contributor/contributor.html" target="_blank">Contribute</a> section and
-        following the guidelines on our GitHub repository.
-      </div>
-    </article>
-
-    <article data-aos="fade-up" class="faq-item">
-      <h3 class="question" onclick="toggleAnswer(this)">
-        Is my data secure on Samnwadh? <i class="fas fa-chevron-down"></i>
-      </h3>
-      <div class="faq-answer">
-        Absolutely! We use end-to-end encryption to ensure your conversations
-        remain private and secure.
-      </div>
-    </article>
-
-    <!-- New Q&A Items -->
-    <article data-aos="fade-up" class="faq-item">
-      <h3 class="question" onclick="toggleAnswer(this)">
-        Can I use Samnwadh on mobile devices? <i class="fas fa-chevron-down"></i>
-      </h3>
-      <div class="faq-answer">
-        Yes, Samnwadh is fully responsive and works smoothly on both mobile
-        and desktop devices.
-      </div>
-    </article>
-
-    <article data-aos="fade-up" class="faq-item">
-      <h3 class="question" onclick="toggleAnswer(this)">
-        Do I need an account to use Samnwadh? <i class="fas fa-chevron-down"></i>
-      </h3>
-      <div class="faq-answer">
-        While some features may be accessible without an account, creating
-        an account unlocks full functionality such as messaging and
-        collaboration tools.
-      </div>
-    </article>
-
-    <article data-aos="fade-up" class="faq-item">
-      <h3 class="question" onclick="toggleAnswer(this)">
-        Who can I contact for support? <i class="fas fa-chevron-down"></i>
-      </h3>
-      <div class="faq-answer">
-        If you need help, you can reach out to us at
-        <a href="mailto:support@samnwadh.com">support@samnwadh.com</a> or
-        visit our community forum.
-      </div>
-    </article>
-  </div>
-</section>  
-</main>
-
-  <!-- Footer section -->
-<footer class="bg-blue-600 text-white py-8">
-  <div class="footer-container max-w-7xl mx-auto px-4">
-    <div class="newsletter mb-8">
-      <h3 class="text-2xl font-semibold mb-4">Subscribe to our Newsletter</h3>
-      <form id="subscribeForm" class="flex flex-col md:flex-row items-center gap-4">
-        <input type="email" id="emailInput" placeholder="Enter your email" required
-          class="px-4 py-2 rounded-md w-full md:w-80 text-black focus:outline-none focus:ring-2 focus:ring-blue-400" />
-        <button
-          class="submit py-2 px-6 bg-white text-blue-600 rounded-md hover:bg-gray-100 focus:ring-2 focus:ring-blue-400"
-          type="submit" onclick="subscribeAlert()">Subscribe</button>
-      </form>
+    </section>
+    <!-- faq section -->
+    <div class="search-container">
+      <input
+        type="text"
+        id="faq-search"
+        class="search-box"
+        placeholder="Search FAQs..."
+        onkeyup="searchFAQ()"
+      />
     </div>
 
-    <div class="footerLinksForAdminInfo text-sm mb-8">
-      <p>📍 Location: xyz, India</p>
-      <p>📞 Phone: <a href="tel:+919876543210" class="text-white hover:underline">+91 99999 99990</a></p>
-      <p>📧 Email: <a href="mailto:your-email@example.com" class="text-white hover:underline">your-email@example.com</a>
-      </p>
+    <section class="faq-box">
+      <h2 data-aos="fade-up" class="text-2xl font-bold text-center mb-8">
+        Frequently Asked Questions
+      </h2>
+      <p id="no-results" style="display: none; color: red">No results found</p>
+      <div data-aos="fade-up" class="faq-container">
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            What is Samnwadh? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            Samnwadh is an open-source platform designed to facilitate real-time
+            collaboration, messaging, and community building.
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Is Samnwadh free to use? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            Yes! Samnwadh is completely free and open-source. You can contribute
+            to its development on GitHub.
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            How do I contribute to Samnwadh? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            You can contribute by visiting our
+            <a href="./contributor/contributor.html">Contribute</a> section and
+            following the guidelines on our GitHub repository.
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Is my data secure on Samnwadh? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            Absolutely! We use end-to-end encryption to ensure your
+            conversations remain private and secure.
+          </div>
+        </div>
+
+        <!-- New Q&A Items -->
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Can I use Samnwadh on mobile devices?
+            <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            Yes, Samnwadh is fully responsive and works smoothly on both mobile
+            and desktop devices.
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Do I need an account to use Samnwadh?
+            <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            While some features may be accessible without an account, creating
+            an account unlocks full functionality such as messaging and
+            collaboration tools.
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="faq-item">
+          <h1 data-aos="fade-up" class="question" onclick="toggleAnswer(this)">
+            Who can I contact for support? <i class="fas fa-chevron-down"></i>
+          </h1>
+          <div class="faq-answer">
+            If you need help, you can reach out to us at
+            <a href="mailto:support@samnwadh.com">support@samnwadh.com</a> or
+            visit our community forum.
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Success Message -->
+    <div id="success-message">
+      <p>Subscription Successful!</p>
+      <button onclick="closeMessage()">OK</button>
     </div>
-  </div>
+    
+    <!-- footer section -->
+    <footer class="bg-blue-600 text-white py-8">
+      <div class="footer-container">
+        <div class="newsletter">
+          <h3>Subscribe to our Newsletter</h3>
+          <form id="subscribeForm">
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Enter your email"
+              required
+            />
+            <div class="content">
+              <button class="submit" type="button" onclick="subscribeAlert()">
+                  Subscribe
+              </button>
+          </div>
+          </form>
+        </div>
+        <div class="footerLinksForAdminInfo">
+          <p>📍 Location: xyz, India</p>
+          <p>📞 Phone: <a href="tel:+919876543210">+91 99999 99990</a></p>
+          <p>
+            📧 Email:
+            <a href="mailto:your-email@example.com">your-email@example.com</a>
+          </p>
+        </div>
+        <!-- Footer Links (Right Side) -->
+        <div class="footer-links">
+          <a href="./about/about.html" class="text-white hover:underline"
+            >About Us</a
+          >
+          <a href="./contact/contact.html" class="text-white hover:underline"
+            >Contact Us</a
+          >
+          <a href="./review/review.html" class="text-white hover:underline"
+            >Review</a
+          >
+          <a href="./faq/faq.html" class="text-white hover:underline">FAQ</a>
+          <a href="./feedback/feedback.html" class="text-white hover:underline"
+            >Feedback</a
+          >
+          <a
+            href="./community/community.html"
+            class="text-white hover:underline"
+            >Community</a
+          >
+          <a href="./blog/blog.html" class="text-white hover:underline">
+            Blog
+          </a>
+          <a href="./privacy/privacy.html" class="text-white hover:underline"
+            >Privacy Policy</a
+          >
+          <a href="./terms/terms.html" class="text-white hover:underline"
+            >Terms & Conditions</a
+          >
+        </div>
+      </div>
 
-  <div class="bottom-footer text-center">
-    <div class="footer-links mb-4">
-      <a href="./about/about.html" class="text-white hover:underline mx-3">About Us</a>
-      <a href="./contact/contact.html" class="text-white hover:underline mx-3">Contact Us</a>
-      <a href="./review/review.html" class="text-white hover:underline mx-3">Review</a>
-      <a href="./faq/faq.html" class="text-white hover:underline mx-3">FAQ</a>
-      <a href="./feedback/feedback.html" class="text-white hover:underline mx-3">Feedback</a>
-      <a href="./community/community.html" class="text-white hover:underline mx-3">Community</a>
-      <a href="./terms/terms.html" class="text-white hover:underline mx-3">Terms & Conditions</a>
-      <a href="./blog/blog.html" class="text-white hover:underline mx-3">Blog</a>
-      <a href="./privacy/privacy.html" class="text-white hover:underline mx-3">Privacy Policy</a>
-    </div>
+      <!-- Social Links & Copyright (Centered at Bottom) -->
+      <div class="bottom-footer">
 
-    <p class="text-sm mt-4">© 2025 Samnwadh. All rights reserved.</p>
+      
 
-    <div class="social-links mt-4">
-      <a href="https://github.com/ak-0283" class="text-white hover:text-gray-400 mx-3"><i class="fab fa-github"></i></a>
-      <a href="https://discord.com/users/762235277263241236" class="text-white hover:text-gray-400 mx-3"><i
-          class="fab fa-discord"></i></a>
-      <a href="https://x.com/AK_2805" class="text-white hover:text-gray-400 mx-3"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/" class="text-white hover:text-gray-400 mx-3"><i
-          class="fab fa-linkedin"></i></a>
-    </div>
-  </div>
-</footer>
+        <p>&copy; 2025 Samnwadh. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://github.com/ak-0283"><i class="fab fa-github"></i></a>
+          <a href="https://discord.com/users/762235277263241236"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+          <a href="https://x.com/AK_2805"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/abhay-kumar-117b4327b/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="./feedback/feedback.js"></script>
 
+    <script src="./feedback/feedback.js"></script>
+    <script src="./mainpage/script.js"></script>
+    <!-- <script src="./event.js"></script> -->
+    <script src="./card/card.js"></script>
+    <script src="./toggle/toggle.js"></script>
 
-  <!-- Scripts -->
-  <script src="./feedback/feedback.js"></script>
-  <script src="./mainpage/script.js"></script>
-  <script src="./card/card.js"></script>
-  <script src="./toggle/toggle.js"></script>
+    <script>
+      function updateAuthLink() {
+        let loggedInUser = localStorage.getItem("loggedInUser");
+        let authLink = document.getElementById("auth-link");
 
-  <script>
-    function updateAuthLink() {
-      let loggedInUser = localStorage.getItem("loggedInUser");
-      let authLink = document.getElementById("auth-link");
-
-      if (loggedInUser) {
-        authLink.innerText = "Logout";
-        authLink.href = "#";
-        authLink.onclick = function () {
-          logout();
-        };
-      }
-    }
-
-    function logout() {
-      localStorage.removeItem("loggedInUser");
-      window.location.reload();
-    }
-
-    updateAuthLink();
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({ duration: 600, once: false });
-  </script>
-
-  <script>
-    function subscribeAlert() {
-      alert("Thank you for subscribing to our newsletter!");
-    }
-
-    function toggleAnswer(element) {
-      let answer = element.nextElementSibling;
-      answer.style.display = answer.style.display === "block" ? "none" : "block";
-    }
-
-    function searchFAQ() {
-      let input = document.querySelector(".search-box").value.toLowerCase();
-      let questions = document.querySelectorAll(".faq-item");
-      let answers = document.querySelectorAll(".faq-answer");
-      let noResults = document.getElementById("no-results");
-      let found = false;
-
-      questions.forEach((item, index) => {
-        let text = item.textContent.toLowerCase();
-        if (text.includes(input)) {
-          item.style.display = "block";
-          answers[index].style.display = "none";
-          found = true;
-        } else {
-          item.style.display = "none";
-          answers[index].style.display = "none";
+        if (loggedInUser) {
+          authLink.innerText = "Logout";
+          authLink.href = "#";
+          authLink.onclick = function () {
+            logout();
+          };
         }
-      });
+      }
 
-      noResults.style.display = found ? "none" : "block";
-    }
-  </script>
-</body>
+      function logout() {
+        localStorage.removeItem("loggedInUser");
+        window.location.reload();
+      }
 
+      // Update login/logout button on page load
+      updateAuthLink();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({ duration: 600, once: false });
+    </script>
+    <script>
+      function subscribeAlert() {
+        document.getElementById("success-message").style.display = "block"; // Show success message
+      }
+
+      function closeMessage() {
+        document.getElementById("success-message").style.display = "none"; // Hide success message
+      }
+
+      function toggleAnswer(element) {
+        let answer = element.nextElementSibling;
+        answer.style.display =
+          answer.style.display === "block" ? "none" : "block";
+      }
+      function searchFAQ() {
+        let input = document.querySelector(".search-box").value.toLowerCase();
+        let questions = document.querySelectorAll(".faq-item");
+        let answers = document.querySelectorAll(".faq-answer"); // Get all answers
+        let noResults = document.getElementById("no-results");
+        let found = false;
+
+        questions.forEach((item, index) => {
+          let text = item.textContent.toLowerCase();
+          if (text.includes(input)) {
+            item.style.display = "block";
+            answers[index].style.display = "none"; // Hide answers on search
+            found = true;
+          } else {
+            item.style.display = "none";
+            answers[index].style.display = "none"; // Hide answers for unmatched items
+          }
+        });
+
+        // Show "No results found" if nothing is found
+        noResults.style.display = found ? "none" : "block";
+      }
+    </script>
+  </body>
 </html>
