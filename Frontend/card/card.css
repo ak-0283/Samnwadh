@@ -34,6 +34,8 @@ body {
   align-items: center;
   text-align: center;
   position: relative;
+  top: 45%;
+  left: 45%;
   animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -81,3 +83,5 @@ h1 {
     width: 90%;
   }
 }
+
+
