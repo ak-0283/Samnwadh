@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Samnwadh</title>
+    <link rel="stylesheet" href="../CSS/navbar.css">
     <link rel="stylesheet" href="../mainpage/style.css" />
     <link rel="stylesheet" href="./about.css" />
     <link rel="stylesheet" href="../toggle/toggle.css" />
@@ -13,10 +14,55 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
   </head>
+  <header class="header">
+    <div class="container">
+      <!-- Logo Section -->
+      <a href="./index.html" class="logo-link">
+        <img src="../images/logo.webp" alt="Samnwadh Logo" class="logo" />
+      </a>
+  
+      <!-- Hamburger Menu for Mobile -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+        ☰
+      </button>
+  
+      <!-- Navigation -->
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="./tech-stack/techstack.html">Tech Stack</a></li>
+          <li><a href="./contributor/contributor.html">Contribute</a></li>
+          <li><a href="./community/community.html">Community</a></li>
+          <li><a href="./review/review.html">Review</a></li>
+          <li><a href="./login/login.html" id="auth-link">Login</a></li>
+          <li><a href="./profile/user.html">Profile</a></li>
+        </ul>
+  
+        <!-- Dark Mode Toggle -->
+        <button type="button" id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+          <span class="icon sun">☀️</span>
+          <span class="icon moon hidden">🌙</span>
+        </button>
+      </nav>
+    </div>
+  
+    <!-- Mobile Menu (Hidden by Default) -->
+    <!-- <div class="mobile-menu" id="mobile-menu">
+      <ul class="mobile-nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="./tech-stack/techstack.html">Tech Stack</a></li>
+        <li><a href="./contributor/contributor.html">Contribute</a></li>
+        <li><a href="./community/community.html">Community</a></li>
+        <li><a href="./review/review.html">Review</a></li>
+        <li><a href="./login/login.html" id="auth-link-mobile">Login</a></li>
+        <li><a href="./profile/user.html">Profile</a></li>
+      </ul>
+    </div> -->
+  </header>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <button class="back-button" onclick="window.location.href = '../index.html'">
+      <button class="back-button" onclick="history.back()">
         <i class="fa-solid fa-arrow-left fa-xl"></i>
       </button>
       <button type="button" id="darkModeToggle" class="toggle">
@@ -155,4 +201,10 @@
     </footer>
   </body>
   <script src="../mainpage/script.js"></script>
+  <script src="../toggle/toggle.js"></script>
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click',()=>{
+      document.querySelector('.navbar').classList.toggle('active');
+    })
+  </script>
 </html>
