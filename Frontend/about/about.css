@@ -17,6 +17,7 @@ body.dark-mode{
 .about{
     display:flex;
     justify-content: center;
+    margin-top: 3rem;
 }
 .about img{
     margin: 50px;
