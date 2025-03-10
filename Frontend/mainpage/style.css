@@ -581,7 +581,7 @@ body.dark-mode ::-webkit-scrollbar-thumb {
 }
 
 .content {
-  padding: 50px;
+  padding: 10px;
   transition: filter 0.3s ease-in-out;
 }
 /* Success Message Styling */
