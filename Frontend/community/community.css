@@ -404,3 +404,12 @@ padding: 2rem 1rem !important;
       align-items: center;
   }
 }
+
+@media (max-width: 768px) {
+  .navbar {
+      display: flex !important;
+    }
+  .footerLinksForAdminInfo{
+    margin: 0.5rem auto;
+  }
+  }
