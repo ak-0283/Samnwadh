@@ -325,7 +325,7 @@ footer {
 .footer-container {
   width: 90%;
   display: flex;
-  justify-content: space-between; /* Keeps links on right */
+  justify-content: center; /* Keeps links on right */
   align-items: center;
   flex-wrap: wrap; /* Prevents overlap */
 }
@@ -337,6 +337,8 @@ footer {
   align-items: flex-start; /* Aligns to the right */
   text-align: left;
   margin-right: auto; /* Pushes links to the right */
+  border: 1px dashed black;
+  padding: 10px 20px;
 }
 .footerLinksForAdminInfo a {
   color: white;
@@ -385,7 +387,11 @@ footer {
 .newsletter {
   margin: 20px;
 }
-
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .newsletter input {
   padding: 10px;
   margin-right: 5px;
@@ -427,10 +433,16 @@ footer {
 /* Responsive Fix for Small Screens */
 @media (max-width: 768px) {
   .footer-container {
+    display: block;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     /* align-items: flex-end; */
   }
-
+  .footerLinksForAdminInfo{
+    display: flex;
+    flex-direction: column;
+  }
   .footer-links {
     align-items: center; /* Center the links on small screens */
     text-align: center;
